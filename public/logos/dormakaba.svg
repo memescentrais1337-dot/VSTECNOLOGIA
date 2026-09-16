@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- dormakaba Vector Logo -->
+  <g transform="translate(16, 17)">
+    <rect width="14" height="34" rx="2" fill="#003B71" />
+    <rect x="18" y="0" width="14" height="34" rx="2" fill="#C3002F" />
+  </g>
+  <g fill="#003B71">
+    <text x="56" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="23" font-weight="800" letter-spacing="-0.3">dormakaba</text>
+  </g>
+</svg>

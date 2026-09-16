@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Rounded Base Badge with subtle dark slate finish -->
+  <rect width="100" height="100" rx="20" fill="#0F172A" />
+  
+  <!-- Stylized Geometric V in Emerald Green -->
+  <path d="M22 28L38 72H48L32 28H22Z" fill="#059669" />
+  <path d="M48 72L64 28H54L43 58L48 72Z" fill="#10B981" />
+  
+  <!-- Stylized Modern S in Clean White/Silver connecting with V -->
+  <path d="M50 36C50 31.5 54 28 61 28H76V36H63C59.5 36 58 37.5 58 40C58 43 60 44.5 65 46L70 47.5C77 49.5 80 54 80 59C80 67 74 72 63 72H48V64H62C67 64 70 62 70 58.5C70 55.5 68 54 62 52L57 50.5C52 48.5 50 44 50 36Z" fill="#FFFFFF" />
+  
+  <!-- Subtle Tech Dot Accent -->
+  <circle cx="76" cy="32" r="3.5" fill="#34D399" />
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Fortinet Vector Logo -->
+  <g transform="translate(16, 18)">
+    <rect x="0" y="0" width="15" height="15" rx="3" fill="#DA291C" />
+    <rect x="18" y="0" width="15" height="15" rx="3" fill="#DA291C" />
+    <rect x="0" y="18" width="15" height="15" rx="3" fill="#DA291C" />
+    <rect x="18" y="18" width="15" height="15" rx="3" fill="#DA291C" />
+  </g>
+  <g fill="#0F172A">
+    <text x="58" y="43" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="900" letter-spacing="1.2">FORTINET</text>
+  </g>
+</svg>

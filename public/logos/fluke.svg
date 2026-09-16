@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Fluke Networks Vector Logo -->
+  <g transform="translate(16, 17)">
+    <rect width="36" height="36" rx="3" fill="#FFC20E" />
+    <path d="M7 11H29V17H14V21H27V26H14V31H7V11Z" fill="#000000" />
+  </g>
+  <g fill="#000000">
+    <text x="60" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="900" letter-spacing="0.5">FLUKE</text>
+    <text x="61" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.5" fill="#2563EB">networks</text>
+  </g>
+</svg>

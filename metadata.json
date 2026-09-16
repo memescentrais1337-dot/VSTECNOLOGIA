@@ -1,0 +1,6 @@
+{
+  "name": "VS Tecnologia e Automação",
+  "description": "Soluções integradas em segurança eletrônica, infraestrutura de redes, automação e telecomunicações para operações corporativas e de alta complexidade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

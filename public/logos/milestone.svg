@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Milestone Systems Vector Logo -->
+  <g transform="translate(14, 17)">
+    <path d="M16 2L30 10V26L16 34L2 26V10L16 2Z" fill="#EAB308" />
+    <path d="M16 8L24 13V23L16 28L8 23V13L16 8Z" fill="#CA8A04" />
+    <path d="M16 13L20 16V20L16 23L12 20V16L16 13Z" fill="#FFFFFF" />
+  </g>
+  <g fill="#0F172A">
+    <text x="56" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.3">milestone</text>
+    <text x="57" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" letter-spacing="3.2" fill="#64748B">SYSTEMS</text>
+  </g>
+</svg>

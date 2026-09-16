@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Notifier by Honeywell Vector Logo -->
+  <g transform="translate(16, 17)">
+    <circle cx="17" cy="17" r="16" fill="#DC2626" />
+    <path d="M17 7C17 7 24 14 24 19C24 23 20.8 26 17 26C13.2 26 10 23 10 19C10 14 17 7 17 7Z" fill="#FFFFFF" />
+  </g>
+  <g fill="#0F172A">
+    <text x="56" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="900" letter-spacing="0.8">NOTIFIER</text>
+    <text x="57" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1" fill="#DC2626">by Honeywell</text>
+  </g>
+</svg>

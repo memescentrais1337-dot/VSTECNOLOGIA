@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Panduit Vector Logo -->
+  <g transform="translate(18, 17)">
+    <path d="M18 2L34 32H2L18 2Z" fill="#00824B" />
+    <path d="M18 10L28 28H8L18 10Z" fill="#FFFFFF" />
+    <circle cx="18" cy="21" r="3.5" fill="#00824B" />
+  </g>
+  <g fill="#0F172A">
+    <text x="60" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="900" letter-spacing="1">PANDUIT</text>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Dahua Technology Vector Logo -->
+  <g transform="translate(14, 18)">
+    <circle cx="17" cy="17" r="16" fill="#D92638" />
+    <path d="M12 9C12 9 22 13 22 17C22 21 12 25 12 25C15 22 17 19.5 17 17C17 14.5 15 12 12 9Z" fill="#FFFFFF" />
+    <circle cx="10" cy="17" r="4" fill="#FFFFFF" />
+  </g>
+  <g fill="#0F172A">
+    <text x="58" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="25" font-weight="900" letter-spacing="-0.5">dahua</text>
+    <text x="59" y="49" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="700" letter-spacing="3" fill="#64748B">TECHNOLOGY</text>
+  </g>
+</svg>

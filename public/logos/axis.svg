@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" fill="none">
+  <!-- AXIS Communications Official Logo Vector -->
+  <g fill="#CC0000">
+    <!-- Red graphic dot / symbol element -->
+    <path d="M78.5 24.2L68.8 38.6L79.4 54H65.8L59.2 44.2L52.5 54H39L49.6 38.6L40 24.2H53.5L59.2 33L65 24.2H78.5Z" />
+  </g>
+  <g fill="#111827">
+    <!-- Letter A -->
+    <path d="M22.5 24.2L35.8 54H23.9L21.4 48.2H10.1L7.6 54H-4L9.3 24.2H22.5ZM19.2 43.1L15.8 34.6L12.3 43.1H19.2Z" transform="translate(10, 0)" />
+    <!-- Letter I -->
+    <path d="M96 24.2H107.5V54H96V24.2Z" />
+    <!-- Letter S -->
+    <path d="M136.5 32.8C136.5 28.5 132.8 24.2 124.5 24.2C116 24.2 111.8 28.2 111.8 32.4C111.8 41 136.3 39 136.3 48.2C136.3 52.4 132.1 54.4 124.2 54.4C115.8 54.4 110.5 50.1 110.5 45.1H120.8C120.8 47.4 122.5 48.8 124.7 48.8C127 48.8 128.5 47.8 128.5 45.8C128.5 38.8 104 39.5 104 31.8C104 26.6 109.2 24.2 116.5 24.2C124.5 24.2 135 27 135 32.8H136.5Z" />
+  </g>
+  <!-- Subtitle COMMUNICATIONS -->
+  <text x="14" y="66" fill="#4B5563" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" letter-spacing="3.8">COMMUNICATIONS</text>
+</svg>

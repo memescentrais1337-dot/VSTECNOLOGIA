@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Bosch Official Logo Vector with Magneto Symbol -->
+  <g transform="translate(10, 15)">
+    <!-- Outer circle -->
+    <circle cx="20" cy="20" r="19" stroke="#E11D48" stroke-width="3" fill="none" />
+    <!-- Armature / Magneto inner shape -->
+    <rect x="8" y="14" width="24" height="12" rx="2" stroke="#E11D48" stroke-width="2.5" fill="none" />
+    <line x1="8" y1="20" x2="32" y2="20" stroke="#E11D48" stroke-width="2" />
+  </g>
+  <!-- BOSCH text -->
+  <text x="60" y="44" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="900" letter-spacing="1">BOSCH</text>
+  <text x="62" y="57" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="600" letter-spacing="2">SECURITY SYSTEMS</text>
+</svg>

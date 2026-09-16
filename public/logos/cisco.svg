@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Cisco Official Vector Logo -->
+  <g fill="#0284C7" transform="translate(14, 10)">
+    <!-- Cisco bridge bars -->
+    <rect x="0" y="14" width="3" height="8" rx="1.5" />
+    <rect x="7" y="9" width="3" height="13" rx="1.5" />
+    <rect x="14" y="5" width="3" height="17" rx="1.5" />
+    <rect x="21" y="9" width="3" height="13" rx="1.5" />
+    <rect x="28" y="14" width="3" height="8" rx="1.5" />
+    
+    <rect x="39" y="14" width="3" height="8" rx="1.5" />
+    <rect x="46" y="9" width="3" height="13" rx="1.5" />
+    <rect x="53" y="5" width="3" height="17" rx="1.5" />
+    <rect x="60" y="9" width="3" height="13" rx="1.5" />
+    <rect x="67" y="14" width="3" height="8" rx="1.5" />
+  </g>
+  <text x="100" y="32" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.5">cisco</text>
+  <text x="14" y="56" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="2">ENTERPRISE NETWORKS</text>
+</svg>

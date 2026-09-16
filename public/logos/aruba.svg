@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Aruba Networks Vector Logo -->
+  <g transform="translate(14, 20)">
+    <path d="M0 24C4 16 10 8 18 4C14 12 14 20 18 24H0Z" fill="#FF8300" />
+    <path d="M12 24C16 14 24 6 34 2C28 10 28 18 34 24H12Z" fill="#FF8300" opacity="0.8" />
+  </g>
+  <g fill="#FF8300">
+    <text x="56" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="900" letter-spacing="-0.5">aruba</text>
+  </g>
+  <text x="57" y="50" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.5">a Hewlett Packard Enterprise co.</text>
+</svg>

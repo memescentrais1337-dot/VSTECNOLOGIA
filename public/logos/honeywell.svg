@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Honeywell Vector Logo -->
+  <g fill="#EE3124">
+    <text x="20" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="33" font-weight="900" letter-spacing="-0.8">Honeywell</text>
+  </g>
+  <rect x="20" y="52" width="195" height="2.5" fill="#EE3124" opacity="0.4" />
+</svg>
