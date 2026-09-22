@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigation } from '../context/NavigationContext';
 import { companyData } from '../data/company';
+import { MotionReveal } from './common/MotionReveal';
 
 const footerLogo = '/images/institucional/logo-footer.jpg';
 import {
@@ -19,7 +20,7 @@ export const Footer: React.FC = () => {
   return (
     <footer id="corporate-footer" className="bg-stone-950 text-stone-400 text-xs border-t border-stone-800">
       {/* Institutional Credentials Strip */}
-      <div className="border-b border-stone-800/80 py-6 bg-stone-900/50">
+      <MotionReveal className="border-b border-stone-800/80 py-6 bg-stone-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-stone-300 font-medium">
@@ -36,10 +37,10 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </MotionReveal>
 
       {/* Main 5 Columns */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
+      <MotionReveal delay={0.08} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Column 1: Logo & Company Identification */}
           <div className="space-y-4">
@@ -50,6 +51,10 @@ export const Footer: React.FC = () => {
                   alt="Logo VS Tecnologia"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                  width="32"
+                  height="32"
                 />
               </div>
               <div>
@@ -147,39 +152,47 @@ export const Footer: React.FC = () => {
           {/* Column 3: Soluções */}
           <div>
             <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-4">
-              Soluções Integradas
+              Soluções por Fabricante
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => navigate('/solucoes/seguranca')}
+                  onClick={() => navigate('/solucoes/hanwha')}
                   className="hover:text-stone-200 transition-colors"
                 >
-                  Segurança Eletrônica & CFTV
+                  Hanwha Vision AI
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => navigate('/solucoes/infraestrutura-de-rede')}
+                  onClick={() => navigate('/solucoes/avigilon')}
                   className="hover:text-stone-200 transition-colors"
                 >
-                  Infraestrutura de Rede & Fibra
+                  Avigilon Unity & Analytics
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => navigate('/solucoes/automacao')}
+                  onClick={() => navigate('/solucoes/axis')}
                   className="hover:text-stone-200 transition-colors"
                 >
-                  Automação & Controle de Acesso
+                  Axis Connected Security
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => navigate('/solucoes/telecomunicacoes')}
+                  onClick={() => navigate('/solucoes/pelco')}
                   className="hover:text-stone-200 transition-colors"
                 >
-                  Telecomunicações & Áudio IP
+                  Pelco VideoXpert VMS
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => navigate('/solucoes/tyco')}
+                  className="hover:text-stone-200 transition-colors"
+                >
+                  Tyco / iSTAR Ultra G2
                 </button>
               </li>
             </ul>
@@ -299,7 +312,7 @@ export const Footer: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </MotionReveal>
     </footer>
   );
 };

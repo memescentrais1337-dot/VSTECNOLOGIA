@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
+import { motion } from 'motion/react';
 import {
   Phone,
   ArrowUp,
@@ -7,53 +8,88 @@ import {
   ChevronRight,
   ArrowRight,
 } from 'lucide-react';
-import { useNavigation } from '../context/NavigationContext';
+import { useNavigation, smoothScrollToY } from '../context/NavigationContext';
+import { useMotionPreference } from './common/MotionReveal';
 import { companyData } from '../data/company';
 
 const headerLogo = '/images/institucional/logo-header.jpg';
 
-export const Header: React.FC = () => {
-  const { currentPath, navigate, setIsSearchOpen, openLeadModalWithData } = useNavigation();
+export const Header: React.FC = memo(() => {
+  const { currentPath, navigate, prefetchRoute, scrollToSection, openLeadModalWithData } = useNavigation();
+  const prefersReduced = useMotionPreference();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('');
 
+  // Cache section positions to avoid layout thrashing (offsetTop forced reflows) during scroll
+  const sectionCacheRef = useRef<Array<{ id: string; name: string; top: number }>>([]);
+
   useEffect(() => {
+    const measureSections = () => {
+      if (window.location.pathname !== '/' && currentPath !== '/') return;
+      const sections = [
+        { id: 'hero-section', name: 'Início' },
+        { id: 'solutions-section', name: 'Soluções' },
+        { id: 'segments-section', name: 'Segmentos' },
+        { id: 'projects-showcase-section', name: 'Projetos' },
+        { id: 'intro-positioning-section', name: 'Quem Somos' },
+        { id: 'specialist-cta-section', name: 'Contato' },
+      ];
+
+      sectionCacheRef.current = sections.map((sec) => {
+        const el = document.getElementById(sec.id);
+        return {
+          id: sec.id,
+          name: sec.name,
+          top: el ? el.offsetTop : 0,
+        };
+      });
+    };
+
+    measureSections();
+    const timer = setTimeout(measureSections, 500);
+    window.addEventListener('resize', measureSections, { passive: true });
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', measureSections);
+    };
+  }, [currentPath]);
+
+  useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      // Transition threshold around 100-120px as requested
-      if (window.scrollY > 100) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-      // Section spy when on home page
-      if (window.location.pathname === '/' || currentPath === '/') {
-        const sections = [
-          { id: 'solutions-section', name: 'Soluções' },
-          { id: 'projects-showcase-section', name: 'Projetos' },
-          { id: 'intro-positioning-section', name: 'Quem Somos' },
-          { id: 'specialist-cta-section', name: 'Fale Conosco' },
-        ];
+          // Transition threshold around 100px - only update state when value changes
+          const nextScrolled = scrollY > 100;
+          setIsScrolled((prev) => (prev !== nextScrolled ? nextScrolled : prev));
 
-        const scrollPosition = window.scrollY + 200;
-        let current = '';
+          // Precise section spy using cached offsets (zero DOM queries)
+          if (window.location.pathname === '/' || currentPath === '/') {
+            const sections = sectionCacheRef.current;
+            const scrollCheckPosition = scrollY + 160;
+            let current = 'Início';
 
-        for (const section of sections) {
-          const el = document.getElementById(section.id);
-          if (el) {
-            const top = el.offsetTop;
-            const height = el.offsetHeight;
-            if (scrollPosition >= top && scrollPosition < top + height) {
-              current = section.name;
-              break;
+            for (let i = sections.length - 1; i >= 0; i--) {
+              const sec = sections[i];
+              if (sec.top > 0 && sec.top <= scrollCheckPosition) {
+                current = sec.name;
+                break;
+              }
             }
-          }
-        }
 
-        setActiveSection(current);
-      } else {
-        setActiveSection('');
+            setActiveSection((prev) => (prev !== current ? current : prev));
+          } else {
+            setActiveSection((prev) => (prev !== '' ? '' : prev));
+          }
+
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -72,7 +108,6 @@ export const Header: React.FC = () => {
     { label: 'Contato', path: '/contato', sectionId: 'specialist-cta-section' },
   ];
 
-  // Scrolled concise links requested: Soluções | Projetos | Quem Somos
   const scrolledCompactLinks = [
     { label: 'Soluções', path: '/solucoes', sectionId: 'solutions-section' },
     { label: 'Projetos', path: '/projetos', sectionId: 'projects-showcase-section' },
@@ -80,16 +115,13 @@ export const Header: React.FC = () => {
   ];
 
   const handleNavClick = (path: string, sectionId?: string) => {
-    // If we are on homepage and sectionId exists, smooth scroll to it
     if (currentPath === '/' && sectionId) {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
+      if (scrollToSection(sectionId)) {
         setIsMobileMenuOpen(false);
         return;
       }
     }
-    navigate(path);
+    navigate(sectionId ? `${path}#${sectionId}` : path);
     setIsMobileMenuOpen(false);
   };
 
@@ -115,7 +147,7 @@ export const Header: React.FC = () => {
         <div
           className={`pointer-events-auto transition-all duration-300 ease-out ${
             isScrolled
-              ? 'w-full max-w-[850px] mx-auto h-14 bg-white/92 backdrop-blur-md rounded-[16px] border border-stone-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] px-3 sm:px-5 flex items-center justify-between'
+              ? 'w-full max-w-[850px] mx-auto h-14 bg-white/95 backdrop-blur-xs rounded-[16px] border border-stone-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] px-3 sm:px-5 flex items-center justify-between'
               : 'w-full bg-white border-b border-stone-200/80 shadow-none px-4 sm:px-6 lg:px-8 py-3'
           }`}
         >
@@ -124,19 +156,18 @@ export const Header: React.FC = () => {
             <button
               id="brand-logo-btn"
               onClick={() => handleNavClick('/')}
-              className="flex items-center gap-2.5 sm:gap-3 text-left focus:outline-none group flex-shrink-0"
+              className="flex items-center gap-2.5 sm:gap-3 text-left focus:outline-none group flex-shrink-0 cursor-pointer"
               aria-label="VS Tecnologia e Automação - Página Inicial"
             >
-              <div
-                className={`rounded-md overflow-hidden flex items-center justify-center bg-stone-900 shadow-2xs transition-all duration-300 ${
-                  isScrolled ? 'w-7 h-7 sm:w-8 sm:h-8' : 'w-9 h-9'
-                }`}
-              >
+              <div className="w-8 h-8 rounded-md overflow-hidden flex items-center justify-center bg-stone-900 shadow-2xs flex-shrink-0">
                 <img
                   src={headerLogo}
                   alt="Logo VS Tecnologia"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  decoding="async"
+                  width="32"
+                  height="32"
                 />
               </div>
               <div className="flex flex-col">
@@ -155,7 +186,7 @@ export const Header: React.FC = () => {
               </div>
             </button>
 
-            {/* Desktop Navigation Links - Smooth transition between full bar and compact floating bar */}
+            {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center space-x-1" aria-label="Navegação principal">
               {(isScrolled ? scrolledCompactLinks : navLinks).map((link) => {
                 const active = isLinkActive(link.label, link.path);
@@ -164,35 +195,38 @@ export const Header: React.FC = () => {
                     key={link.path}
                     id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                     onClick={() => handleNavClick(link.path, link.sectionId)}
-                    className={`relative px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors ${
+                    onMouseEnter={() => prefetchRoute(link.path)}
+                    onFocus={() => prefetchRoute(link.path)}
+                    className={`relative px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm font-medium transition-colors cursor-pointer ${
                       active
                         ? 'text-stone-950 font-semibold'
                         : 'text-stone-600 hover:text-stone-900 hover:bg-stone-50/80 rounded-md'
                     }`}
                   >
                     <span>{link.label}</span>
-                    {/* Discrete green indicator bar below active item */}
+                    {/* Discrete green indicator bar */}
                     {active && (
-                      <span className="absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-emerald-600 rounded-full transition-all duration-300" />
+                      <span
+                        className="absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-emerald-600 rounded-full transition-opacity duration-200"
+                      />
                     )}
                   </button>
                 );
               })}
             </nav>
 
-            {/* Right actions: Back to Top, Phone (when at top), Specialist CTA */}
+            {/* Right actions */}
             <div className="hidden sm:flex items-center gap-2 sm:gap-3 flex-shrink-0">
-              {/* Back to top button */}
               <button
                 id="header-search-btn"
                 onClick={() => {
                   if (currentPath !== '/') {
                     navigate('/');
                   } else {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    smoothScrollToY(0);
                   }
                 }}
-                className={`inline-flex items-center gap-1.5 text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-md transition-colors font-medium ${
+                className={`inline-flex items-center gap-1.5 text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-md transition-colors font-medium cursor-pointer ${
                   isScrolled ? 'px-2 py-1 text-xs' : 'px-2.5 py-1.5 text-xs'
                 }`}
                 title="Voltar ao início da página"
@@ -202,7 +236,6 @@ export const Header: React.FC = () => {
                 <span>Voltar ao início</span>
               </button>
 
-              {/* Telephone (only visible in top state for minimal layout in compact state) */}
               {!isScrolled && (
                 <a
                   id="header-phone-link"
@@ -215,35 +248,34 @@ export const Header: React.FC = () => {
                 </a>
               )}
 
-              {/* Specialist CTA button (adapts smoothly to 'Fale conosco →' in compact floating bar) */}
               <button
                 id="header-specialist-cta-btn"
                 onClick={() => openLeadModalWithData({ purpose: 'Empresa / Uso próprio' })}
-                className={`inline-flex items-center gap-1.5 rounded-md bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 text-white font-medium transition-all shadow-xs ${
+                className={`group inline-flex items-center gap-1.5 rounded-md bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 text-white font-medium transition-colors shadow-xs cursor-pointer ${
                   isScrolled
                     ? 'px-3 py-1.5 text-xs'
                     : 'px-4 py-2 text-xs sm:text-sm'
                 }`}
               >
                 <span>{isScrolled ? 'Fale conosco' : 'Fale com um especialista'}</span>
-                <ArrowRight className={isScrolled ? 'w-3 h-3' : 'w-3.5 h-3.5'} />
+                <ArrowRight className={`${isScrolled ? 'w-3 h-3' : 'w-3.5 h-3.5'} btn-arrow-icon`} />
               </button>
             </div>
 
-            {/* Mobile Actions: Compact during scroll [VS] Fale conosco → ☰ */}
+            {/* Mobile Actions */}
             <div className="flex items-center gap-1 sm:hidden flex-shrink-0">
               {isScrolled ? (
                 <>
                   <button
                     onClick={() => openLeadModalWithData({ purpose: 'Empresa / Uso próprio' })}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-700 text-white text-[11px] font-medium mr-1 shadow-2xs"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-700 text-white text-[11px] font-medium mr-1 shadow-2xs cursor-pointer"
                   >
                     <span>Fale conosco</span>
                     <ArrowRight className="w-2.5 h-2.5" />
                   </button>
                   <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    className="p-1.5 text-stone-700 hover:text-stone-900 rounded-md focus:outline-none"
+                    className="p-1.5 text-stone-700 hover:text-stone-900 rounded-md focus:outline-none cursor-pointer"
                     aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
                   >
                     {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -257,10 +289,10 @@ export const Header: React.FC = () => {
                       if (currentPath !== '/') {
                         navigate('/');
                       } else {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        smoothScrollToY(0);
                       }
                     }}
-                    className="p-2 text-stone-600 hover:text-stone-900"
+                    className="p-2 text-stone-600 hover:text-stone-900 cursor-pointer"
                     title="Voltar ao início"
                     aria-label="Voltar ao início"
                   >
@@ -270,7 +302,7 @@ export const Header: React.FC = () => {
                   <button
                     id="mobile-menu-toggle-btn"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    className="p-2 text-stone-700 hover:text-stone-900 rounded-md focus:outline-none"
+                    className="p-2 text-stone-700 hover:text-stone-900 rounded-md focus:outline-none cursor-pointer"
                     aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
                   >
                     {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -303,7 +335,7 @@ export const Header: React.FC = () => {
                 </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-1.5 text-stone-500 hover:text-stone-900 rounded-md"
+                  className="p-1.5 text-stone-500 hover:text-stone-900 rounded-md cursor-pointer"
                   aria-label="Fechar menu"
                 >
                   <X className="w-5 h-5" />
@@ -315,7 +347,7 @@ export const Header: React.FC = () => {
                   <button
                     key={link.path}
                     onClick={() => handleNavClick(link.path, link.sectionId)}
-                    className={`w-full flex items-center justify-between px-3 py-2.5 rounded-md text-sm transition-colors ${
+                    className={`w-full flex items-center justify-between px-3 py-2.5 rounded-md text-sm transition-colors cursor-pointer ${
                       isLinkActive(link.label, link.path)
                         ? 'text-stone-950 font-semibold bg-stone-100'
                         : 'text-stone-700 hover:text-stone-900 hover:bg-stone-50'
@@ -342,7 +374,7 @@ export const Header: React.FC = () => {
                   setIsMobileMenuOpen(false);
                   openLeadModalWithData({ purpose: 'Empresa / Uso próprio' });
                 }}
-                className="w-full py-2.5 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-medium text-center transition-colors shadow-2xs"
+                className="w-full py-2.5 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-medium text-center transition-colors shadow-2xs cursor-pointer"
               >
                 Fale com um especialista
               </button>
@@ -352,4 +384,6 @@ export const Header: React.FC = () => {
       )}
     </>
   );
-};
+});
+
+Header.displayName = 'Header';

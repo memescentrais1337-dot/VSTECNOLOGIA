@@ -7,6 +7,7 @@ import {
   Users,
   Headphones,
 } from 'lucide-react';
+import { MotionReveal, MotionStaggerContainer, MotionStaggerItem } from './common/MotionReveal';
 
 export const WhyChooseVS: React.FC = () => {
   const differentials = [
@@ -50,7 +51,7 @@ export const WhyChooseVS: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
+        <MotionReveal className="max-w-2xl mb-12">
           <span className="text-xs font-semibold uppercase tracking-wider text-emerald-800">
             Diferenciais Competitivos
           </span>
@@ -60,29 +61,30 @@ export const WhyChooseVS: React.FC = () => {
           <p className="mt-3 text-base text-stone-600">
             Solidez técnica, corpo de engenharia especializado e histórico de projetos em ambientes de alta criticidade.
           </p>
-        </div>
+        </MotionReveal>
 
         {/* 6 Differentials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <MotionStaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {differentials.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-stone-200/90 rounded-md p-6 flex flex-col justify-between shadow-2xs hover:border-stone-400 transition-colors"
-            >
-              <div>
-                <div className="w-9 h-9 rounded-md bg-stone-100 flex items-center justify-center mb-4">
-                  {item.icon}
+            <MotionStaggerItem key={idx}>
+              <div
+                className="bg-white border border-stone-200/90 rounded-md p-6 flex flex-col justify-between shadow-2xs hover:border-stone-400 transition-colors h-full"
+              >
+                <div>
+                  <div className="w-9 h-9 rounded-md bg-stone-100 flex items-center justify-center mb-4">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-base font-semibold text-stone-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="text-base font-semibold text-stone-900 mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                  {item.desc}
-                </p>
               </div>
-            </div>
+            </MotionStaggerItem>
           ))}
-        </div>
+        </MotionStaggerContainer>
       </div>
     </section>
   );

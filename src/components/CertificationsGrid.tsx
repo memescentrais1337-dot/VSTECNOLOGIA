@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { certificationsData } from '../data/certifications';
 import { ShieldCheck, Award, Layers, CheckCircle2, FileCheck, ShieldAlert, Check, X, ExternalLink, Filter } from 'lucide-react';
+import { MotionReveal, MotionStaggerContainer, MotionStaggerItem } from './common/MotionReveal';
 
 export const CertificationsGrid: React.FC = () => {
   const [selectedCertId, setSelectedCertId] = useState<string | null>(null);
@@ -51,7 +52,7 @@ export const CertificationsGrid: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header & Filter Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-6 gap-3.5">
+        <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-6 gap-3.5">
           <div className="max-w-2xl">
             <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800">
               Capacitação Técnica & Homologação
@@ -80,80 +81,84 @@ export const CertificationsGrid: React.FC = () => {
               </button>
             ))}
           </div>
-        </div>
+        </MotionReveal>
 
         {/* Certificate Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
+        <MotionStaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5">
           {filteredCerts.map((cert) => {
             return (
-              <div
-                key={cert.id}
-                onClick={() => setSelectedCertId(cert.id)}
-                className="group relative bg-white border border-stone-200 hover:border-emerald-600/70 rounded-lg p-3.5 transition-all duration-200 hover:shadow-sm cursor-pointer flex flex-col justify-between"
-              >
-                <div>
-                  {/* Top Row: Issuer & Badge */}
-                  <div className="flex items-start justify-between gap-2 mb-2">
-                    <span className="inline-flex items-center gap-1 text-[10px] font-mono font-semibold uppercase text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">
-                      {getCertIcon(cert.iconName)}
-                      <span className="truncate max-w-[130px]">{cert.issuer}</span>
-                    </span>
-                    <span className="text-[9px] font-medium text-stone-500 bg-stone-100 border border-stone-200/80 px-1.5 py-0.5 rounded whitespace-nowrap">
-                      {cert.badgeText}
-                    </span>
+              <MotionStaggerItem key={cert.id}>
+                <div
+                  onClick={() => setSelectedCertId(cert.id)}
+                  className="group relative bg-white border border-stone-200 hover:border-emerald-600/70 rounded-lg p-3.5 transition-all duration-200 hover:shadow-sm cursor-pointer flex flex-col justify-between h-full"
+                >
+                  <div>
+                    {/* Top Row: Issuer & Badge */}
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 text-[10px] font-mono font-semibold uppercase text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">
+                        {getCertIcon(cert.iconName)}
+                        <span className="truncate max-w-[130px]">{cert.issuer}</span>
+                      </span>
+                      <span className="text-[9px] font-medium text-stone-500 bg-stone-100 border border-stone-200/80 px-1.5 py-0.5 rounded whitespace-nowrap">
+                        {cert.badgeText}
+                      </span>
+                    </div>
+
+                    {/* Certificate Image Thumbnail Preview */}
+                    <div className="relative h-20 w-full rounded-md overflow-hidden bg-stone-100 border border-stone-200/80 mb-2.5">
+                      <img
+                        src={cert.imageUrl}
+                        alt={`Certificação ${cert.name} - ${cert.issuer}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="80"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-stone-900/10 group-hover:bg-transparent transition-colors" />
+                      <div className="absolute bottom-1 right-1.5 opacity-0 group-hover:opacity-100 transition-opacity bg-stone-900/80 text-white text-[9px] px-1.5 py-0.5 rounded font-mono">
+                        Expandir
+                      </div>
+                    </div>
+
+                    {/* Name & Short Description */}
+                    <h3 className="text-xs font-semibold text-stone-900 leading-snug group-hover:text-emerald-900 transition-colors">
+                      {cert.name}
+                    </h3>
+
+                    <p className="mt-1 text-[11px] text-stone-600 leading-relaxed line-clamp-2">
+                      {cert.description}
+                    </p>
+
+                    {/* Specific Badges for NR */}
+                    {cert.id === 'nr-certifications' && (
+                      <div className="mt-2 flex flex-wrap gap-1">
+                        {['NR-6', 'NR-10', 'NR-12', 'NR-35'].map((nr) => (
+                          <span
+                            key={nr}
+                            className="px-1.5 py-0.5 rounded text-[9px] font-mono font-semibold bg-stone-100 text-stone-700 border border-stone-200"
+                          >
+                            {nr}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
-                  {/* Certificate Image Thumbnail Preview */}
-                  <div className="relative h-20 w-full rounded-md overflow-hidden bg-stone-100 border border-stone-200/80 mb-2.5">
-                    <img
-                      src={cert.imageUrl}
-                      alt={`Certificação ${cert.name} - ${cert.issuer}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-stone-900/10 group-hover:bg-transparent transition-colors" />
-                    <div className="absolute bottom-1 right-1.5 opacity-0 group-hover:opacity-100 transition-opacity bg-stone-900/80 text-white text-[9px] px-1.5 py-0.5 rounded font-mono">
-                      Expandir
-                    </div>
+                  {/* Card Footer: Category & Status */}
+                  <div className="pt-2.5 mt-2.5 border-t border-stone-100 flex items-center justify-between text-[10px] text-stone-500">
+                    <span className="truncate max-w-[150px]">{cert.category}</span>
+                    <span className="inline-flex items-center gap-1 text-emerald-700 font-medium">
+                      <Check className="w-3 h-3" />
+                      <span className="font-mono text-[9px]">Vigente</span>
+                    </span>
                   </div>
-
-                  {/* Name & Short Description */}
-                  <h3 className="text-xs font-semibold text-stone-900 leading-snug group-hover:text-emerald-900 transition-colors">
-                    {cert.name}
-                  </h3>
-
-                  <p className="mt-1 text-[11px] text-stone-600 leading-relaxed line-clamp-2">
-                    {cert.description}
-                  </p>
-
-                  {/* Specific Badges for NR */}
-                  {cert.id === 'nr-certifications' && (
-                    <div className="mt-2 flex flex-wrap gap-1">
-                      {['NR-6', 'NR-10', 'NR-12', 'NR-35'].map((nr) => (
-                        <span
-                          key={nr}
-                          className="px-1.5 py-0.5 rounded text-[9px] font-mono font-semibold bg-stone-100 text-stone-700 border border-stone-200"
-                        >
-                          {nr}
-                        </span>
-                      ))}
-                    </div>
-                  )}
                 </div>
-
-                {/* Card Footer: Category & Status */}
-                <div className="pt-2.5 mt-2.5 border-t border-stone-100 flex items-center justify-between text-[10px] text-stone-500">
-                  <span className="truncate max-w-[150px]">{cert.category}</span>
-                  <span className="inline-flex items-center gap-1 text-emerald-700 font-medium">
-                    <Check className="w-3 h-3" />
-                    <span className="font-mono text-[9px]">Vigente</span>
-                  </span>
-                </div>
-              </div>
+              </MotionStaggerItem>
             );
           })}
-        </div>
+        </MotionStaggerContainer>
 
         {/* Modal de Detalhes em Alta Resolução da Certificação */}
         {selectedCert && (

@@ -1,56 +1,83 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState, useCallback, memo } from 'react';
 import { representedBrands } from '../data/brands';
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext';
+import { MotionReveal } from './common/MotionReveal';
 
-export const BrandMarquee: React.FC = () => {
+export const BrandMarquee: React.FC = memo(() => {
   const { navigate } = useNavigation();
+  const sectionRef = useRef<HTMLElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeftState, setScrollLeftState] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // Check scroll boundary to update arrow button states
+  // Check scroll boundary only when needed (not on every frame)
   const checkScrollability = useCallback(() => {
     const container = scrollRef.current;
     if (!container) return;
     const { scrollLeft, scrollWidth, clientWidth } = container;
-    setCanScrollLeft(scrollLeft > 10);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    const left = scrollLeft > 10;
+    const right = scrollLeft < scrollWidth - clientWidth - 10;
+    setCanScrollLeft((prev) => (prev !== left ? left : prev));
+    setCanScrollRight((prev) => (prev !== right ? right : prev));
   }, []);
 
+  // IntersectionObserver: Only run auto-scroll when the marquee is actually visible in the viewport
   useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-    checkScrollability();
-    container.addEventListener('scroll', checkScrollability, { passive: true });
-    window.addEventListener('resize', checkScrollability);
-    return () => {
-      container.removeEventListener('scroll', checkScrollability);
-      window.removeEventListener('resize', checkScrollability);
+    const section = sectionRef.current;
+    if (!section || typeof IntersectionObserver === 'undefined') {
+      setIsInView(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { rootMargin: '100px 0px' }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  // Debounced check on resize
+  useEffect(() => {
+    const handleResize = () => {
+      checkScrollability();
     };
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
   }, [checkScrollability]);
 
-  // Smooth automatic scrolling loop
+  // Smooth automatic scrolling loop - ONLY runs when visible in viewport
   useEffect(() => {
     const container = scrollRef.current;
-    if (!container) return;
+    if (!container || !isInView || isPaused || isDragging) return;
 
     let animationFrameId: number;
+    let lastTime = performance.now();
 
-    const step = () => {
-      if (!isPaused && !isDragging && container) {
-        // Increment scroll position continuously (approx 0.8px per frame for elegant corporate flow)
+    const step = (currentTime: number) => {
+      const delta = currentTime - lastTime;
+      lastTime = currentTime;
+
+      // Adjust speed based on actual frame delta (~45px per second)
+      const move = Math.min(delta * 0.045, 2.5);
+
+      if (container) {
         if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 2) {
-          // Wrap seamlessly back to start
           container.scrollLeft = 0;
         } else {
-          container.scrollLeft += 0.8;
+          container.scrollLeft += move;
         }
       }
+
       animationFrameId = requestAnimationFrame(step);
     };
 
@@ -59,7 +86,7 @@ export const BrandMarquee: React.FC = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [isPaused, isDragging]);
+  }, [isInView, isPaused, isDragging]);
 
   // Handle manual navigation arrows
   const handleScroll = (direction: 'left' | 'right') => {
@@ -71,9 +98,10 @@ export const BrandMarquee: React.FC = () => {
       left: direction === 'left' ? -scrollAmount : scrollAmount,
       behavior: 'smooth',
     });
+    setTimeout(checkScrollability, 350);
   };
 
-  // Touch and drag support for fluid manual inspection
+  // Touch and drag support
   const handleMouseDown = (e: React.MouseEvent) => {
     const container = scrollRef.current;
     if (!container) return;
@@ -95,21 +123,21 @@ export const BrandMarquee: React.FC = () => {
   const handleMouseUpOrLeave = () => {
     if (isDragging) {
       setIsDragging(false);
+      checkScrollability();
     }
   };
 
-  // Duplicate items array to guarantee continuous uninterrupted auto-scrolling loop
   const brandsList = [...representedBrands, ...representedBrands];
 
   return (
     <section
+      ref={sectionRef}
       id="represented-brands-section"
       className="py-8 lg:py-10 bg-white border-b border-stone-200 relative overflow-hidden"
       aria-label="Marcas e Fabricantes Representados"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Centered Heading with Generous Breathing Room */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+        <MotionReveal className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800">
             Parcerias Tecnológicas Homologadas
           </span>
@@ -119,9 +147,8 @@ export const BrandMarquee: React.FC = () => {
           <p className="mt-1 text-xs sm:text-sm text-stone-600 leading-relaxed max-w-2xl mx-auto">
             Equipamentos originais, suporte de engenharia e integração com líderes globais.
           </p>
-        </div>
+        </MotionReveal>
 
-        {/* Carousel Container com Auto-scroll contínuo e pausa ao passar o mouse */}
         <div
           className="relative group"
           onMouseEnter={() => setIsPaused(true)}
@@ -130,7 +157,6 @@ export const BrandMarquee: React.FC = () => {
             handleMouseUpOrLeave();
           }}
         >
-          {/* Subtle Side Fade Gradients */}
           {canScrollLeft && (
             <div className="absolute left-0 top-0 bottom-0 w-10 sm:w-20 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none transition-opacity duration-300" />
           )}
@@ -138,33 +164,30 @@ export const BrandMarquee: React.FC = () => {
             <div className="absolute right-0 top-0 bottom-0 w-10 sm:w-20 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none transition-opacity duration-300" />
           )}
 
-          {/* Navigation Arrow Left */}
           <button
             type="button"
             onClick={() => handleScroll('left')}
             disabled={!canScrollLeft}
-            className={`flex absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/95 hover:bg-white border border-stone-200 hover:border-stone-300 text-stone-700 hover:text-stone-900 shadow-md items-center justify-center transition-all ${
-              !canScrollLeft ? 'opacity-20 cursor-not-allowed' : 'opacity-90 hover:opacity-100 hover:scale-105'
+            className={`flex absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/95 hover:bg-white border border-stone-200 hover:border-stone-300 text-stone-700 hover:text-stone-900 shadow-md items-center justify-center transition-opacity ${
+              !canScrollLeft ? 'opacity-20 cursor-not-allowed' : 'opacity-90 hover:opacity-100'
             } focus:outline-none`}
             aria-label="Ver fabricantes anteriores"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
 
-          {/* Navigation Arrow Right */}
           <button
             type="button"
             onClick={() => handleScroll('right')}
             disabled={!canScrollRight}
-            className={`flex absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/95 hover:bg-white border border-stone-200 hover:border-stone-300 text-stone-700 hover:text-stone-900 shadow-md items-center justify-center transition-all ${
-              !canScrollRight ? 'opacity-20 cursor-not-allowed' : 'opacity-90 hover:opacity-100 hover:scale-105'
+            className={`flex absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/95 hover:bg-white border border-stone-200 hover:border-stone-300 text-stone-700 hover:text-stone-900 shadow-md items-center justify-center transition-opacity ${
+              !canScrollRight ? 'opacity-20 cursor-not-allowed' : 'opacity-90 hover:opacity-100'
             } focus:outline-none`}
             aria-label="Ver próximos fabricantes"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
 
-          {/* Horizontal Scrolling Track */}
           <div
             ref={scrollRef}
             onMouseDown={handleMouseDown}
@@ -190,24 +213,30 @@ export const BrandMarquee: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`${brand.name} - Conheça o fabricante homologado`}
-                    className="group/item block w-[170px] sm:w-[190px] lg:w-[210px] h-[80px] sm:h-[88px] lg:h-[94px] bg-white rounded-md border border-stone-200/90 hover:border-stone-400 p-3 sm:p-4 flex items-center justify-center transition-all duration-200 hover:shadow-2xs focus:outline-none focus:ring-1 focus:ring-stone-400"
+                    className="group/item block w-[170px] sm:w-[190px] lg:w-[210px] h-[80px] sm:h-[88px] lg:h-[94px] bg-white rounded-md border border-stone-200/90 hover:border-stone-400 p-3 sm:p-4 flex items-center justify-center transition-colors duration-200 hover:shadow-2xs focus:outline-none focus:ring-1 focus:ring-stone-400"
                   >
                     <img
                       src={brand.logo}
                       alt={brand.alt}
                       loading="lazy"
+                      decoding="async"
+                      width="160"
+                      height="50"
                       className="max-h-[42px] sm:max-h-[48px] lg:max-h-[52px] max-w-[130px] sm:max-w-[150px] lg:max-w-[165px] w-auto h-auto object-contain transition-transform duration-200 group-hover/item:scale-102 pointer-events-none"
                     />
                   </a>
                 ) : (
                   <div
                     title={brand.name}
-                    className="w-[170px] sm:w-[190px] lg:w-[210px] h-[80px] sm:h-[88px] lg:h-[94px] bg-white rounded-md border border-stone-200/90 p-3 sm:p-4 flex items-center justify-center transition-all duration-200"
+                    className="w-[170px] sm:w-[190px] lg:w-[210px] h-[80px] sm:h-[88px] lg:h-[94px] bg-white rounded-md border border-stone-200/90 p-3 sm:p-4 flex items-center justify-center"
                   >
                     <img
                       src={brand.logo}
                       alt={brand.alt}
                       loading="lazy"
+                      decoding="async"
+                      width="160"
+                      height="50"
                       className="max-h-[42px] sm:max-h-[48px] lg:max-h-[52px] max-w-[130px] sm:max-w-[150px] lg:max-w-[165px] w-auto h-auto object-contain pointer-events-none"
                     />
                   </div>
@@ -217,7 +246,6 @@ export const BrandMarquee: React.FC = () => {
           </div>
         </div>
 
-        {/* Action Link to Catalog */}
         <div className="mt-8 sm:mt-10 text-center">
           <button
             onClick={() => navigate('/produtos')}
@@ -230,4 +258,6 @@ export const BrandMarquee: React.FC = () => {
       </div>
     </section>
   );
-};
+});
+
+BrandMarquee.displayName = 'BrandMarquee';

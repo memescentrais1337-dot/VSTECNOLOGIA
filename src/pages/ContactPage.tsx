@@ -11,6 +11,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { PreFooterCTA } from '../components/PreFooterCTA';
+import { MotionReveal } from '../components/common/MotionReveal';
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ export const ContactPage: React.FC = () => {
     <main className="pt-28 pb-16 bg-white min-h-screen">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="max-w-3xl">
+        <MotionReveal className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200/60 text-xs font-bold uppercase tracking-wider mb-3">
             <Building2 className="w-3.5 h-3.5 text-emerald-600" />
             <span>Canais Corporativos</span>
@@ -46,14 +47,14 @@ export const ContactPage: React.FC = () => {
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             Estamos prontos para atender sua demanda com precisão técnica, fornecimento direto e consultoria especializada.
           </p>
-        </div>
+        </MotionReveal>
       </div>
 
       {/* Main Grid: Details / Map + Contact Form */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Official corporate info */}
-          <div className="lg:col-span-5 space-y-8">
+          <MotionReveal className="lg:col-span-5 space-y-8">
             {/* Contact info cards */}
             <div className="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 space-y-6">
               <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
@@ -149,10 +150,10 @@ export const ContactPage: React.FC = () => {
                 Atendimento presencial mediante agendamento prévio com a equipe de engenharia.
               </p>
             </div>
-          </div>
+          </MotionReveal>
 
           {/* Right Column: Complete Corporate Form */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
+          <MotionReveal delay={0.12} className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm">
             <h2 className="text-2xl font-bold text-slate-900">
               Envie sua Mensagem ou Solicitação de Cotação
             </h2>
@@ -299,7 +300,7 @@ export const ContactPage: React.FC = () => {
                 </div>
               </form>
             )}
-          </div>
+          </MotionReveal>
         </div>
       </div>
 

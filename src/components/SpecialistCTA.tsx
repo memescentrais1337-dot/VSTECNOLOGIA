@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, CheckCircle2, Send } from 'lucide-react';
 import { companyData } from '../data/company';
+import { MotionReveal } from './common/MotionReveal';
 
 const directorPhoto = '/images/institucional/diretor-especialista.png';
 
@@ -31,7 +32,7 @@ export const SpecialistCTA: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-7 items-start">
           {/* Left Column: Context & Specialist Profile Card */}
-          <div className="lg:col-span-5 space-y-4">
+          <MotionReveal className="lg:col-span-5 space-y-4">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800">
                 Engenharia Consultiva
@@ -53,6 +54,10 @@ export const SpecialistCTA: React.FC = () => {
                     alt={`Foto de perfil de ${companyData.engineeringDirector.name}`}
                     className="w-full h-full object-cover object-top"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
+                    width="80"
+                    height="80"
                   />
                 </div>
                 <div className="text-center sm:text-left flex-1 min-w-0">
@@ -90,10 +95,10 @@ export const SpecialistCTA: React.FC = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </MotionReveal>
 
           {/* Right Column: Consultation Form - Compact */}
-          <div className="lg:col-span-7 bg-white rounded-md p-4 sm:p-5 border border-stone-200 shadow-2xs">
+          <MotionReveal delay={0.14} className="lg:col-span-7 bg-white rounded-md p-4 sm:p-5 border border-stone-200 shadow-2xs">
             <h3 className="text-base sm:text-lg font-semibold text-stone-900">
               Solicitar Contato Técnico
             </h3>
@@ -238,7 +243,7 @@ export const SpecialistCTA: React.FC = () => {
                 </div>
               </form>
             )}
-          </div>
+          </MotionReveal>
         </div>
       </div>
     </section>

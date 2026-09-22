@@ -66,6 +66,11 @@ export interface Segment {
   challenges: string[];
   solutionsProvided: string[];
   featuredProject?: string;
+  recommendedArchitecture?: { title: string; desc: string }[];
+  manufacturers?: string[];
+  differentials?: string[];
+  faq?: { q: string; a: string }[];
+  relatedCaseSlugs?: string[];
 }
 
 export interface ProjectCase {
@@ -86,6 +91,8 @@ export interface ProjectCase {
   executionSteps?: string[];
   results: string[];
   gallery: string[];
+  architectureSteps?: { step: string; detail: string }[];
+  whyVS?: string[];
 }
 
 export interface Certification {

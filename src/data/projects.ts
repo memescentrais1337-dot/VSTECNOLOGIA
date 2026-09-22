@@ -33,6 +33,18 @@ export const projectsData: ProjectCase[] = [
       'Redução de 65% no tempo de vistoria presencial das áreas desatendidas da subestação',
       'Atendimento integral às rigorosas diretrizes da ONS (Operador Nacional do Sistema Elétrico)',
     ],
+    architectureSteps: [
+      { step: 'Sensoriamento de Campo', detail: 'Câmeras térmicas radiométricas AXIS + PTZ Laser instaladas no perímetro e pátio' },
+      { step: 'Backbone Imune', detail: 'Anel óptico monomodo dielétrico subterrâneo com protocolo ERPS sub-50ms' },
+      { step: 'Comutação Industrial', detail: 'Switches industriais certificados sob norma IEC 61850-3 contra surtos' },
+      { step: 'Analíticos & Supervisório', detail: 'Integração de alarmes térmicos diretamente com o SCADA da concessionária' },
+      { step: 'Centro de Controle', detail: 'Gestão visual unificada no CCO com gravação em servidores tolerantes a falhas' },
+    ],
+    whyVS: [
+      'Engenharia própria com registro no CREA-GO e emissão de ART específica para alta tensão',
+      'Domínio das normas da ONS e requisitos de imunidade eletromagnética em subestações',
+      'Parceria homologada direta com os fabricantes AXIS e Hanwha Vision',
+    ],
     gallery: [
       '/images/projetos/projeto-edp-goiania.png',
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
@@ -71,6 +83,18 @@ export const projectsData: ProjectCase[] = [
       'Rastreabilidade integral de entrada e saída em almoxarifados de medicamentos controlados',
       'Auditorias de acreditação hospitalar internacional (JCI) aprovadas com nota máxima em segurança física',
     ],
+    architectureSteps: [
+      { step: 'Identificação Facial Touchless', detail: 'Leitores biométricos 3D com validação sem toque em centro cirúrgico e farmácias' },
+      { step: 'Eclusas & Travas Eletromecânicas', detail: 'Intertravamento de portas com abertura de emergência automatizada (código azul)' },
+      { step: 'Rede Segura LSZH Cat.6A', detail: 'Cabeamento estruturado livre de halogênios e sem emissão de gases tóxicos' },
+      { step: 'Monitoramento & Interfonia SIP', detail: 'Câmeras discretas em corredores e interfonia estéril com botão de acionamento' },
+      { step: 'Integração com ERP Hospitalar', detail: 'Sincronização instantânea de permissões com o cadastro de colaboradores e médicos' },
+    ],
+    whyVS: [
+      'Experiência consolidada em ambientes de saúde com exigência sanitária e normas de combate a incêndio',
+      'Capacidade de implantação noturna e escalonada sem interrupção dos atendimentos médicos',
+      'Conformidade rígida com os padrões de acreditação internacional JCI e LGPD',
+    ],
     gallery: [
       '/images/projetos/projeto-hospital-albert-einstein.png',
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
@@ -108,6 +132,18 @@ export const projectsData: ProjectCase[] = [
       'Capacidade de rastreamento de alvos a mais de 2 km de distância com zoom óptico estabilizado',
       'Disponibilidade ininterrupta do sistema com uptime superior a 99.98%',
       'Plataforma homologada para os mais altos padrões de segurança militar',
+    ],
+    architectureSteps: [
+      { step: 'Sensoriamento Perimetral Tático', detail: 'Câmeras bi-espectrais térmicas + ópticas com zoom óptico de 40x e sensores sísmicos' },
+      { step: 'Infraestrutura Blindada', detail: 'Dutos subterrâneos envelopados em concreto e fibra óptica monomodo blindada' },
+      { step: 'Controle de Acessos Pesados', detail: 'Barreiras automáticas de alta velocidade e dilaceradores de pneus CAME' },
+      { step: 'Videowall & Servidores N+1', detail: 'Painel profissional 4x2 com displays 0.88mm e servidores hot-swap tolerantes a falhas' },
+      { step: 'Centro de Comando Tático', detail: 'Operação ininterrupta 24/7 com inteligência artificial para detecção de anomalias' },
+    ],
+    whyVS: [
+      'Corpo técnico experiente no atendimento de editais governamentais e normas de segurança física de instalações críticas',
+      'Capacidade de fornecimento e comissionamento de videowalls e storage de nível militar',
+      'SLA presencial com peças de reposição e manutenção continuada garantida',
     ],
     gallery: [
       '/images/projetos/projeto-qgex.png',

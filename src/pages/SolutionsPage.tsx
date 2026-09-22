@@ -20,7 +20,7 @@ export const SolutionsPage: React.FC = () => {
   return (
     <main className="pt-28 pb-16 bg-white min-h-screen">
       {/* Header Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200/60 text-xs font-bold uppercase tracking-wider mb-3">
             <span>Engenharia e Integração B2B</span>
@@ -31,6 +31,47 @@ export const SolutionsPage: React.FC = () => {
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
             Desenvolvemos e implantamos ecossistemas convergentes que unem segurança física, transmissão de dados em alta velocidade, automação de acessos e telecomunicações unificadas.
           </p>
+        </div>
+
+        {/* Dedicated High-Conversion Brand Solutions Strip */}
+        <div className="mt-10 p-6 bg-slate-900 rounded-2xl border border-slate-800 text-white shadow-lg">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <span className="text-[11px] font-mono font-bold text-emerald-400 uppercase tracking-wider block">
+                Soluções Específicas por Fabricante Homologado
+              </span>
+              <h2 className="text-lg sm:text-xl font-bold text-white">
+                Projetos e Tecnologias de Ponta para Campanhas e Grandes Contas
+              </h2>
+            </div>
+            <span className="text-xs text-slate-400">
+              Engenharia turn-key • Homologação oficial
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {[
+              { slug: 'hanwha', name: 'Hanwha Vision', tag: 'IA Embarcada & Edge' },
+              { slug: 'avigilon', name: 'Avigilon', tag: 'Busca por Aparência' },
+              { slug: 'axis', name: 'Axis', tag: 'Ecossistema Conectado' },
+              { slug: 'pelco', name: 'Pelco', tag: 'Missão Crítica & PTZ' },
+              { slug: 'tyco', name: 'Tyco / iSTAR', tag: 'Controle de Acesso' },
+            ].map((b) => (
+              <button
+                key={b.slug}
+                onClick={() => navigate(`/solucoes/${b.slug}`)}
+                className="group text-left p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-900 transition-all cursor-pointer"
+              >
+                <div className="text-xs font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center justify-between">
+                  <span>{b.name}</span>
+                  <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-emerald-400" />
+                </div>
+                <div className="text-[11px] text-slate-400 mt-1">
+                  {b.tag}
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

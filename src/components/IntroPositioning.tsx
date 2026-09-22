@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import { ArrowRight, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext';
+import { MotionReveal } from './common/MotionReveal';
 
-export const IntroPositioning: React.FC = () => {
+export const IntroPositioning: React.FC = memo(() => {
   const { navigate } = useNavigation();
+  const sectionRef = useRef<HTMLElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isInView, setIsInView] = useState(false);
 
   const carouselImages = [
     {
@@ -25,13 +28,34 @@ export const IntroPositioning: React.FC = () => {
     },
   ];
 
+  // Pause carousel auto-rotation when offscreen
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setIsInView(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { rootMargin: '50px 0px' }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 3000);
+    }, 3500);
 
     return () => clearInterval(timer);
-  }, [carouselImages.length]);
+  }, [isInView, carouselImages.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
@@ -54,20 +78,20 @@ export const IntroPositioning: React.FC = () => {
 
   return (
     <section
+      ref={sectionRef}
       id="intro-positioning-section"
       className="py-8 lg:py-10 bg-white border-b border-stone-200"
       aria-label="Posicionamento Institucional"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-          {/* Engineering Visual - 4 Images Sliding Carousel (EXATAMENTE AS MESMAS IMAGENS E DIMENSÕES) */}
-          <div className="lg:col-span-6 order-2 lg:order-1">
+          {/* Engineering Visual - 4 Images Sliding Carousel */}
+          <MotionReveal className="lg:col-span-6 order-2 lg:order-1" delay={0.06}>
             <div className="rounded-md overflow-hidden border border-stone-200 shadow-sm bg-stone-900 relative group">
-              {/* Carousel Track */}
               <div className="relative w-full h-[280px] sm:h-[350px] overflow-hidden">
                 <div
-                  className="flex h-full transition-transform duration-700 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  className="flex h-full transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)`, willChange: 'transform' }}
                 >
                   {carouselImages.map((img, idx) => (
                     <div key={idx} className="w-full h-full flex-shrink-0 relative">
@@ -75,7 +99,10 @@ export const IntroPositioning: React.FC = () => {
                         src={img.src}
                         alt={img.alt}
                         className={`w-full h-full object-cover ${idx === 1 ? 'object-[center_20%]' : 'object-center'}`}
-                        loading={idx === 0 ? 'eager' : 'lazy'}
+                        loading="lazy"
+                        decoding="async"
+                        width="600"
+                        height="350"
                       />
                     </div>
                   ))}
@@ -86,7 +113,7 @@ export const IntroPositioning: React.FC = () => {
                   type="button"
                   id="turnkey-carousel-prev-btn"
                   onClick={prevSlide}
-                  className="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-stone-900/60 hover:bg-stone-900 text-white flex items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 focus:opacity-100 backdrop-blur-sm z-10"
+                  className="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-stone-900/60 hover:bg-stone-900 text-white flex items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 focus:opacity-100 backdrop-blur-sm z-10 cursor-pointer"
                   aria-label="Imagem anterior"
                 >
                   <ChevronLeft className="w-4 h-4" />
@@ -95,7 +122,7 @@ export const IntroPositioning: React.FC = () => {
                   type="button"
                   id="turnkey-carousel-next-btn"
                   onClick={nextSlide}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-stone-900/60 hover:bg-stone-900 text-white flex items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 focus:opacity-100 backdrop-blur-sm z-10"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-stone-900/60 hover:bg-stone-900 text-white flex items-center justify-center transition-opacity opacity-0 group-hover:opacity-100 focus:opacity-100 backdrop-blur-sm z-10 cursor-pointer"
                   aria-label="Próxima imagem"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -108,7 +135,7 @@ export const IntroPositioning: React.FC = () => {
                       key={idx}
                       id={`turnkey-carousel-indicator-${idx + 1}`}
                       onClick={() => setCurrentSlide(idx)}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                         currentSlide === idx ? 'w-5 bg-emerald-400' : 'w-1.5 bg-white/60 hover:bg-white'
                       }`}
                       aria-label={`Ir para imagem ${idx + 1}`}
@@ -117,10 +144,10 @@ export const IntroPositioning: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </MotionReveal>
 
-          {/* Content - Compact Layout */}
-          <div className="lg:col-span-6 order-1 lg:order-2">
+          {/* Content */}
+          <MotionReveal className="lg:col-span-6 order-1 lg:order-2" delay={0.1}>
             <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800">
               Engenharia Turn-Key
             </span>
@@ -133,7 +160,7 @@ export const IntroPositioning: React.FC = () => {
               A <strong className="text-stone-900 font-medium">VS Tecnologia e Automação</strong> assume a responsabilidade ponta a ponta sobre a infraestrutura tecnológica, do diagnóstico à manutenção com SLA.
             </p>
 
-            {/* Lifecycle verbs - Compact 4-col on desktop / 2-col on mobile */}
+            {/* Lifecycle verbs */}
             <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
               {lifecycleVerbs.map((item) => (
                 <div
@@ -159,15 +186,17 @@ export const IntroPositioning: React.FC = () => {
               <button
                 id="intro-about-cta-btn"
                 onClick={() => navigate('/quem-somos')}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-stone-900 hover:bg-stone-800 text-white font-medium text-xs sm:text-sm transition-colors"
+                className="group inline-flex items-center gap-2 px-4 py-2 rounded-md bg-stone-900 hover:bg-stone-800 text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
               >
                 <span>Conheça a VS Tecnologia</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 btn-arrow-icon" />
               </button>
             </div>
-          </div>
+          </MotionReveal>
         </div>
       </div>
     </section>
   );
-};
+});
+
+IntroPositioning.displayName = 'IntroPositioning';
