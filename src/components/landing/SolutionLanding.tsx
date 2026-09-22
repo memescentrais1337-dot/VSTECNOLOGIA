@@ -82,8 +82,8 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
 
   const lpNavSteps = [
     { id: 'lp-hero', label: 'Visão Geral' },
-    { id: 'lp-cases', label: 'Cases Reais' },
     { id: 'lp-tecnologia', label: 'Tecnologia' },
+    { id: 'lp-cases', label: 'Cases Reais' },
     { id: 'lp-aplicacoes', label: 'Aplicações' },
     { id: 'conheca-a-vs-tecnologia', label: 'VS Engenharia' },
     { id: 'contato-especialista', label: 'Contato' },
@@ -345,60 +345,9 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
       </nav>
 
       {/* =========================================================================
-          02. AUTORIDADE / CASES LOGO NO INÍCIO (Compacto, 3 Colunas Abertas)
+          02. TECNOLOGIAS / PRODUTOS (Catálogo Editorial Compacto)
          ========================================================================= */}
-      <section id="lp-cases" className="py-10 lg:py-14 bg-white border-b border-stone-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mb-8">
-            <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-widest block mb-1.5">
-              AUTORIDADE COMPROVADA
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-950 tracking-tight leading-tight mb-2">
-              Projetos que exigem confiança e precisão
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              A VS Tecnologia projeta, integra e sustenta infraestruturas críticas onde a falha não é uma opção. Conheça implantações reais atendidas pela nossa equipe de engenharia.
-            </p>
-          </div>
-
-          <MotionStaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-            {data.cases.map((c, idx) => (
-              <MotionStaggerItem key={idx} className="flex flex-col group card-hover-subtle">
-                <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-stone-100 border border-stone-200 mb-3">
-                  <img
-                    src={c.image}
-                    alt={c.client}
-                    className="w-full h-full object-cover img-hover-subtle"
-                    loading="lazy"
-                  />
-                  <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-white/95 backdrop-blur-xs border border-stone-200 text-stone-800 text-[10px] font-bold shadow-2xs">
-                    {c.tag}
-                  </span>
-                </div>
-                <div className="flex-1 flex flex-col justify-between">
-                  <div>
-                    <span className="text-[11px] font-semibold text-emerald-800 uppercase tracking-wider block mb-0.5">
-                      {c.highlight}
-                    </span>
-                    <h3 className="text-base sm:text-lg font-bold text-stone-900 mb-1 leading-snug">
-                      {c.client}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                      {c.description}
-                    </p>
-                  </div>
-                </div>
-              </MotionStaggerItem>
-            ))}
-          </MotionStaggerContainer>
-        </div>
-      </section>
-
-
-      {/* =========================================================================
-          04. TECNOLOGIAS / PRODUTOS (Catálogo Editorial Compacto, Fundo Off-White)
-         ========================================================================= */}
-      <section id="lp-tecnologia" className="py-10 lg:py-14 bg-[#F7F8F5] border-b border-stone-200/80">
+      <section id="lp-tecnologia" className="py-10 lg:py-14 bg-white border-b border-stone-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
             <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-widest block mb-1.5">
@@ -414,7 +363,7 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
 
           {/* Destaque para NÚMEROS TÉCNICOS COMPACTOS (ex: Tyco ou métricas de topo) */}
           {data.heroMetrics && data.heroMetrics.length > 0 && (
-            <div className="mb-8 bg-white p-5 sm:p-6 rounded-xl border border-stone-200 shadow-2xs">
+            <div className="mb-8 bg-[#F7F8F5] p-5 sm:p-6 rounded-xl border border-stone-200 shadow-2xs">
               <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider block mb-4">
                 Indicadores Técnicos de Alto Desempenho
               </span>
@@ -443,7 +392,7 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-xl border border-stone-200/90 overflow-hidden shadow-2xs"
+                  className="bg-[#F7F8F5] rounded-xl border border-stone-200/90 overflow-hidden shadow-2xs"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 p-5 sm:p-6 lg:p-7 items-center">
                     {/* Text Column */}
@@ -496,7 +445,7 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
 
                     {/* Image Column */}
                     <div className={`lg:col-span-5 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-                      <div className="relative rounded-lg overflow-hidden bg-stone-100 border border-stone-200 aspect-[16/11] max-h-[260px] group">
+                      <div className="relative rounded-lg overflow-hidden bg-white border border-stone-200 aspect-[16/11] max-h-[260px] group">
                         <img
                           src={tech.image || data.heroImage}
                           alt={tech.title}
@@ -514,6 +463,56 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          03. AUTORIDADE / CASES REAIS & PROVAS SOCIAIS
+         ========================================================================= */}
+      <section id="lp-cases" className="py-10 lg:py-14 bg-[#F7F8F5] border-b border-stone-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-8">
+            <span className="text-[11px] font-bold text-emerald-800 uppercase tracking-widest block mb-1.5">
+              AUTORIDADE COMPROVADA
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-950 tracking-tight leading-tight mb-2">
+              Projetos que exigem confiança e precisão
+            </h2>
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              A VS Tecnologia projeta, integra e sustenta infraestruturas críticas onde a falha não é uma opção. Conheça implantações reais atendidas pela nossa equipe de engenharia.
+            </p>
+          </div>
+
+          <MotionStaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            {data.cases.map((c, idx) => (
+              <MotionStaggerItem key={idx} className="flex flex-col group card-hover-subtle bg-white p-4 sm:p-5 rounded-xl border border-stone-200/90 shadow-2xs">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-stone-100 border border-stone-200 mb-3">
+                  <img
+                    src={c.image}
+                    alt={c.client}
+                    className="w-full h-full object-cover img-hover-subtle"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-white/95 backdrop-blur-xs border border-stone-200 text-stone-800 text-[10px] font-bold shadow-2xs">
+                    {c.tag}
+                  </span>
+                </div>
+                <div className="flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="text-[11px] font-semibold text-emerald-800 uppercase tracking-wider block mb-0.5">
+                      {c.highlight}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-stone-900 mb-1 leading-snug">
+                      {c.client}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                      {c.description}
+                    </p>
+                  </div>
+                </div>
+              </MotionStaggerItem>
+            ))}
+          </MotionStaggerContainer>
         </div>
       </section>
 
