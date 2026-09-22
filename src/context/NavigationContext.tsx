@@ -16,6 +16,14 @@ export type RoutePath =
   | '/politica-de-cookies'
   | '/termos-de-uso';
 
+export interface LeadModalData {
+  purpose?: string;
+  projectSummary?: string;
+  targetChannel?: 'whatsapp' | 'specialist';
+  brandName?: string;
+  solutionName?: string;
+}
+
 interface NavigationContextType {
   currentPath: string;
   routeParams: { slug?: string };
@@ -26,8 +34,8 @@ interface NavigationContextType {
   setIsSearchOpen: (open: boolean) => void;
   isLeadModalOpen: boolean;
   setIsLeadModalOpen: (open: boolean) => void;
-  leadModalInitialData?: { purpose?: string; projectSummary?: string };
-  openLeadModalWithData: (data?: { purpose?: string; projectSummary?: string }) => void;
+  leadModalInitialData?: LeadModalData;
+  openLeadModalWithData: (data?: LeadModalData) => void;
 }
 
 const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
@@ -147,7 +155,7 @@ export const NavigationProvider: React.FC<{ children: ReactNode }> = ({ children
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
-  const [leadModalInitialData, setLeadModalInitialData] = useState<{ purpose?: string; projectSummary?: string } | undefined>(undefined);
+  const [leadModalInitialData, setLeadModalInitialData] = useState<LeadModalData | undefined>(undefined);
   const scrollPositionsMap = React.useRef<Map<string, number>>(new Map());
 
   // Prefetch route data / resources on hover/focus to maximize perceived performance
@@ -262,7 +270,7 @@ export const NavigationProvider: React.FC<{ children: ReactNode }> = ({ children
     }
   }, [currentPath, scrollToHashWithRetry]);
 
-  const openLeadModalWithData = (data?: { purpose?: string; projectSummary?: string }) => {
+  const openLeadModalWithData = (data?: LeadModalData) => {
     setLeadModalInitialData(data);
     setIsLeadModalOpen(true);
   };

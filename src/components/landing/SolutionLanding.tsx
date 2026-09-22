@@ -26,7 +26,7 @@ interface SolutionLandingProps {
 const headerLogo = '/images/institucional/logo-header.jpg';
 
 export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
-  const { navigate, scrollToSection } = useNavigation();
+  const { navigate, scrollToSection, openLeadModalWithData } = useNavigation();
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [vsSlide, setVsSlide] = useState(0);
 
@@ -126,9 +126,15 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
     scrollToSection('contato-especialista');
   };
 
-  const whatsappUrl = `https://wa.me/${companyData.whatsappRaw}?text=${encodeURIComponent(
-    data.whatsappMessage
-  )}`;
+  const handleOpenWhatsAppIntake = () => {
+    openLeadModalWithData({
+      purpose: 'Empresa / Uso próprio',
+      projectSummary: `Interesse em soluções de engenharia ${data.brandName} (${data.solutionName})`,
+      targetChannel: 'whatsapp',
+      brandName: data.brandName,
+      solutionName: data.solutionName,
+    });
+  };
 
   return (
     <div className="bg-white text-stone-900 min-h-screen font-sans antialiased selection:bg-emerald-700 selection:text-white">
@@ -179,16 +185,15 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
               <span>{companyData.phone}</span>
             </a>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-bold transition-all"
+            <button
+              type="button"
+              onClick={handleOpenWhatsAppIntake}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-bold transition-all cursor-pointer"
             >
               <MessageCircle className="w-3.5 h-3.5 text-emerald-700" />
               <span className="hidden sm:inline">WhatsApp Engenharia</span>
               <span className="sm:hidden">WhatsApp</span>
-            </a>
+            </button>
 
             <button
               onClick={scrollToForm}
@@ -257,26 +262,12 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
             </h1>
 
             {/* Subtítulo explicativo */}
-            <p className="mt-2 sm:mt-2.5 text-xs sm:text-[13px] leading-relaxed text-stone-200/95 max-w-[620px]">
+            <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm leading-relaxed text-stone-200/90 max-w-[620px]">
               {data.subheadline}
             </p>
 
-            {/* Lista de 3 a 5 benefícios principais */}
-            <div className="mt-3.5 sm:mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 max-w-[680px]">
-              {data.heroBenefits.slice(0, 4).map((benefit, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <div className="w-3.5 h-3.5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-500/30">
-                    <Check className="w-2 h-2 stroke-[2.5]" />
-                  </div>
-                  <span className="text-xs text-stone-200 font-normal leading-snug">
-                    {benefit}
-                  </span>
-                </div>
-              ))}
-            </div>
-
             {/* 2 CTAs: 1. Especialista | 2. WhatsApp */}
-            <div className="mt-4.5 sm:mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+            <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
               <button
                 id="lp-hero-specialist-cta-btn"
                 onClick={scrollToForm}
@@ -286,46 +277,32 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
                 <ArrowRight className="w-3.5 h-3.5 btn-arrow-icon" />
               </button>
 
-              <a
+              <button
                 id="lp-hero-whatsapp-cta-btn"
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                type="button"
+                onClick={handleOpenWhatsAppIntake}
                 className="group inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-white/10 hover:bg-white/15 active:bg-white/20 text-white border border-white/20 hover:border-white/30 backdrop-blur-xs font-medium text-xs tracking-wider uppercase transition-colors cursor-pointer"
               >
                 <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
                 <span>CONVERSAR NO WHATSAPP</span>
-              </a>
+              </button>
             </div>
 
-            {/* Micro Trust Strip & Homologação */}
-            <div className="mt-4.5 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-[11px] text-stone-400 font-medium">
-              <div className="flex flex-wrap items-center gap-3 sm:gap-5">
-                <div className="flex items-center gap-1.5 text-stone-300">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>CREA-GO Nº 26.848</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-stone-300">
-                  <FileCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Projetos com ART</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-stone-300">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Garantia de Fábrica</span>
-                </div>
+            {/* Micro Trust Strip Simplificado e Discreto */}
+            <div className="mt-5 pt-3.5 border-t border-white/10 flex flex-wrap items-center gap-3.5 sm:gap-4 text-[11px] text-stone-300 font-medium">
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>CREA-GO Nº 26.848</span>
               </div>
-
-              {/* Homologação / Selo do Fabricante */}
-              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-md backdrop-blur-xs">
-                <span className="text-[10px] text-stone-300 uppercase tracking-wider">Homologação Oficial:</span>
-                <div className="h-3.5 w-auto flex items-center">
-                  <img
-                    src={data.logo}
-                    alt={data.logoAlt}
-                    className="max-h-3.5 max-w-[75px] object-contain brightness-0 invert opacity-85"
-                    loading="lazy"
-                  />
-                </div>
+              <span className="text-white/20 hidden sm:inline">•</span>
+              <div className="flex items-center gap-1.5">
+                <FileCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Projetos com ART</span>
+              </div>
+              <span className="text-white/20 hidden sm:inline">•</span>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span>Garantia de Fábrica</span>
               </div>
             </div>
           </MotionReveal>
@@ -701,15 +678,14 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
                   <span>SOLICITAR CONTATO COM ENGENHARIA</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-3.5 py-2.5 rounded-lg border border-stone-300 hover:bg-stone-50 text-stone-800 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5"
+                <button
+                  type="button"
+                  onClick={handleOpenWhatsAppIntake}
+                  className="px-3.5 py-2.5 rounded-lg border border-stone-300 hover:bg-stone-50 text-stone-800 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 cursor-pointer"
                 >
                   <MessageCircle className="w-3.5 h-3.5 text-emerald-700" />
                   <span>WHATSAPP DIRETO</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -954,15 +930,14 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
               <span>{data.finalCTA.buttonText || 'FALAR COM UM ESPECIALISTA'}</span>
             </button>
 
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-3 rounded-lg bg-emerald-800/80 hover:bg-emerald-800 text-white border border-emerald-700/80 text-xs sm:text-sm font-bold flex items-center gap-2 transition-all"
+            <button
+              type="button"
+              onClick={handleOpenWhatsAppIntake}
+              className="px-5 py-3 rounded-lg bg-emerald-800/80 hover:bg-emerald-800 text-white border border-emerald-700/80 text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 text-emerald-300" />
               <span>CONVERSAR NO WHATSAPP</span>
-            </a>
+            </button>
           </div>
 
           <p className="text-[11px] text-emerald-200/60 mt-5">

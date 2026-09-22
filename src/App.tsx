@@ -5,6 +5,7 @@ import { useMotionPreference } from './components/common/MotionReveal';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { LeadModal } from './components/LeadModal';
+import { ExitIntentModal } from './components/common/ExitIntentModal';
 import { GlobalSearchModal } from './components/GlobalSearchModal';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { MobileBackToTop } from './components/common/MobileBackToTop';
@@ -128,6 +129,7 @@ const AppContent: React.FC = () => {
 
       {/* Global Overlays & Widgets */}
       <LeadModal />
+      <ExitIntentModal />
       {!isBrandLandingPage && <GlobalSearchModal />}
       <WhatsAppButton />
       <MobileBackToTop />
