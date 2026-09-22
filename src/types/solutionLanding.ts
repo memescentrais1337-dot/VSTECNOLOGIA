@@ -30,11 +30,13 @@ export interface SolutionLandingData {
   brandName: string;
   solutionName: string;
   eyebrow: string;
+  heroEyebrow?: string;
   headline: string;
   headlineHighlight?: string;
   subheadline: string;
   heroBenefits: string[];
   heroImage: string;
+  heroBgImage?: string;
   heroImageLabel?: string;
   logo: string;
   logoAlt: string;

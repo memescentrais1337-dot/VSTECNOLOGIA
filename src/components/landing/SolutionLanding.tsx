@@ -200,6 +200,138 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
         </div>
       </header>
 
+      {/* =========================================================================
+          01. HERO SECTION (Compacto, Imersivo, Fundo com Imagem Estática e Overlay)
+         ========================================================================= */}
+      <section
+        id="lp-hero"
+        className="relative w-full flex items-center overflow-hidden bg-stone-950 py-9 sm:py-11 lg:py-12 border-b border-stone-800"
+      >
+        {/* Imagem de Fundo Estática, de alta qualidade e contexto técnico */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
+          <img
+            src={data.heroBgImage || data.heroImage}
+            alt={data.solutionName}
+            className="w-full h-full object-cover object-center scale-100"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+
+        {/* Overlay escuro em camadas para máxima legibilidade e padrão nobre da VS */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(90deg, rgba(7, 14, 22, 0.95) 0%, rgba(7, 14, 22, 0.88) 46%, rgba(7, 14, 22, 0.58) 100%)',
+          }}
+        />
+        <div
+          className="absolute inset-0 z-10 pointer-events-none sm:hidden"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(7, 14, 22, 0.95) 0%, rgba(7, 14, 22, 0.82) 100%)',
+          }}
+        />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-transparent pointer-events-none z-10" />
+
+        {/* Conteúdo Editorial do Hero */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20">
+          <MotionReveal className="max-w-3xl">
+            {/* Eyebrow / Selo acima do título */}
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 sm:py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase mb-2 sm:mb-2.5 backdrop-blur-xs shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+              <span>{data.heroEyebrow || `${data.brandName} • ${data.eyebrow}`}</span>
+            </div>
+
+            {/* Headline forte em 2 ou 3 linhas */}
+            <h1 className="text-xl sm:text-2xl lg:text-[30px] font-semibold text-white tracking-tight leading-[1.2] max-w-[740px]">
+              {data.headline}{' '}
+              {data.headlineHighlight && (
+                <span className="text-emerald-400 block sm:inline">
+                  {data.headlineHighlight}
+                </span>
+              )}
+            </h1>
+
+            {/* Subtítulo explicativo */}
+            <p className="mt-2 sm:mt-2.5 text-xs sm:text-[13px] leading-relaxed text-stone-200/95 max-w-[620px]">
+              {data.subheadline}
+            </p>
+
+            {/* Lista de 3 a 5 benefícios principais */}
+            <div className="mt-3.5 sm:mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5 max-w-[680px]">
+              {data.heroBenefits.slice(0, 4).map((benefit, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <div className="w-3.5 h-3.5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-500/30">
+                    <Check className="w-2 h-2 stroke-[2.5]" />
+                  </div>
+                  <span className="text-xs text-stone-200 font-normal leading-snug">
+                    {benefit}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* 2 CTAs: 1. Especialista | 2. WhatsApp */}
+            <div className="mt-4.5 sm:mt-5 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
+              <button
+                id="lp-hero-specialist-cta-btn"
+                onClick={scrollToForm}
+                className="px-5 py-2.5 rounded-md bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-medium text-xs tracking-wider uppercase transition-colors shadow-sm text-center cursor-pointer inline-flex items-center justify-center gap-2"
+              >
+                <span>FALAR COM UM ESPECIALISTA</span>
+                <ArrowRight className="w-3.5 h-3.5 btn-arrow-icon" />
+              </button>
+
+              <a
+                id="lp-hero-whatsapp-cta-btn"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-white/10 hover:bg-white/15 active:bg-white/20 text-white border border-white/20 hover:border-white/30 backdrop-blur-xs font-medium text-xs tracking-wider uppercase transition-colors cursor-pointer"
+              >
+                <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                <span>CONVERSAR NO WHATSAPP</span>
+              </a>
+            </div>
+
+            {/* Micro Trust Strip & Homologação */}
+            <div className="mt-4.5 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-[11px] text-stone-400 font-medium">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-5">
+                <div className="flex items-center gap-1.5 text-stone-300">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>CREA-GO Nº 26.848</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-stone-300">
+                  <FileCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Projetos com ART</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-stone-300">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Garantia de Fábrica</span>
+                </div>
+              </div>
+
+              {/* Homologação / Selo do Fabricante */}
+              <div className="flex items-center gap-2 bg-white/5 border border-white/10 px-2.5 py-1 rounded-md backdrop-blur-xs">
+                <span className="text-[10px] text-stone-300 uppercase tracking-wider">Homologação Oficial:</span>
+                <div className="h-3.5 w-auto flex items-center">
+                  <img
+                    src={data.logo}
+                    alt={data.logoAlt}
+                    className="max-h-3.5 max-w-[75px] object-contain brightness-0 invert opacity-85"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </MotionReveal>
+        </div>
+      </section>
+
       {/* Sub-navegação interna sticky das etapas da Landing Page (PARTE 16) */}
       <nav
         aria-label="Etapas da Solução"
@@ -234,116 +366,6 @@ export const SolutionLanding: React.FC<SolutionLandingProps> = ({ data }) => {
           </button>
         </div>
       </nav>
-
-      {/* =========================================================================
-          01. HERO SECTION (Compacto, Proporcional, Fundo Claro)
-         ========================================================================= */}
-      <section id="lp-hero" className="relative py-10 lg:py-14 bg-[#F7F8F5] border-b border-stone-200/80 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            {/* Left: Editorial Content */}
-            <MotionReveal className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white border border-stone-200 text-emerald-800 text-[11px] font-bold uppercase tracking-wider mb-4 shadow-2xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
-                <span>{data.brandName} • {data.eyebrow}</span>
-              </div>
-
-              <h1 className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-stone-950 tracking-tight leading-[1.18] mb-3">
-                {data.headline}{' '}
-                {data.headlineHighlight && (
-                  <span className="text-emerald-800 block sm:inline">
-                    {data.headlineHighlight}
-                  </span>
-                )}
-              </h1>
-
-              <p className="text-sm sm:text-base text-stone-600 leading-relaxed max-w-2xl mb-5">
-                {data.subheadline}
-              </p>
-
-              <div className="space-y-2 mb-6 max-w-2xl">
-                {data.heroBenefits.slice(0, 4).map((benefit, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <div className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 stroke-[2.5]" />
-                    </div>
-                    <span className="text-xs sm:text-sm text-stone-800 font-medium leading-normal">
-                      {benefit}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-3 mb-6">
-                <button
-                  onClick={scrollToForm}
-                  className="group px-5 py-3 rounded-lg bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-xs flex items-center gap-2 transition-all cursor-pointer"
-                >
-                  <span>FALAR COM UM ESPECIALISTA</span>
-                  <ArrowRight className="w-4 h-4 btn-arrow-icon" />
-                </button>
-
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-3 rounded-lg bg-white hover:bg-stone-50 text-stone-800 border border-stone-300 text-xs sm:text-sm font-bold transition-all inline-flex items-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4 text-emerald-700" />
-                  <span>CONVERSAR NO WHATSAPP</span>
-                </a>
-              </div>
-
-              {/* Micro Trust Strip */}
-              <div className="pt-4 border-t border-stone-200 flex flex-wrap items-center gap-4 sm:gap-6 text-[11px] sm:text-xs text-stone-500 font-medium">
-                <div className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
-                  <span>CREA-GO Nº 26.848</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <FileCheck className="w-3.5 h-3.5 text-emerald-700" />
-                  <span>Projetos com ART</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
-                  <span>Garantia de Fábrica</span>
-                </div>
-              </div>
-            </MotionReveal>
-
-            {/* Right: Real Equipment / Application Image */}
-            <MotionReveal className="lg:col-span-5" delay={0.1}>
-              <div className="relative rounded-xl overflow-hidden bg-white border border-stone-200/90 shadow-sm group">
-                <div className="aspect-[16/10] max-h-[340px] overflow-hidden bg-stone-100">
-                  <img
-                    src={data.heroImage}
-                    alt={data.heroImageLabel || data.solutionName}
-                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-3 sm:p-4 bg-white border-t border-stone-100 flex items-center justify-between">
-                  <div>
-                    <span className="text-xs font-bold text-stone-900 block">
-                      {data.brandName}
-                    </span>
-                    <span className="text-[10px] text-stone-500 block line-clamp-1">
-                      {data.heroImageLabel || 'Equipamento e tecnologia homologada pela engenharia VS'}
-                    </span>
-                  </div>
-                  <div className="w-8 h-8 rounded-md bg-stone-50 border border-stone-200 flex items-center justify-center p-1 shrink-0">
-                    <img
-                      src={data.logo}
-                      alt={data.logoAlt}
-                      className="max-h-full max-w-full object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </MotionReveal>
-          </div>
-        </div>
-      </section>
 
       {/* =========================================================================
           02. AUTORIDADE / CASES LOGO NO INÍCIO (Compacto, 3 Colunas Abertas)

@@ -7,6 +7,7 @@ import { Footer } from './components/Footer';
 import { LeadModal } from './components/LeadModal';
 import { GlobalSearchModal } from './components/GlobalSearchModal';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { MobileBackToTop } from './components/common/MobileBackToTop';
 import { CookieBanner } from './components/CookieBanner';
 
 // Main Landing Page is bundled synchronously for immediate LCP and TTI
@@ -129,6 +130,7 @@ const AppContent: React.FC = () => {
       <LeadModal />
       {!isBrandLandingPage && <GlobalSearchModal />}
       <WhatsAppButton />
+      <MobileBackToTop />
       <CookieBanner />
     </div>
   );
