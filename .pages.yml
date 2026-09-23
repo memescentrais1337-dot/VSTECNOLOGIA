@@ -1,0 +1,826 @@
+# Pages CMS Configuration
+# Documentation: https://pagescms.org/docs
+
+media:
+  input: public/uploads
+  output: /uploads
+  extensions:
+    - jpg
+    - jpeg
+    - png
+    - webp
+    - pdf
+
+content:
+  # ============================================================================
+  # INFORMAÇÕES GERAIS E HOME (site.json)
+  # ============================================================================
+  - name: site
+    label: Configurações Gerais & Home
+    type: file
+    path: src/content/site.json
+    format: json
+    delete: false
+    fields:
+      - name: company
+        label: Dados Institucionais da Empresa
+        type: object
+        fields:
+          - name: tradeName
+            label: Nome Fantasia
+            type: string
+            required: true
+          - name: legalName
+            label: Razão Social
+            type: string
+            required: true
+          - name: cnpj
+            label: CNPJ
+            type: string
+            required: true
+          - name: phone
+            label: Telefone Exibição (ex: (62) 3289-5267)
+            type: string
+            required: true
+          - name: phoneRaw
+            label: Telefone Link Tel (ex: +556232895267)
+            type: string
+          - name: whatsapp
+            label: WhatsApp Exibição (ex: (62) 3289-5267)
+            type: string
+            required: true
+          - name: whatsappRaw
+            label: WhatsApp Link Número (ex: 556232895267)
+            type: string
+            required: true
+          - name: email
+            label: E-mail de Contato
+            type: string
+            required: true
+          - name: businessHours
+            label: Horário de Funcionamento
+            type: string
+          - name: address
+            label: Endereço da Sede
+            type: object
+            fields:
+              - name: street
+                label: Rua / Logradouro
+                type: string
+              - name: number
+                label: Número / Sala
+                type: string
+              - name: neighborhood
+                label: Bairro
+                type: string
+              - name: city
+                label: Cidade
+                type: string
+              - name: state
+                label: Estado (UF)
+                type: string
+              - name: zipCode
+                label: CEP
+                type: string
+          - name: engineeringDirector
+            label: Diretor Técnico / Responsável
+            type: object
+            fields:
+              - name: name
+                label: Nome Completo
+                type: string
+              - name: role
+                label: Cargo / Função
+                type: string
+              - name: phone
+                label: Telefone Direto
+                type: string
+              - name: whatsapp
+                label: WhatsApp Direto
+                type: string
+              - name: email
+                label: E-mail Corporativo
+                type: string
+          - name: social
+            label: Redes Sociais
+            type: object
+            fields:
+              - name: linkedin
+                label: LinkedIn URL
+                type: string
+              - name: instagram
+                label: Instagram URL
+                type: string
+              - name: youtube
+                label: YouTube URL
+                type: string
+
+      - name: seo
+        label: SEO Padrão do Portal
+        type: object
+        fields:
+          - name: defaultTitle
+            label: Título Padrão das Páginas (Title Tag)
+            type: string
+            required: true
+          - name: defaultDescription
+            label: Meta Descrição Geral (Google Search)
+            type: text
+            required: true
+          - name: keywords
+            label: Palavras-chave
+            type: list
+            fields:
+              - name: keyword
+                type: string
+          - name: ogImage
+            label: Imagem de Compartilhamento (OpenGraph / Social)
+            type: image
+
+      - name: home
+        label: Seções Editáveis da Home
+        type: object
+        fields:
+          - name: hero
+            label: Hero Principal (Topo da Home)
+            type: object
+            fields:
+              - name: eyebrow
+                label: Tag Superior (Eyebrow)
+                type: string
+              - name: headline
+                label: Título Principal
+                type: string
+                required: true
+              - name: subheadline
+                label: Subtítulo / Descrição
+                type: text
+                required: true
+              - name: ctaPrimary
+                label: Texto Botão Primário
+                type: string
+              - name: ctaSecondary
+                label: Texto Botão Secundário
+                type: string
+              - name: desktopVideo
+                label: Vídeo de Fundo Desktop (URL ou /videos/...)
+                type: string
+              - name: mobileVideo
+                label: Vídeo de Fundo Mobile
+                type: string
+              - name: posterDesktop
+                label: Imagem de Capa do Vídeo Desktop
+                type: image
+              - name: posterMobile
+                label: Imagem de Capa do Vídeo Mobile
+                type: image
+
+          - name: stats
+            label: Métricas & Engenharia Consultiva
+            type: object
+            fields:
+              - name: badge
+                label: Selo / Badge Superior
+                type: string
+              - name: headline
+                label: Título da Seção
+                type: string
+              - name: headlineHighlight
+                label: Palavra em Destaque no Título
+                type: string
+              - name: subheadline
+                label: Subtítulo Explicativo
+                type: text
+              - name: complianceRate
+                label: Texto de Conformidade Técnica
+                type: string
+              - name: metrics
+                label: Indicadores Numéricos
+                type: list
+                fields:
+                  - name: id
+                    label: Identificador (projetos, experiencia, fabricantes, segmentos)
+                    type: string
+                  - name: prefix
+                    label: Prefixo (ex: +)
+                    type: string
+                  - name: value
+                    label: Valor Numérico
+                    type: number
+                    required: true
+                  - name: title
+                    label: Rótulo / Título
+                    type: string
+                    required: true
+                  - name: description
+                    label: Descrição Detalhada
+                    type: text
+                  - name: technicalCode
+                    label: Código Técnico Estético (ex: PRJ / 120)
+                    type: string
+                  - name: scopeTag
+                    label: Tag de Escopo
+                    type: string
+
+          - name: turnkey
+            label: Seção Engenharia Turn-Key
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+              - name: headline
+                label: Título da Seção
+                type: string
+              - name: description
+                label: Descrição do Posicionamento
+                type: text
+              - name: ctaText
+                label: Texto do Botão Sobre Nós
+                type: string
+              - name: carouselImages
+                label: Fotos do Carrossel de Engenharia
+                type: list
+                fields:
+                  - name: src
+                    label: Imagem
+                    type: image
+                  - name: alt
+                    label: Descrição de Acessibilidade
+                    type: string
+              - name: steps
+                label: Etapas do Ciclo Turn-Key
+                type: list
+                fields:
+                  - name: step
+                    label: Número (ex: 01)
+                    type: string
+                  - name: title
+                    label: Nome da Etapa
+                    type: string
+                  - name: desc
+                    label: Explicação
+                    type: text
+              - name: lifecycleVerbs
+                label: Verbos Operacionais em Grid
+                type: list
+                fields:
+                  - name: verb
+                    label: Verbo
+                    type: string
+                  - name: desc
+                    label: Resumo da Ação
+                    type: string
+
+          - name: specialistCta
+            label: Chamada para Falar com Especialista
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+              - name: headline
+                label: Título
+                type: string
+              - name: subheadline
+                label: Subtítulo
+                type: text
+              - name: directorPhoto
+                label: Foto do Engenheiro / Diretor
+                type: image
+              - name: ctaButtonText
+                label: Texto do Botão WhatsApp
+                type: string
+
+  # ============================================================================
+  # PRODUTOS (src/content/products/*.json)
+  # ============================================================================
+  - name: products
+    label: Catálogo de Produtos
+    type: collection
+    path: src/content/products
+    format: json
+    filename: '{slug}.json'
+    view:
+      fields: [name, brand, category, active]
+      primary: name
+    fields:
+      - name: name
+        label: Nome do Produto
+        type: string
+        required: true
+      - name: slug
+        label: Slug (identificador único na URL)
+        type: string
+        required: true
+        pattern: '^[a-z0-9-]+$'
+        description: 'Somente letras minúsculas, números e hífens (ex: axis-camera-p3265).'
+      - name: brand
+        label: Fabricante / Marca
+        type: string
+        required: true
+      - name: brandId
+        label: ID da Marca (ex: axis, hanwha, avigilon, came, cisco)
+        type: string
+      - name: category
+        label: Categoria Técnica
+        type: string
+        required: true
+      - name: model
+        label: Modelo Comercial
+        type: string
+      - name: type
+        label: Tipo do Equipamento
+        type: string
+      - name: application
+        label: Verticais Recomendadas
+        type: list
+        fields:
+          - name: vertical
+            type: string
+      - name: shortDescription
+        label: Descrição Curta (Card e Listagem)
+        type: text
+        required: true
+      - name: description
+        label: Descrição Completa e Diferenciais
+        type: text
+        required: true
+      - name: image
+        label: Imagem Principal
+        type: image
+        required: true
+      - name: gallery
+        label: Galeria de Fotos
+        type: list
+        fields:
+          - name: photo
+            type: image
+      - name: datasheet
+        label: Arquivo PDF de Ficha Técnica / Datasheet
+        type: file
+      - name: highlights
+        label: Destaques Técnicos Principais (3 itens)
+        type: list
+        fields:
+          - name: highlight
+            type: string
+      - name: features
+        label: Lista Detalhada de Recursos
+        type: list
+        fields:
+          - name: feature
+            type: string
+      - name: specs
+        label: Especificações Técnicas (Chave / Valor)
+        type: object
+      - name: featured
+        label: Produto em Destaque na Home?
+        type: boolean
+        default: false
+      - name: active
+        label: Produto Ativo no Site?
+        type: boolean
+        default: true
+      - name: order
+        label: Ordem de Exibição
+        type: number
+        default: 1
+
+  # ============================================================================
+  # PROJETOS & CASES (src/content/projects/*.json)
+  # ============================================================================
+  - name: projects
+    label: Projetos & Cases de Sucesso
+    type: collection
+    path: src/content/projects
+    format: json
+    filename: '{slug}.json'
+    view:
+      fields: [title, client, segment, location]
+      primary: title
+    fields:
+      - name: title
+        label: Título do Case
+        type: string
+        required: true
+      - name: slug
+        label: Slug (identificador único na URL)
+        type: string
+        required: true
+        pattern: '^[a-z0-9-]+$'
+        description: 'Somente letras minúsculas, números e hífens (ex: hospital-albert-einstein).'
+      - name: client
+        label: Cliente / Organização
+        type: string
+        required: true
+      - name: segment
+        label: Segmento Operacional
+        type: string
+        required: true
+      - name: location
+        label: Localidade (Cidade - UF)
+        type: string
+        required: true
+      - name: year
+        label: Período / Ano de Execução
+        type: string
+      - name: summary
+        label: Resumo do Case (Card)
+        type: text
+        required: true
+      - name: description
+        label: Descrição Geral da Implantação
+        type: text
+      - name: coverImage
+        label: Imagem de Capa do Case
+        type: image
+        required: true
+      - name: gallery
+        label: Galeria de Fotos do Case
+        type: list
+        fields:
+          - name: photo
+            type: image
+      - name: challenge
+        label: Desafio Enfrentado pelo Cliente
+        type: text
+        required: true
+      - name: solution
+        label: Solução Desenvolvida pela VS Tecnologia
+        type: text
+        required: true
+      - name: technologies
+        label: Tecnologias Empregadas
+        type: list
+        fields:
+          - name: tech
+            type: string
+      - name: execution
+        label: Fases da Execução Técnica
+        type: list
+        fields:
+          - name: step
+            type: string
+      - name: results
+        label: Resultados e Benefícios Aferidos
+        type: list
+        fields:
+          - name: result
+            type: string
+      - name: architectureSteps
+        label: Etapas da Arquitetura Implantada
+        type: list
+        fields:
+          - name: step
+            label: Nome da Camada
+            type: string
+          - name: detail
+            label: Detalhamento Técnico
+            type: text
+      - name: featured
+        label: Case em Destaque?
+        type: boolean
+        default: true
+      - name: order
+        label: Ordem de Exibição
+        type: number
+        default: 1
+
+  # ============================================================================
+  # SOLUÇÕES / LANDING PAGES (src/content/solutions/*.json)
+  # ============================================================================
+  - name: solutions
+    label: Soluções & Landing Pages
+    type: collection
+    path: src/content/solutions
+    format: json
+    filename: '{slug}.json'
+    delete: false
+    view:
+      fields: [brandName, solutionName, eyebrow]
+      primary: brandName
+    fields:
+      - name: brandName
+        label: Nome do Fabricante / Marca
+        type: string
+        required: true
+      - name: slug
+        label: Slug da LP (ex: hanwha, avigilon, axis, pelco, tyco)
+        type: string
+        required: true
+        pattern: '^[a-z0-9-]+$'
+      - name: solutionName
+        label: Nome da Solução Comercial
+        type: string
+      - name: eyebrow
+        label: Eyebrow da Solução
+        type: string
+      - name: heroEyebrow
+        label: Eyebrow do Hero
+        type: string
+      - name: headline
+        label: Título Principal da LP
+        type: string
+        required: true
+      - name: headlineHighlight
+        label: Complemento do Título em Destaque
+        type: string
+      - name: subheadline
+        label: Subtítulo Explicativo da LP
+        type: text
+        required: true
+      - name: heroBgImage
+        label: Imagem de Fundo do Hero
+        type: image
+      - name: heroImage
+        label: Imagem do Equipamento em Destaque no Hero
+        type: image
+        required: true
+      - name: heroImageLabel
+        label: Legenda Técnica da Imagem do Hero
+        type: string
+      - name: logo
+        label: Logotipo do Fabricante
+        type: image
+      - name: partnerBadge
+        label: Selo de Fabricante Homologado
+        type: string
+      - name: heroBenefits
+        label: Benefícios Rápidos do Hero (Lista de Destaques)
+        type: list
+        fields:
+          - name: item
+            type: string
+      - name: heroMetrics
+        label: 4 Indicadores Tecnológicos do Hero
+        type: list
+        fields:
+          - name: value
+            label: Valor / Sigla (ex: AI, 4K, 99.9%)
+            type: string
+          - name: label
+            label: Título do Indicador
+            type: string
+          - name: detail
+            label: Detalhe Técnico
+            type: string
+      - name: problemSection
+        label: Diagnóstico Operacional / Dores Resolvidas
+        type: object
+        fields:
+          - name: tag
+            label: Tag da Seção
+            type: string
+          - name: title
+            label: Título da Seção de Dores
+            type: string
+          - name: subtitle
+            label: Subtítulo
+            type: text
+          - name: items
+            label: Lista de Desafios Resolvidos
+            type: list
+            fields:
+              - name: challenge
+                label: Desafio
+                type: string
+              - name: risk
+                label: Risco Operacional
+                type: string
+              - name: solution
+                label: Resolução com esta Tecnologia
+                type: string
+      - name: businessBenefits
+        label: Benefícios Corporativos Estruturados
+        type: list
+        fields:
+          - name: title
+            label: Título do Benefício
+            type: string
+          - name: description
+            label: Descrição do Impacto
+            type: text
+          - name: metric
+            label: Métrica / Indicador
+            type: string
+          - name: metricLabel
+            label: Rótulo da Métrica
+            type: string
+      - name: technologiesTitle
+        label: Título da Seção de Tecnologias
+        type: string
+      - name: technologiesSubtitle
+        label: Subtítulo da Seção de Tecnologias
+        type: text
+      - name: technologies
+        label: Catálogo Técnico de Equipamentos da Solução
+        type: list
+        fields:
+          - name: name
+            label: Nome do Dispositivo
+            type: string
+          - name: tag
+            label: Categoria Técnica
+            type: string
+          - name: description
+            label: Descrição Técnica
+            type: text
+          - name: specs
+            label: Especificação de Destaque
+            type: string
+          - name: image
+            label: Foto do Equipamento
+            type: image
+          - name: features
+            label: Especificações Secundárias
+            type: list
+            fields:
+              - name: spec
+                type: string
+      - name: applicationsTitle
+        label: Título de Cenários de Aplicação
+        type: string
+      - name: applications
+        label: Casos de Aplicação por Setor
+        type: list
+        fields:
+          - name: title
+            label: Setor / Ambiente
+            type: string
+          - name: description
+            label: Como é Aplicado
+            type: text
+          - name: environment
+            label: Tipo de Ambiente
+            type: string
+          - name: features
+            label: Destaques da Aplicação
+            type: list
+            fields:
+              - name: item
+                type: string
+      - name: casesTitle
+        label: Título da Seção de Cases
+        type: string
+      - name: cases
+        label: Cases de Sucesso da Solução
+        type: list
+        fields:
+          - name: client
+            label: Nome do Cliente
+            type: string
+          - name: segment
+            label: Segmento
+            type: string
+          - name: title
+            label: Título do Case
+            type: string
+          - name: challenge
+            label: Desafio
+            type: text
+          - name: solution
+            label: Solução
+            type: text
+          - name: result
+            label: Resultado Obtido
+            type: text
+      - name: faq
+        label: Perguntas Frequentes da Solução
+        type: list
+        fields:
+          - name: q
+            label: Pergunta
+            type: string
+          - name: a
+            label: Resposta
+            type: text
+      - name: finalCTA
+        label: Chamada Final para Ação (CTA)
+        type: object
+        fields:
+          - name: headline
+            label: Título do CTA Final
+            type: string
+          - name: subheadline
+            label: Subtítulo do CTA Final
+            type: text
+          - name: buttonText
+            label: Texto do Botão de Cotação
+            type: string
+          - name: secondaryButtonText
+            label: Texto do Botão Secundário
+            type: string
+      - name: seoTitle
+        label: SEO Title da Landing Page
+        type: string
+        required: true
+      - name: seoDescription
+        label: SEO Meta Description da Landing Page
+        type: text
+        required: true
+
+  # ============================================================================
+  # SEGMENTOS DE MERCADO (src/content/segments/*.json)
+  # ============================================================================
+  - name: segments
+    label: Segmentos de Atuação
+    type: collection
+    path: src/content/segments
+    format: json
+    filename: '{slug}.json'
+    delete: false
+    view:
+      fields: [title, tagline]
+      primary: title
+    fields:
+      - name: title
+        label: Nome do Segmento
+        type: string
+        required: true
+      - name: slug
+        label: Slug (identificador único na URL)
+        type: string
+        required: true
+        pattern: '^[a-z0-9-]+$'
+      - name: tagline
+        label: Frase de Impacto / Subtítulo
+        type: string
+        required: true
+      - name: description
+        label: Descrição do Posicionamento no Segmento
+        type: text
+        required: true
+      - name: iconName
+        label: Nome do Ícone Lucide (Landmark, Factory, HeartPulse, Ship, Zap, Building2, Wheat, Plane, HardHat, Home)
+        type: string
+      - name: imageUrl
+        label: Imagem Representativa do Segmento
+        type: image
+      - name: challenges
+        label: Principais Desafios do Setor
+        type: list
+        fields:
+          - name: challenge
+            type: string
+      - name: solutionsProvided
+        label: Soluções de Engenharia Fornecidas
+        type: list
+        fields:
+          - name: solution
+            type: string
+      - name: featuredProject
+        label: Slug do Projeto em Destaque
+        type: string
+      - name: manufacturers
+        label: Fabricantes Empregados
+        type: list
+        fields:
+          - name: brand
+            type: string
+      - name: differentials
+        label: Diferenciais Técnicos da VS Tecnologia
+        type: list
+        fields:
+          - name: diff
+            type: string
+      - name: faq
+        label: Dúvidas Comuns do Segmento
+        type: list
+        fields:
+          - name: q
+            label: Pergunta
+            type: string
+          - name: a
+            label: Resposta
+            type: text
+      - name: order
+        label: Ordem
+        type: number
+        default: 1
+
+  # ============================================================================
+  # PERGUNTAS FREQUENTES GERAIS (src/content/faqs/general.json)
+  # ============================================================================
+  - name: faqs
+    label: FAQs Gerais
+    type: file
+    path: src/content/faqs/general.json
+    format: json
+    delete: false
+    fields:
+      - name: list
+        label: Banco de Perguntas e Respostas
+        type: list
+        fields:
+          - name: question
+            label: Pergunta
+            type: string
+            required: true
+          - name: answer
+            label: Resposta Detalhada
+            type: text
+            required: true
+          - name: category
+            label: Categoria (Geral, Engenharia, Equipamentos, Suporte, etc.)
+            type: string

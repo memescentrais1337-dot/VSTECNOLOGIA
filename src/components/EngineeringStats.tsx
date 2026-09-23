@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, memo } from 'react';
 import { Layers, Award, ShieldCheck, Cpu, Activity } from 'lucide-react';
 import { MotionReveal } from './common/MotionReveal';
+import { getSiteConfig } from '../lib/content';
 
 interface MetricItem {
   id: string;
@@ -14,47 +15,19 @@ interface MetricItem {
   scopeTag: string;
 }
 
-const metrics: MetricItem[] = [
-  {
-    id: 'projetos',
-    prefix: '+',
-    value: 120,
-    title: 'Projetos Executados',
-    description: 'Missões críticas implantadas em infraestruturas privadas e governamentais de alta complexidade em todo o território nacional.',
-    icon: <Layers className="w-3.5 h-3.5 text-emerald-400" />,
-    technicalCode: 'PRJ / 120',
-    scopeTag: 'DESTAQUE NACIONAL'
-  },
-  {
-    id: 'experiencia',
-    prefix: '+',
-    value: 15,
-    title: 'Anos de Experiência',
-    description: 'Engenharia aplicada em CFTV IP, redes industriais e automação predial.',
-    icon: <Award className="w-3 h-3 text-emerald-400" />,
-    technicalCode: 'EXP / 15Y',
-    scopeTag: 'HISTÓRICO TÉCNICO'
-  },
-  {
-    id: 'fabricantes',
-    prefix: '+',
-    value: 20,
-    title: 'Fabricantes Homologados',
-    description: 'Alianças diretas com os líderes globais de segurança e conectividade.',
-    icon: <ShieldCheck className="w-3 h-3 text-emerald-400" />,
-    technicalCode: 'PAR / 20+',
-    scopeTag: 'TIER-1 ALLIANCE'
-  },
-  {
-    id: 'segmentos',
-    value: 10,
-    title: 'Segmentos Atendidos',
-    description: 'Atuação especializada em portos, defesa, indústrias e data centers.',
-    icon: <Cpu className="w-3 h-3 text-emerald-400" />,
-    technicalCode: 'VRT / 10',
-    scopeTag: 'VERTICAL EXP'
-  }
-];
+const statsConfig = getSiteConfig().home.stats;
+
+const iconMap: Record<string, React.ReactNode> = {
+  projetos: <Layers className="w-3.5 h-3.5 text-emerald-400" />,
+  experiencia: <Award className="w-3 h-3 text-emerald-400" />,
+  fabricantes: <ShieldCheck className="w-3 h-3 text-emerald-400" />,
+  segmentos: <Cpu className="w-3 h-3 text-emerald-400" />,
+};
+
+const metrics: MetricItem[] = statsConfig.metrics.map((m) => ({
+  ...m,
+  icon: iconMap[m.id] || <Layers className="w-3.5 h-3.5 text-emerald-400" />,
+}));
 
 export const EngineeringStats: React.FC = memo(() => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -169,21 +142,21 @@ export const EngineeringStats: React.FC = memo(() => {
               <div className="lg:col-span-5 space-y-3">
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/70 border border-emerald-500/30 text-[10px] font-mono tracking-wider text-emerald-300 uppercase shadow-2xs">
                   <Activity className="w-3 h-3 text-emerald-400 animate-pulse" />
-                  <span className="font-semibold">ENGENHARIA CONSULTIVA</span>
+                  <span className="font-semibold">{statsConfig.badge}</span>
                 </div>
 
                 <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-white tracking-tight leading-tight">
-                  Engenharia que entrega <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-200">resultado</span>
+                  {statsConfig.headline} <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-200">{statsConfig.headlineHighlight}</span>
                 </h2>
 
                 <p className="text-xs sm:text-[13px] text-stone-300/80 leading-relaxed max-w-md">
-                  Projetos executados com foco em performance, confiabilidade e integração para operações críticas.
+                  {statsConfig.subheadline}
                 </p>
 
                 <div className="pt-2 border-t border-white/10 space-y-2 max-w-md">
                   <div className="flex items-center justify-between text-[10px] font-mono text-stone-400">
                     <span className="text-stone-400">Taxa de Conformidade Técnica</span>
-                    <span className="text-emerald-400 font-semibold">100% Homologado</span>
+                    <span className="text-emerald-400 font-semibold">{statsConfig.complianceRate}</span>
                   </div>
                   <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
                     <div

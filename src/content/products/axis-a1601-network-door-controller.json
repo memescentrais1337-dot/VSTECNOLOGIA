@@ -1,0 +1,59 @@
+{
+  "name": "Controladora de Acesso de Rede para Ambientes Críticos",
+  "slug": "axis-a1601-network-door-controller",
+  "brand": "AXIS Communications",
+  "brandId": "axis",
+  "category": "Controle de Acesso",
+  "model": "AXIS A1601 Network Door Controller",
+  "type": "Controladora de Rede",
+  "application": [
+    "Corporativo e Escritórios",
+    "Hospitais e Saúde",
+    "Governo e Defesa"
+  ],
+  "shortDescription": "Controladora de portas de plataforma aberta com PoE+, alta capacidade de memória e suporte a protocolos seguros OSDP v2 e Wiegand.",
+  "description": "A AXIS A1601 é construída em arquitetura aberta, permitindo integração transparente com qualquer software VMS ou de controle de acesso (Genetec, Axis Camera Station, etc.). Armazena dados de credenciais localmente, garantindo funcionamento ininterrupto mesmo com perda de conexão.",
+  "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80",
+  "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80",
+  "gallery": [
+    "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "datasheet": "/datasheets/axis-a1601-network-door-controller.pdf",
+  "highlights": [
+    "Alimentação PoE+ para fechaduras de alto consumo",
+    "Suporte a 70.000 credenciais salvas em memória local",
+    "Criptografia OSDP Secure Channel para leitoras"
+  ],
+  "features": [
+    "Duas portas supervisionadas e relés de alta corrente",
+    "Plataforma aberta (API VAPIX e ONVIF Perfil A e C)",
+    "Sensor de violação de gabinete (tamper) embutido",
+    "Gerenciamento integrado de baterias de backup"
+  ],
+  "specs": {
+    "Capacidade de Usuários": "Até 70.000 credenciais locais",
+    "Registros de Eventos": "200.000 eventos em memória não volátil",
+    "Interfaces de Leitora": "2 x OSDP (RS485) ou 2 x Wiegand",
+    "Alimentação": "PoE+ (IEEE 802.3at) ou 10-30 VDC",
+    "Saídas de Potência": "Até 2 x 12 VDC para travas eletromagnéticas"
+  },
+  "downloads": [
+    {
+      "title": "Datasheet AXIS A1601",
+      "type": "PDF",
+      "size": "1.2 MB"
+    },
+    {
+      "title": "Diagrama Unifilar de Instalação",
+      "type": "PDF",
+      "size": "2.5 MB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "came-ozak-speedgate",
+    "genetec-security-center"
+  ],
+  "featured": true,
+  "active": true,
+  "order": 4
+}

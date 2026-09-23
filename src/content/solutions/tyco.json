@@ -1,0 +1,368 @@
+{
+  "slug": "tyco",
+  "brandName": "Tyco / Software House",
+  "solutionName": "iSTAR Ultra G2 Access Control",
+  "eyebrow": "CONTROLE DE ACESSO CORPORATIVO & INFRAESTRUTURA CRÍTICA",
+  "heroEyebrow": "Tyco / Johnson Controls • Controle e segurança integrada",
+  "headline": "Controle de acesso de alta densidade",
+  "headlineHighlight": "para operações que não podem parar.",
+  "subheadline": "Controladoras iSTAR Ultra G2, comunicação criptografada OSDP v2 e operação 100% autônoma offline para ambientes corporativos que demandam segurança física intransigente.",
+  "heroBenefits": [
+    "Capacidade para até 1.000.000 de usuários e 16 leitoras simultâneas (expansível até 32)",
+    "Comunicação ultra-segura com criptografia AES de 256 bits e protocolo OSDP v2 Secure Channel",
+    "Operação offline autônoma: mantém validações de acesso mesmo sem conexão de rede",
+    "Conformidade com padrões governamentais e corporativos (FICAM, 802.1X e TEE)"
+  ],
+  "heroBgImage": "/images/heroes/hero-tyco.jpg",
+  "heroImage": "/images/cameras/camera-tyco.png",
+  "heroImageLabel": "Tyco Illustra Pro Multi-Sensor - 4 Sensores Ajustáveis e Cobertura Total",
+  "logo": "/images/marcas/logo-tyco.png",
+  "logoAlt": "Tyco Johnson Controls - Fabricante Homologado",
+  "partnerBadge": "Fabricante Homologado • Certificação Oficial VS",
+  "heroMetrics": [
+    {
+      "value": "1.000.000",
+      "label": "Usuários Suportados",
+      "detail": "Memória local massiva para credenciais"
+    },
+    {
+      "value": "16 Portas",
+      "label": "Leitores Simultâneos",
+      "detail": "Expansão até 32 portas por gabinete"
+    },
+    {
+      "value": "AES 256",
+      "label": "Criptografia de Ponta",
+      "detail": "Blindagem contra interceptações na rede"
+    },
+    {
+      "value": "100% Offline",
+      "label": "Operação Resiliente",
+      "detail": "Continua operando mesmo com queda de servidor"
+    }
+  ],
+  "problemSection": {
+    "tag": "DIAGNÓSTICO OPERACIONAL",
+    "title": "Segurança não pode ser reativa.",
+    "narrative": [
+      "Em instalações corporativas de alta complexidade, portas, catracas e eclusas controlam o fluxo de milhares de colaboradores, prestadores e visitantes. Controladoras convencionais dependem de conexão constante com um servidor central para validar se um crachá é válido.",
+      "Se o switch queima, o cabo de rede rompe ou o servidor oscila, catracas travam gerando filas caóticas — ou, pior ainda, abrem portas desprotegidas. Além disso, leitoras com fiação Wiegand antiga transmitem dados desprotegidos suscetíveis a clonagem e grampos de fiação."
+    ],
+    "painPoints": [
+      {
+        "title": "Vulnerabilidade crítica de comunicação Wiegand antiga",
+        "desc": "Leitoras sem criptografia que transmitem números de crachá em texto puro, permitindo grampos eletrônicos fáceis nos fios."
+      },
+      {
+        "title": "Colapso de circulação em quedas de link ou servidor",
+        "desc": "Controladoras dependentes de nuvem ou servidor que deixam portas trancadas ou abertas quando a rede oscila."
+      },
+      {
+        "title": "Gargalo de expansão de portas e lentidão de resposta",
+        "desc": "Controladoras limitadas a 2 ou 4 portas que exigem dezenas de fontes espalhadas e caixas de passagem desorganizadas."
+      },
+      {
+        "title": "Falta de lógica avançada de eclusas e antipassback",
+        "desc": "Incapacidade de impedir que duas portas de segurança abram ao mesmo tempo ou que um crachá seja passado para trás."
+      }
+    ],
+    "solutionBridge": "É aqui que entra a engenharia do controlador iSTAR Ultra G2 da Tyco / Software House."
+  },
+  "technologiesTitle": "Uma arquitetura. Múltiplas camadas de proteção.",
+  "technologiesSubtitle": "Hardware de nível governamental projetado para gerenciar acessos com tolerância zero a falhas.",
+  "technologies": [
+    {
+      "title": "Controlador de Alta Densidade iSTAR Ultra G2",
+      "category": "Núcleo de Processamento",
+      "description": "O controlador de acesso corporativo mais poderoso da categoria. Equipado com processador ARM multinúcleo, sistema operacional Linux embutido e memória para gerenciar até 1 milhão de usuários e 500.000 eventos offline. Controla até 16 leitoras em sua placa nativa e expande para até 32 portas.",
+      "features": [
+        "Processador de alta performance com Trusted Execution Environment (TEE)",
+        "Duas portas de rede Gigabit Ethernet com suporte a failover automático e IPv6",
+        "Autenticação de rede 802.1X para proteção contra conexões não autorizadas no rack",
+        "Lógica avançada de antipassback global, intertravamento de eclusas e lockdown imediato"
+      ],
+      "specs": {
+        "Usuários": "Até 1.000.000 de credenciais salvas localmente",
+        "Capacidade": "16 leitoras nativas (expansível a 32)",
+        "Criptografia": "AES 256 bits / TLS 1.3 / FIPS 197"
+      },
+      "tag": "Controlador iSTAR Ultra G2",
+      "image": "/images/equipamentos/tyco-istar-controller.png"
+    },
+    {
+      "title": "Comunicação Segura OSDP v2 Secure Channel",
+      "category": "Segurança de Borda",
+      "description": "Substituição definitiva da vulnerável fiação Wiegand pelo protocolo bidirecional supervisionado OSDP v2 (Open Supervised Device Protocol). Dados entre leitoras de crachá/biometria e o painel iSTAR trafegam sob criptografia militar AES de 128/256 bits com detecção de violação.",
+      "features": [
+        "Impedimento absoluto de grampos eletrônicos e clonagem na fiação do leitor",
+        "Supervisão contínua da saúde da leitora com aviso imediato de desconexão",
+        "Fiação simplificada em barramento RS-485 em longas distâncias até 1.200 metros",
+        "Suporte a credenciais móveis no smartphone (NFC e BLE) e cartões inteligentes DESFire"
+      ],
+      "specs": {
+        "Protocolo": "SIA OSDP v2.2 Secure Channel",
+        "Alcance": "Até 1.200 metros por barramento",
+        "Compatibilidade": "Leitoras biométricas, faciais e smartcards"
+      },
+      "tag": "Protocolo OSDP Seguro",
+      "image": "/images/equipamentos/tyco-osdp-reader.png"
+    },
+    {
+      "title": "Gerenciamento de Energia Inteligente & I/O Supervisionado",
+      "category": "Resiliência Elétrica",
+      "description": "Gabinete industrial com fonte de alimentação redundante e monitoramento avançado de bateria. Entradas digitais supervisionadas por resistores de fim de linha (EOL) que diferenciam porta aberta, porta fechada, corte de cabo e curto-circuito.",
+      "features": [
+        "Monitoramento em tempo real da voltagem, carga de bateria e temperatura do painel",
+        "Saídas de relé com proteção contra sobrecorrente para travas eletromagnéticas",
+        "Relatórios preditivos de troca de baterias antes que ocorra a falha",
+        "Gabinete com sensor de abertura (tamper) anti-violação física"
+      ],
+      "specs": {
+        "Alimentação": "110/220 VAC com backup de bateria duplo",
+        "Entradas/Saídas": "Entradas supervisionadas duplas analógicas",
+        "Certificações": "UL 294, FICAM, CE"
+      },
+      "tag": "Gestão Elétrica Resiliente",
+      "image": "/images/equipamentos/tyco-power-cabinet.png"
+    }
+  ],
+  "businessBenefits": [
+    {
+      "number": "01",
+      "title": "CONTROLA ACESSOS EM ESCALA",
+      "desc": "Projetado para lidar com o fluxo de centenas de milhares de pessoas sem lentidão na resposta ou atraso na liberação das catracas.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Liberação de portas em milissegundos mesmo com 1 milhão de usuários cadastrados",
+        "Concentra até 32 portas em um único ponto, reduzindo cabeamento e switches",
+        "Gestão unificada de colaboradores, prestadores de serviço e visitantes"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "MANTÉM OPERAÇÃO EM CENÁRIOS DE FALHA",
+      "desc": "Operação 100% autônoma offline que preserva a inteligência e as regras de segurança mesmo com a perda total da conexão de rede.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Validação completa de permissões e horários sem consultar o servidor",
+        "Buffer local para até 500.000 eventos que sincronizam assim que a rede volta",
+        "Garante circulação segura em evacuações de emergência e rotas de fuga"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "REDUZ COMPLEXIDADE DE INFRAESTRUTURA",
+      "desc": "Arquitetura limpa que consolida fontes de alimentação, relés e inteligência de controle em gabinetes organizados e auditáveis.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Fiação OSDP de longa distância reduzindo custos de infraestrutura de tubulação",
+        "Duas portas de rede Gigabit eliminando a necessidade de switches adicionais",
+        "Menor tempo de manutenção e facilidade de diagnóstico técnico em campo"
+      ]
+    }
+  ],
+  "architectureTitle": "Monte sua arquitetura",
+  "architectureSubtitle": "A topologia segura do fluxo de acesso corporativo Tyco.",
+  "architectureLayers": [
+    {
+      "step": "01",
+      "label": "CREDENTIAL",
+      "sublabel": "Identificação Pessoal",
+      "detail": "Cartões inteligentes MIFARE DESFire EV3, biometria facial ou credencial móvel no smartphone.",
+      "metrics": "Criptografia de alta segurança",
+      "iconName": "CreditCard"
+    },
+    {
+      "step": "02",
+      "label": "READER",
+      "sublabel": "Leitura Criptografada",
+      "detail": "Leitoras de parede e catracas transmitindo via barramento seguro OSDP v2 supervisionado.",
+      "metrics": "AES 256 bits • Barramento RS-485",
+      "iconName": "ScanFace"
+    },
+    {
+      "step": "03",
+      "label": "iSTAR ULTRA G2",
+      "sublabel": "Decisão Local Autônoma",
+      "detail": "Controlador de alta densidade processando regras de acesso e autorizações em memória local.",
+      "metrics": "Validação em < 20ms • 100% offline",
+      "iconName": "Cpu"
+    },
+    {
+      "step": "04",
+      "label": "NETWORK 802.1X",
+      "sublabel": "Backbone Corporativo",
+      "detail": "Portas de rede Gigabit redundantes protegidas por autenticação 802.1X e TLS 1.3.",
+      "metrics": "Failover de rede automático",
+      "iconName": "Network"
+    },
+    {
+      "step": "05",
+      "label": "MANAGEMENT",
+      "sublabel": "C•CURE 9000 VMS",
+      "detail": "Software de gestão de segurança empresarial consolidando eventos, crachás e alarmes.",
+      "metrics": "Sincronização com RH e ERP",
+      "iconName": "Server"
+    },
+    {
+      "step": "06",
+      "label": "ACCESS EVENT",
+      "sublabel": "Ação Física",
+      "detail": "Acionamento de travas eletromagnéticas, torniquetes, cancelas e geração de logs auditáveis.",
+      "metrics": "Controle contínuo e blindado",
+      "iconName": "Lock"
+    }
+  ],
+  "applicationsTitle": "Projetado para ambientes que não podem parar",
+  "applications": [
+    {
+      "title": "Data Centers & Salas Seguras",
+      "segment": "Conformidade Rigorosa",
+      "description": "Eclusas com intertravamento de portas, autenticação dupla (cartão + biometria), antipassback rigoroso e trilha de auditoria completa.",
+      "relevance": "Atendimento a normas internacionais de segurança física da informação.",
+      "iconName": "Server"
+    },
+    {
+      "title": "Complexos Hospitalares & Centros Cirúrgicos",
+      "segment": "Saúde & Controle Sanitário",
+      "description": "Eclusas automáticas touchless, controle de acesso estrito a farmácias e salas de gases medicinais, e liberação instantânea de rotas de fuga.",
+      "relevance": "Prioridade absoluta para velocidade da equipe médica e proteção de áreas estéreis.",
+      "iconName": "HeartPulse"
+    },
+    {
+      "title": "Indústrias Pesadas & Plantas Químicas",
+      "segment": "Operações Críticas",
+      "description": "Controle de portarias com catracas de alto fluxo, cancelas de caminhões pesados e controle de evacuação com contagem de pessoas em áreas de refúgio.",
+      "relevance": "Gestão de segurança patrimonial integrada à segurança do trabalho.",
+      "iconName": "Factory"
+    },
+    {
+      "title": "Sedes Corporativas & Instituições Financeiras",
+      "segment": "Alto Padrão Corporativo",
+      "description": "Gerenciamento de milhares de colaboradores, integração com catracas speed gates de vidro e auditoria de acessos aos andares de tesouraria.",
+      "relevance": "Equilíbrio entre agilidade de fluxo e blindagem de áreas confidenciais.",
+      "iconName": "Building2"
+    }
+  ],
+  "compliance": {
+    "title": "Tecnologia preparada para ambientes com altas exigências.",
+    "subtitle": "O iSTAR Ultra G2 atende a rigorosos requisitos de segurança cibernética e física de governos e corporações globais.",
+    "items": [
+      {
+        "title": "Homologação Governamental FICAM",
+        "desc": "Aprovado pelo programa governamental dos EUA (Federal Identity, Credential, and Access Management) para instalações de segurança máxima.",
+        "supportedStandard": "Conformidade FICAM / FIPS 201"
+      },
+      {
+        "title": "Criptografia de Hardware de Nível Militar",
+        "desc": "Comunicação ponta a ponta criptografada por AES de 256 bits com módulos criptográficos validados e ausência de portas inseguras.",
+        "supportedStandard": "Padrão FIPS 197 / AES-256"
+      },
+      {
+        "title": "Segurança de Conexão à Rede Local",
+        "desc": "Autenticação de porta 802.1X garantindo que apenas dispositivos autorizados consigam se comunicar com o switch da rede da empresa.",
+        "supportedStandard": "Protocolo IEEE 802.1X & TLS 1.3"
+      },
+      {
+        "title": "Engenharia com Certificação Oficial",
+        "desc": "Instalação executada por equipe com treinamento oficial de fábrica e registro de projeto executivo com ART no CREA.",
+        "supportedStandard": "Padrão CREA-GO & Fabricante"
+      }
+    ]
+  },
+  "casesTitle": "Projetos que exigem confiabilidade",
+  "cases": [
+    {
+      "client": "Hospital Israelita Albert Einstein",
+      "highlight": "Projeto Turn-key",
+      "description": "Controle de acesso touchless com leitoras avançadas integradas a portas de eclusa, farmácia hospitalar e áreas estéreis.",
+      "image": "/images/projetos/projeto-hospital-albert-einstein.png",
+      "tag": "Saúde & Alta Complexidade"
+    },
+    {
+      "client": "EDP Goiânia",
+      "highlight": "Integração avançada",
+      "description": "Controle de acesso perimetral e em salas de controle operacional de subestação elétrica com registro estrito de credenciais.",
+      "image": "/images/projetos/projeto-edp-goiania.png",
+      "tag": "Energia & Utilidades"
+    },
+    {
+      "client": "Quartel General do Exército — QGEX",
+      "highlight": "Infraestrutura crítica de segurança",
+      "description": "Controle de acessos e monitoramento integrado para instalações de defesa militar com exigência de operação ininterrupta.",
+      "image": "/images/projetos/projeto-qgex.png",
+      "tag": "Defesa & Governo"
+    }
+  ],
+  "faq": [
+    {
+      "question": "O iSTAR Ultra G2 continua liberando portas se a internet ou o servidor cair?",
+      "answer": "Sim. O iSTAR Ultra G2 possui arquitetura distribuída autônoma: ele armazena até 1.000.000 de credenciais e todas as regras de horário e níveis de acesso em sua memória local. As portas continuam funcionando normalmente e os eventos são guardados na memória para sincronização posterior."
+    },
+    {
+      "question": "Por que substituir a fiação Wiegand pelo padrão OSDP v2?",
+      "answer": "O protocolo Wiegand tradicional não tem criptografia e transmite o número do crachá aberto, permitindo que invasores conectem grampos físicos nos fios do leitor e clonem credenciais. O OSDP v2 utiliza criptografia AES-128/256 bits e monitora continuamente a integridade do circuito."
+    },
+    {
+      "question": "Quantas portas um único gabinete iSTAR Ultra G2 consegue controlar?",
+      "answer": "Ele possui 16 interfaces de leitora nativas na placa principal e pode ser expandido com módulos adicionais para gerenciar até 32 leitoras no mesmo gabinete, reduzindo enormemente o número de fontes e passagens de cabeamento."
+    },
+    {
+      "question": "A VS Tecnologia realiza o comissionamento e a parametrização de software?",
+      "answer": "Sim. Nossa equipe de engenharia realiza todo o projeto elétrico, montagem de gabinetes, conectorização, certificação e configuração lógica de grupos de acesso, níveis de permissão e integração com sistemas legados."
+    },
+    {
+      "question": "Como solicitar um dimensionamento para a minha empresa?",
+      "answer": "Basta preencher o formulário ou chamar no WhatsApp da engenharia. Levantamos a quantidade de portas, tipos de leitoras (cartão, biometria ou celular) e enviamos uma proposta técnica detalhada."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Controle de acesso não é só abrir portas.",
+    "subheadline": "É controlar quem, quando e onde, com resiliência total mesmo em cenários de falha.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  },
+  "formSource": "landing_page_tyco",
+  "whatsappMessage": "Olá! Vim pela página da solução Tyco / iSTAR Ultra G2 e gostaria de conversar sobre um projeto de controle de acesso corporativo com a VS.",
+  "seoTitle": "iSTAR Ultra G2 e Controle de Acesso Tyco | VS Tecnologia",
+  "seoDescription": "Controladores corporativos de alta densidade iSTAR Ultra G2 da Tyco / Software House com comunicação segura OSDP, operação offline e projeto turn-key da VS Tecnologia.",
+  "benefits": [
+    {
+      "number": "01",
+      "title": "CONTROLA ACESSOS EM ESCALA",
+      "desc": "Projetado para lidar com o fluxo de centenas de milhares de pessoas sem lentidão na resposta ou atraso na liberação das catracas.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Liberação de portas em milissegundos mesmo com 1 milhão de usuários cadastrados",
+        "Concentra até 32 portas em um único ponto, reduzindo cabeamento e switches",
+        "Gestão unificada de colaboradores, prestadores de serviço e visitantes"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "MANTÉM OPERAÇÃO EM CENÁRIOS DE FALHA",
+      "desc": "Operação 100% autônoma offline que preserva a inteligência e as regras de segurança mesmo com a perda total da conexão de rede.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Validação completa de permissões e horários sem consultar o servidor",
+        "Buffer local para até 500.000 eventos que sincronizam assim que a rede volta",
+        "Garante circulação segura em evacuações de emergência e rotas de fuga"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "REDUZ COMPLEXIDADE DE INFRAESTRUTURA",
+      "desc": "Arquitetura limpa que consolida fontes de alimentação, relés e inteligência de controle em gabinetes organizados e auditáveis.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Fiação OSDP de longa distância reduzindo custos de infraestrutura de tubulação",
+        "Duas portas de rede Gigabit eliminando a necessidade de switches adicionais",
+        "Menor tempo de manutenção e facilidade de diagnóstico técnico em campo"
+      ]
+    }
+  ],
+  "cta": {
+    "headline": "Controle de acesso não é só abrir portas.",
+    "subheadline": "É controlar quem, quando e onde, com resiliência total mesmo em cenários de falha.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  }
+}

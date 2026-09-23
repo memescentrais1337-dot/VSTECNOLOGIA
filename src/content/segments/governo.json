@@ -1,0 +1,59 @@
+{
+  "id": "governo",
+  "title": "Governo & Órgãos Públicos",
+  "slug": "governo",
+  "tagline": "Segurança crítica, conformidade estrita e infraestrutura para repartições e centros táticos.",
+  "description": "Atendemos demandas governamentais e de defesa com equipamentos certificados, atendimento a editais técnicos, rastreabilidade forense e suporte a missões que exigem sigilo e estabilidade incondicional.",
+  "iconName": "Landmark",
+  "imageUrl": "/images/segmentos/segmento-governo.png",
+  "challenges": [
+    "Grandes perímetros territoriais com múltiplos pontos de acesso não supervisionados",
+    "Exigência de conformidade estrita com normas públicas, editais técnicos e LGPD",
+    "Sistemas legados heterogêneos que precisam convergir em sala de comando único"
+  ],
+  "solutionsProvided": [
+    "Controle de acesso restrito com biometria facial e dupla autenticação",
+    "Monitoramento perimetral com câmeras térmicas e radar",
+    "Videowalls integrados para Centros de Operações Integradas (COI/CCO)"
+  ],
+  "featuredProject": "qgex",
+  "recommendedArchitecture": [
+    {
+      "title": "Sensoriamento Perimetral",
+      "desc": "Câmeras térmicas de longo alcance e PTZ táticas com iluminação infravermelha"
+    },
+    {
+      "title": "Convergência Segura",
+      "desc": "Backbone óptico subterrâneo com criptografia e switches industriais certificados"
+    },
+    {
+      "title": "Centro Integrado (COI)",
+      "desc": "Videowall de alta resolução com software VMS centralizado e gravação redundante"
+    }
+  ],
+  "manufacturers": [
+    "Hanwha Vision",
+    "AXIS Communications",
+    "CAME",
+    "Furukawa"
+  ],
+  "differentials": [
+    "Engenheiros com certificação técnica e experiência em certames públicos e termos de referência",
+    "Emissão de ART registrada no CREA-GO para todas as disciplinas instaladas",
+    "Treinamento e transferência tecnológica para os operadores do órgão público"
+  ],
+  "faq": [
+    {
+      "q": "A VS Tecnologia atende editais e licitações públicas?",
+      "a": "Sim. Nossa equipe técnica e jurídica atua na elaboração e atendimento de termos de referência, projetos executivos, fornecimento e execução de obras públicas de engenharia de segurança."
+    },
+    {
+      "q": "Os equipamentos fornecidos atendem às exigências de segurança cibernética governamental?",
+      "a": "Sim, trabalhamos exclusivamente com fabricantes que atendem a certificações internacionais de cibersegurança (NDAA compliant, criptografia TLS/HTTPS e sem backdoors)."
+    }
+  ],
+  "relatedCaseSlugs": [
+    "qgex"
+  ],
+  "order": 1
+}

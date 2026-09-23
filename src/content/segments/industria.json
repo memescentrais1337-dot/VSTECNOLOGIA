@@ -1,0 +1,59 @@
+{
+  "id": "industria",
+  "title": "Indústria & Manufatura",
+  "slug": "industria",
+  "tagline": "Proteção perimetral, segurança operacional e automação logística para plantas fabris.",
+  "description": "Projetos robustos para ambientes agressivos com poeira, calor e vibrações. Monitoramento de linhas de produção, controle de EPI por inteligência artificial e proteção perimetral quilométrica.",
+  "iconName": "Factory",
+  "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Ambientes hostis com interferência eletromagnética pesada, poeira e alta temperatura",
+    "Fluxo intenso de carretas, caminhões e matérias-primas com risco de desvios",
+    "Prevenção de acidentes de trabalho com maquinário em operação contínua"
+  ],
+  "solutionsProvided": [
+    "Câmeras antideflagrantes, térmicas e industriais com proteção IK10/IP67",
+    "Cancelas automáticas de alto ciclo CAME para frotas pesadas",
+    "Redes em anel de fibra óptica com protocolo ERPS imunes a ruídos de motores"
+  ],
+  "featuredProject": "edp-goiania",
+  "recommendedArchitecture": [
+    {
+      "title": "Cercamento Perimetral Fabril",
+      "desc": "Câmeras analíticas com cerca virtual para filtragem de falsos disparos"
+    },
+    {
+      "title": "Controle de Gates Pesados",
+      "desc": "Cancelas CAME integradas a câmeras de leitura de placas (LPR) e balança"
+    },
+    {
+      "title": "Segurança Operacional",
+      "desc": "Sensores de IA para verificação contínua de capacetes, coletes e EPIs na linha"
+    }
+  ],
+  "manufacturers": [
+    "AXIS Communications",
+    "Hanwha Vision",
+    "CAME",
+    "Furukawa Electric"
+  ],
+  "differentials": [
+    "Projetos elétricos e ópticos com equipe técnica habilitada nas normas NR-10 e NR-35",
+    "Switches e conversores industriais com isolamento galvânico para proteção contra surtos",
+    "SLA de atendimento corretivo com estoque local em Goiânia"
+  ],
+  "faq": [
+    {
+      "q": "É possível monitorar áreas industriais com atmosferas explosivas ou poeira combustível?",
+      "a": "Sim. Especificamos e instalamos câmeras e caixas antideflagrantes com certificações ATEX/IECEx projetadas para atmosferas com risco de explosão."
+    },
+    {
+      "q": "A rede de câmeras interfere nos dados da automação industrial (CLPs)?",
+      "a": "Não. Projetamos VLANs segregadas com cabeamento óptico imune a interferência eletromagnética (EMI), garantindo isolamento total do tráfego corporativo e do chão de fábrica."
+    }
+  ],
+  "relatedCaseSlugs": [
+    "edp-goiania"
+  ],
+  "order": 2
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Câmera Panorâmica Multisensor de Próxima Geração",
+  "slug": "avigilon-h6a-panoramica",
+  "brand": "Avigilon",
+  "brandId": "avigilon",
+  "category": "Câmeras de Rede",
+  "model": "Avigilon H6A Panorâmica 180° / 360°",
+  "type": "Câmera Multisensor",
+  "application": [
+    "Governo e Defesa",
+    "Hospitais e Saúde",
+    "Corporativo e Escritórios"
+  ],
+  "shortDescription": "Câmera multissensor panorâmica com até 32 MP, cobertura total de 360 graus sem pontos cegos e inteligência de vídeo de alta precisão.",
+  "description": "Projetada para cobrir grandes áreas com um único cabo de rede e licença VMS. A linha Avigilon H6A combina sensores independentes com costura de imagem impecável e analíticos neurais que detectam comportamentos suspeitos e contagem precisa de fluxo.",
+  "image": "/images/equipamentos/avigilon-h6a-panoramica.png",
+  "imageUrl": "/images/equipamentos/avigilon-h6a-panoramica.png",
+  "gallery": [
+    "/images/equipamentos/avigilon-h6a-panoramica.png"
+  ],
+  "datasheet": "/datasheets/avigilon-h6a-panoramica.pdf",
+  "highlights": [
+    "Cobertura total panorâmica sem pontos cegos",
+    "Inteligência analítica Avigilon de 5ª geração",
+    "Redução de até 70% nos custos de cabeamento e infraestrutura"
+  ],
+  "features": [
+    "Costura de imagem automatizada sem distorção óptica",
+    "Detecção de pessoas caídas, intrusão e aglomeração anormal",
+    "Classificação avançada de veículos por modelo e cor",
+    "Gerenciamento dinâmico de largura de banda High Definition Stream Management (HDSM)",
+    "Compatível com padrões ONVIF Perfil S, G, T e M"
+  ],
+  "specs": {
+    "Resolução Total": "Até 32 MP (4 x 8 MP)",
+    "Campo de Visão": "Panorâmico 180° ou 360° ajustável",
+    "Alcance IR": "Iluminação adaptativa até 30 metros",
+    "Faixa Dinâmica (WDR)": "120 dB True WDR",
+    "Armazenamento Local": "Dois slots para cartão MicroSDXC até 1 TB",
+    "Alimentação": "PoE+ (IEEE 802.3at) ou 24V AC/DC"
+  },
+  "downloads": [
+    {
+      "title": "Ficha Técnica Avigilon H6A",
+      "type": "PDF",
+      "size": "2.2 MB"
+    },
+    {
+      "title": "Manual de Engenharia e Especificação",
+      "type": "PDF",
+      "size": "4.0 MB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "axis-q3538-lve",
+    "genetec-security-center"
+  ],
+  "featured": true,
+  "active": true,
+  "order": 2
+}

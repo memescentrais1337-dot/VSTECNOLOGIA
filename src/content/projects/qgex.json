@@ -1,0 +1,70 @@
+{
+  "title": "Infraestrutura de Segurança Perimetral e Centro de Monitoramento",
+  "slug": "qgex",
+  "client": "QGEX - Quartel-General do Exército",
+  "segment": "Defesa & Segurança Pública",
+  "location": "Setor Militar Urbano",
+  "year": "2022 - 2023",
+  "summary": "Sistema robusto de videomonitoramento com inteligência artificial, câmeras PTZ de 40x zoom, fibra óptica blindada e videowall para centro de operações.",
+  "shortDesc": "Sistema robusto de videomonitoramento com inteligência artificial, câmeras PTZ de 40x zoom, fibra óptica blindada e videowall para centro de operações.",
+  "description": "A proteção das instalações estratégicas de comando exigia cobrir perímetros de extensas distâncias territoriais, com vias de acesso rápido, controle de blindados e necessidade de visualização tática de ameaças a mais de 1.500 metros em condições noturnas ou com fumaça. A VS projetou e implantou uma arquitetura robusta com câmeras térmicas de longo alcance acopladas a sensores ópticos de alta sensibilidade noturna (tecnologia Starlight/Lightfinder). Toda a infraestrutura foi conectada por anel de fibra óptica subterrânea em dutos blindados, convergindo para um Centro de Controle com videowall profissional de alta definição.",
+  "fullDescription": "",
+  "coverImage": "/images/projetos/projeto-qgex.png",
+  "heroImage": "/images/projetos/projeto-qgex.png",
+  "gallery": [
+    "/images/projetos/projeto-qgex.png",
+    "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80"
+  ],
+  "challenge": "A proteção das instalações estratégicas de comando exigia cobrir perímetros de extensas distâncias territoriais, com vias de acesso rápido, controle de blindados e necessidade de visualização tática de ameaças a mais de 1.500 metros em condições noturnas ou com fumaça.",
+  "solution": "A VS projetou e implantou uma arquitetura robusta com câmeras térmicas de longo alcance acopladas a sensores ópticos de alta sensibilidade noturna (tecnologia Starlight/Lightfinder). Toda a infraestrutura foi conectada por anel de fibra óptica subterrânea em dutos blindados, convergindo para um Centro de Controle com videowall profissional de alta definição.",
+  "technologies": [
+    "Câmeras Térmicas Bi-Espectrais de Longa Distância",
+    "Câmeras PTZ Hanwha e AXIS com Estabilização Giroscópica e Limpador de Lente",
+    "Videowall 4x2 com Displays Profissionais de Borda Ultrafina 0.88mm",
+    "Servidores de Gravação com redundância N+1 e discos corporativos hot-swap",
+    "Sistema de Alarme Perimetral Sísmico Subterrâneo",
+    "Barreiras e Dilaceradores de Pneus Automáticos CAME"
+  ],
+  "execution": [
+    "Abertura e fechamento de valas com envelopamento de dutos em concreto para proteção contra sabotagem",
+    "Calibração de algoritmos de inteligência artificial para detecção de armas e comportamento suspeito",
+    "Implantação de redundância elétrica completa com no-breaks duplos e grupo gerador dedicado",
+    "Protocolos de segurança criptográfica ponto a ponto (HTTPS, 802.1X, certificados digitais em cada câmera)"
+  ],
+  "results": [
+    "Cobertura visual de 100% da linha perimetral sem pontos cegos",
+    "Capacidade de rastreamento de alvos a mais de 2 km de distância com zoom óptico estabilizado",
+    "Disponibilidade ininterrupta do sistema com uptime superior a 99.98%",
+    "Plataforma homologada para os mais altos padrões de segurança militar"
+  ],
+  "architectureSteps": [
+    {
+      "step": "Sensoriamento Perimetral Tático",
+      "detail": "Câmeras bi-espectrais térmicas + ópticas com zoom óptico de 40x e sensores sísmicos"
+    },
+    {
+      "step": "Infraestrutura Blindada",
+      "detail": "Dutos subterrâneos envelopados em concreto e fibra óptica monomodo blindada"
+    },
+    {
+      "step": "Controle de Acessos Pesados",
+      "detail": "Barreiras automáticas de alta velocidade e dilaceradores de pneus CAME"
+    },
+    {
+      "step": "Videowall & Servidores N+1",
+      "detail": "Painel profissional 4x2 com displays 0.88mm e servidores hot-swap tolerantes a falhas"
+    },
+    {
+      "step": "Centro de Comando Tático",
+      "detail": "Operação ininterrupta 24/7 com inteligência artificial para detecção de anomalias"
+    }
+  ],
+  "whyVS": [
+    "Corpo técnico experiente no atendimento de editais governamentais e normas de segurança física de instalações críticas",
+    "Capacidade de fornecimento e comissionamento de videowalls e storage de nível militar",
+    "SLA presencial com peças de reposição e manutenção continuada garantida"
+  ],
+  "featured": true,
+  "order": 3
+}

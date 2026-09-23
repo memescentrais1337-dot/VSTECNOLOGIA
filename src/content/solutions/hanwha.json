@@ -1,0 +1,368 @@
+{
+  "slug": "hanwha",
+  "brandName": "Hanwha Vision",
+  "solutionName": "Hanwha Vision AI Surveillance",
+  "eyebrow": "VIDEOMONITORAMENTO INTELIGENTE COM IA EMBARCADA",
+  "heroEyebrow": "Hanwha Vision • Soluções inteligentes para operações críticas",
+  "headline": "Veja o que acontece em tempo real.",
+  "headlineHighlight": "Entenda antes que vire um problema.",
+  "subheadline": "Videomonitoramento inteligente com IA embarcada na borda para operações corporativas que precisam detectar, classificar alvos e reagir a eventos com máxima precisão.",
+  "heroBenefits": [
+    "IA com Deep Learning direto no chipset da câmera (Edge AI)",
+    "Classificação precisa: pessoas, veículos, rostos e placas sem falsos positivos",
+    "Gravadores NVR de alta densidade e throughput corporativo",
+    "Compressão dinâmica WiseStream III com até 80% de economia de banda"
+  ],
+  "heroBgImage": "/images/heroes/hero-hanwha.jpg",
+  "heroImage": "/images/cameras/camera-hanwha.png",
+  "heroImageLabel": "Hanwha Vision Dome AI IVA - Detecção e Análise Neural em Shopping / Varejo",
+  "logo": "/images/marcas/logo-hanwha.png",
+  "logoAlt": "Hanwha Vision - Fabricante Homologado",
+  "partnerBadge": "Fabricante Homologado • Certificação Oficial VS",
+  "heroMetrics": [
+    {
+      "value": "Edge AI",
+      "label": "Processamento Neural",
+      "detail": "Classificação de alvos na própria câmera"
+    },
+    {
+      "value": "Zero Fog",
+      "label": "Desembaçamento Óptico",
+      "detail": "Operação garantida em intempéries severas"
+    },
+    {
+      "value": "4K / 8K",
+      "label": "Ultra Resolução",
+      "detail": "Sensor CMOS de alta sensibilidade e Forensic WDR"
+    },
+    {
+      "value": "FIPS 140-2",
+      "label": "Cibersegurança",
+      "detail": "Chipset criptográfico TPM 2.0 integrado"
+    }
+  ],
+  "problemSection": {
+    "tag": "DIAGNÓSTICO OPERACIONAL",
+    "title": "Segurança não pode ser reativa.",
+    "narrative": [
+      "Em operações de médio e grande porte, câmeras convencionais geram centenas de horas de gravação passiva. Quando um incidente acontece, a equipe precisa rebobinar horas de material para entender o ocorrido.",
+      "Falhas de monitoramento, sobrecarga de operadores com alarmes falsos causados por chuva ou animais, sistemas legados fragmentados e falta de integração tornam a resposta lenta e a infraestrutura vulnerável."
+    ],
+    "painPoints": [
+      {
+        "title": "Operações fragmentadas e sistemas legados",
+        "desc": "Ilhas de vídeo isoladas que não se comunicam com controle de acesso, alarmes ou central de monitoramento unificada."
+      },
+      {
+        "title": "Fadiga de alertas e falsos positivos",
+        "desc": "Centrais de comando bombardeadas por detecções de movimento causadas por vento, sombras ou vegetação, camuflando incidentes reais."
+      },
+      {
+        "title": "Resposta lenta e investigação demorada",
+        "desc": "Dificuldade de localizar indivíduos, veículos ou objetos suspeitos entre terabytes de vídeo não categorizados."
+      },
+      {
+        "title": "Gargalo de largura de banda e storage",
+        "desc": "Transmissão contínua de vídeo bruto sobrecarregando links de rede corporativos e servidores de armazenamento."
+      }
+    ],
+    "solutionBridge": "É aqui que entra a engenharia de videomonitoramento inteligente da Hanwha Vision."
+  },
+  "technologiesTitle": "Uma arquitetura. Múltiplas camadas de proteção.",
+  "technologiesSubtitle": "Componentes projetados para transformar vídeo bruto em inteligência operacional imediata.",
+  "technologies": [
+    {
+      "title": "Câmeras com IA Embarcada e Deep Learning",
+      "category": "Sensoriamento de Borda",
+      "description": "Modelos de redes neurais profundas pré-treinados executam algoritmos de visão computacional diretamente no hardware da câmera, filtrando atributos como tipo de veículo, cor, presença de máscara, capacete e direção de movimento sem depender de servidores analíticos caros.",
+      "features": [
+        "Classificação simultânea de múltiplos objetos em cena",
+        "Tecnologia WiseStream III para redução de até 80% do consumo de banda",
+        "Forensic WDR de 150dB para cenas com iluminação mista e contra-luz intensa",
+        "Detecção de vadiagem (loitering), travessia de linha virtual e intrusão de área restrita"
+      ],
+      "specs": {
+        "Chipset": "Wisenet 7 / AI SoC dedicado",
+        "Compressão": "H.265 / H.264 / WiseStream III",
+        "Proteções": "IP66, IP67, IK10, NEMA 4X"
+      },
+      "tag": "IA na Borda",
+      "image": "/images/cameras/camera-hanwha.png"
+    },
+    {
+      "title": "Gravadores NVR Corporativos de Alto Throughput",
+      "category": "Armazenamento & Gravação",
+      "description": "Sistemas de gravação em rede desenvolvidos para operações ininterruptas 24/7, com suporte a dezenas de canais 4K, gravação redundante em RAID e busca forense imediata por metadados de IA.",
+      "features": [
+        "Gravação contínua com suporte a RAID 5/6 contra falhas de disco",
+        "Armazenamento de metadados enriquecidos para busca forense instantânea",
+        "Fontes de alimentação redundantes hot-swap para máxima disponibilidade",
+        "Visualização síncrona de múltiplos canais com baixa latência de decodificação"
+      ],
+      "specs": {
+        "Throughput": "Até 400 Mbps por gravador",
+        "Capacidade": "Até 16 baías SATA com hot-swap",
+        "Redundância": "RAID 0/1/5/6/10 e Failover N+1"
+      },
+      "tag": "Gravador de Rede",
+      "image": "/images/equipamentos/hanwha-nvr-rack.png"
+    },
+    {
+      "title": "Áudio em Rede & Integração de Acesso Unificada",
+      "category": "Resposta Ativa",
+      "description": "Alto-falantes IP tipo corneta e caixas de som de rede acionados automaticamente por regras de análise de vídeo. Mensagens de voz pré-gravadas ou transmissão ao vivo para dissuasão imediata de intrusos no perímetro.",
+      "features": [
+        "Alertas sonoros automáticos mediante violação de cerca virtual",
+        "Interfonia IP bidirecional integrada aos pontos de triagem",
+        "Protocolos abertos SIP e ONVIF Perfil S, G e T",
+        "Sincronização com controladoras de acesso e acionamento de eclusas"
+      ],
+      "specs": {
+        "Protocolos": "SIP, ONVIF, HTTP, TCP/IP",
+        "Potência": "Até 30W PoE+",
+        "Pressão Sonora": "Até 120 dB SPL a 1m"
+      },
+      "tag": "Áudio IP & Resposta",
+      "image": "/images/equipamentos/hanwha-audio-horn.png"
+    }
+  ],
+  "businessBenefits": [
+    {
+      "number": "01",
+      "title": "IA NA BORDA",
+      "desc": "Processamento inteligente diretamente nos dispositivos, reduzindo a dependência de servidores analíticos dedicados e infraestrutura de rede sobrecarregada.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Elimina a necessidade de servidores GPU caros na central",
+        "Transmite apenas metadados de eventos quando a rede estiver congestionada",
+        "Garante análise local contínua mesmo se o enlace principal oscilar"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "RESPOSTA MAIS RÁPIDA",
+      "desc": "Eventos relevantes são transformados em informação acionável em frações de segundo, permitindo que os operadores atuem antes que um incidente se concretize.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Alertas precisos com indicação visual de cor, direção e tipo de objeto",
+        "Avisos automáticos por áudio em rede dissuadindo invasões perimetrais",
+        "Filtro forense que reduz buscas de dias para segundos"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "INFRAESTRUTURA ESCALÁVEL",
+      "desc": "Arquitetura preparada para expansão gradual, integrando-se com facilidade a sistemas legados, softwares VMS abertos e controles de acesso existentes.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Compatibilidade aberta com padrões globais ONVIF e APIs RESTful",
+        "Expansão canal a canal sem obrigação de substituir hardware pré-existente",
+        "Projetado para operações distribuídas com gestão centralizada"
+      ]
+    }
+  ],
+  "architectureTitle": "Monte sua arquitetura",
+  "architectureSubtitle": "Passe o mouse ou toque em cada camada para entender o fluxo de dados e inteligência.",
+  "architectureLayers": [
+    {
+      "step": "01",
+      "label": "CÂMERAS",
+      "sublabel": "Captura Óptica",
+      "detail": "Sensores 4K e térmicos de alta sensibilidade operando em condições críticas de iluminação e intempéries.",
+      "metrics": "4K • 60fps • WDR 150dB",
+      "iconName": "Camera"
+    },
+    {
+      "step": "02",
+      "label": "EDGE AI",
+      "sublabel": "Inferência na Borda",
+      "detail": "Chipset Wisenet executando modelos de Deep Learning em tempo real para classificação de pessoas e veículos.",
+      "metrics": "Inferência < 15ms",
+      "iconName": "Cpu"
+    },
+    {
+      "step": "03",
+      "label": "NETWORK",
+      "sublabel": "Transporte Seguro",
+      "detail": "Backbone de fibra óptica e switches industriais com compressão inteligente WiseStream III.",
+      "metrics": "-80% consumo de banda",
+      "iconName": "Network"
+    },
+    {
+      "step": "04",
+      "label": "VMS & NVR",
+      "sublabel": "Gravação & Metadados",
+      "detail": "Armazenamento redundante em RAID com indexação imediata de metadados forenses.",
+      "metrics": "Throughput 400 Mbps",
+      "iconName": "Server"
+    },
+    {
+      "step": "05",
+      "label": "ANALYTICS",
+      "sublabel": "Correlação de Regras",
+      "detail": "Cruzamento de regras de negócios, cerca virtual, controle de fluxo e detecção de anomalias.",
+      "metrics": "Regras ilimitadas",
+      "iconName": "ShieldCheck"
+    },
+    {
+      "step": "06",
+      "label": "CONTROL ROOM",
+      "sublabel": "Operação Centralizada",
+      "detail": "Interface integrada para operadores, videowalls, resposta por áudio e acionamento de protocolos.",
+      "metrics": "Resposta ativa em segundos",
+      "iconName": "Monitor"
+    }
+  ],
+  "applicationsTitle": "Projetado para ambientes que não podem parar",
+  "applications": [
+    {
+      "title": "Indústria & Plantas Fabris",
+      "segment": "Produção Contínua",
+      "description": "Monitoramento de linhas produtivas, controle de uso de EPIs por visão computacional, pátios de expedição e proteção perimetral quilométrica.",
+      "relevance": "Ambientes com poeira, vibração mecânica e interferência eletromagnética.",
+      "iconName": "Factory"
+    },
+    {
+      "title": "Centros Logísticos & Armazéns",
+      "segment": "Cadeia de Suprimentos",
+      "description": "Supervisão de docas de carregamento, rastreamento visual de encomendas em esteiras e controle de fluxo de caminhões e empilhadeiras.",
+      "relevance": "Grandes áreas cobertas com iluminação mista e alto tráfego de frotas.",
+      "iconName": "Truck"
+    },
+    {
+      "title": "Infraestrutura Crítica & Energia",
+      "segment": "Alta Confiabilidade",
+      "description": "Subestações elétricas, pátios de transformadores e reservatórios que demandam análise térmica preventiva e detecção precisa de intrusão perimetral.",
+      "relevance": "Operações remotas ou desatendidas que necessitam de telemetria visual confiável.",
+      "iconName": "Zap"
+    },
+    {
+      "title": "Edifícios Corporativos & Governo",
+      "segment": "Acesso Restrito",
+      "description": "Recepção, garagens subterrâneas, data centers e andares executivos com controle de permanência não autorizada e busca forense veloz.",
+      "relevance": "Exigência de sigilo, gravação contínua e conformidade estrita.",
+      "iconName": "Building2"
+    }
+  ],
+  "compliance": {
+    "title": "Tecnologia preparada para ambientes com altas exigências.",
+    "subtitle": "A engenharia da VS implementa soluções que apoiam sua organização a cumprir exigências normativas e de governança corporativa quando corretamente projetadas.",
+    "items": [
+      {
+        "title": "Proteção de Dados & Privacidade",
+        "desc": "Recursos nativos de mascaramento dinâmico de rostos e placas de veículos para adequação a diretrizes de proteção de dados pessoais (LGPD).",
+        "supportedStandard": "Recursos para apoio à LGPD"
+      },
+      {
+        "title": "Cibersegurança de Hardware",
+        "desc": "Criptografia ponta a ponta, chipset com inicialização segura (Secure Boot), firmware assinado e conformidade com práticas de hardening reconhecidas pelo setor.",
+        "supportedStandard": "Certificação FIPS 140-2 / TPM 2.0"
+      },
+      {
+        "title": "Rastreabilidade e Cadeia Forense",
+        "desc": "Marca d’água digital criptografada nas gravações para verificação de autenticidade e histórico de logs de auditoria de acessos de operadores.",
+        "supportedStandard": "Integridade Forense de Evidências"
+      },
+      {
+        "title": "Alta Disponibilidade Operacional",
+        "desc": "Projetos em conformidade com normas ABNT e diretrizes de redundância para continuidade de negócios sem pontos únicos de falha.",
+        "supportedStandard": "Normas ABNT & Práticas TIA/EIA"
+      }
+    ]
+  },
+  "casesTitle": "Projetos que exigem confiabilidade",
+  "cases": [
+    {
+      "client": "EDP Goiânia",
+      "highlight": "Integração avançada",
+      "description": "Monitoramento perimetral inteligente com análise de vídeo na borda, anel redundante de fibra óptica e controle térmico de transformadores em ambiente de alta tensão.",
+      "image": "/images/projetos/projeto-edp-goiania.png",
+      "tag": "Energia & Utilidades"
+    },
+    {
+      "client": "Hospital Israelita Albert Einstein",
+      "highlight": "Projeto Turn-key",
+      "description": "Videomonitoramento clínico de alta resolução, integração de acesso touchless para áreas cirúrgicas e infraestrutura cabeada com zero halogênio.",
+      "image": "/images/projetos/projeto-hospital-albert-einstein.png",
+      "tag": "Saúde & Alta Complexidade"
+    },
+    {
+      "client": "Quartel General do Exército — QGEX",
+      "highlight": "Infraestrutura crítica de segurança",
+      "description": "Implantação de sistemas de vigilância eletrônica e infraestrutura de rede para complexo militar estratégico com requisitos rigorosos de disponibilidade.",
+      "image": "/images/projetos/projeto-qgex.png",
+      "tag": "Defesa & Governo"
+    }
+  ],
+  "faq": [
+    {
+      "question": "A solução Hanwha pode ser integrada à infraestrutura existente da minha empresa?",
+      "answer": "Sim. As câmeras e gravadores Hanwha Vision seguem padrões abertos da indústria (ONVIF Perfil S, G, T e M) e contam com APIs abertas. Nossa equipe de engenharia realiza o diagnóstico para reaproveitar cabeamento e integrar o sistema ao seu VMS atual ou propor a migração mais eficiente."
+    },
+    {
+      "question": "A VS Tecnologia realiza todo o projeto e instalação?",
+      "answer": "Sim. Atuamos no modelo turn-key completo: realizamos o levantamento de campo, projeto executivo com cálculo de iluminação e lentes, fornecimento oficial com garantia, instalação física por técnicos certificados, comissionamento e treinamento da sua equipe."
+    },
+    {
+      "question": "É possível expandir o sistema futuramente adicionando mais câmeras?",
+      "answer": "Com certeza. A arquitetura é totalmente modular e permite que você comece cobrindo as áreas mais críticas e adicione novos dispositivos e licenças conforme o orçamento e a necessidade da sua operação."
+    },
+    {
+      "question": "A solução atende operações corporativas com múltiplos locais ou filiais?",
+      "answer": "Sim. É possível centralizar a visualização e gestão de múltiplas plantas ou unidades remotas em uma única sala de controle (CCO), mantendo a gravação redundante em cada unidade para segurança contra oscilações de link."
+    },
+    {
+      "question": "Como funciona o atendimento de um especialista da VS?",
+      "answer": "Ao preencher o formulário ou entrar em contato via WhatsApp, nosso engenheiro especialista entra em contato para entender a planta, os desafios do local e estruturar uma proposta técnica personalizada com estudo de viabilidade."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de uma solução de engenharia integrada e confiável.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  },
+  "formSource": "landing_page_hanwha",
+  "whatsappMessage": "Olá! Vim pela página da solução Hanwha Vision e gostaria de falar com um especialista da VS sobre um projeto.",
+  "seoTitle": "Soluções Hanwha Vision | Videomonitoramento Inteligente | VS Tecnologia",
+  "seoDescription": "Soluções de videomonitoramento inteligente Hanwha Vision com inteligência artificial na borda, NVRs de alto desempenho e integração completa realizada pela engenharia da VS Tecnologia.",
+  "benefits": [
+    {
+      "number": "01",
+      "title": "IA NA BORDA",
+      "desc": "Processamento inteligente diretamente nos dispositivos, reduzindo a dependência de servidores analíticos dedicados e infraestrutura de rede sobrecarregada.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Elimina a necessidade de servidores GPU caros na central",
+        "Transmite apenas metadados de eventos quando a rede estiver congestionada",
+        "Garante análise local contínua mesmo se o enlace principal oscilar"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "RESPOSTA MAIS RÁPIDA",
+      "desc": "Eventos relevantes são transformados em informação acionável em frações de segundo, permitindo que os operadores atuem antes que um incidente se concretize.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Alertas precisos com indicação visual de cor, direção e tipo de objeto",
+        "Avisos automáticos por áudio em rede dissuadindo invasões perimetrais",
+        "Filtro forense que reduz buscas de dias para segundos"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "INFRAESTRUTURA ESCALÁVEL",
+      "desc": "Arquitetura preparada para expansão gradual, integrando-se com facilidade a sistemas legados, softwares VMS abertos e controles de acesso existentes.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Compatibilidade aberta com padrões globais ONVIF e APIs RESTful",
+        "Expansão canal a canal sem obrigação de substituir hardware pré-existente",
+        "Projetado para operações distribuídas com gestão centralizada"
+      ]
+    }
+  ],
+  "cta": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de uma solução de engenharia integrada e confiável.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  }
+}

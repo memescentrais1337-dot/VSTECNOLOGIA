@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Qual a abrangência geográfica de atendimento da VS Tecnologia?",
+    "answer": "Nossa matriz de engenharia está sediada em Goiânia (GO), com capacidade de mobilização técnica e execução de projetos turn-key em todo o território nacional, atendendo concessionárias, hospitais, órgãos de governo e complexos industriais.",
+    "category": "Geral"
+  },
+  {
+    "question": "O que contempla o modelo de engenharia Turn-Key da VS?",
+    "answer": "Assumimos a responsabilidade integral de ponta a ponta: diagnóstico prévio de vulnerabilidades, elaboração de projeto executivo com ART, fornecimento de equipamentos homologados com garantia direta de fábrica, instalação física, parametrização de software VMS/BMS e suporte continuado com SLA.",
+    "category": "Engenharia"
+  },
+  {
+    "question": "Os equipamentos instalados possuem garantia oficial dos fabricantes?",
+    "answer": "Sim. Como parceiros homologados diretos dos líderes mundiais (AXIS, Avigilon, Hanwha Vision, Pelco, Tyco, Cisco, CAME e Furukawa), todos os equipamentos possuem procedência legal rastreável, notas fiscais e garantia de fábrica de até 5 anos.",
+    "category": "Equipamentos"
+  },
+  {
+    "question": "Como funciona o suporte técnico e acordos de nível de serviço (SLA)?",
+    "answer": "Dispomos de contratos de manutenção preventiva e corretiva com SLA garantido a partir de 4 horas para atendimento emergencial presencial, monitoramento contínuo da saúde dos ativos e substituição ágil com estoque de contingência.",
+    "category": "Suporte"
+  },
+  {
+    "question": "A VS Tecnologia atende normas de segurança do trabalho e conformidade?",
+    "answer": "Sim. Nossos engenheiros e técnicos de campo possuem todas as certificações regulamentadoras obrigatórias (NR-10, NR-35, NR-18), seguro de responsabilidade civil e estrito cumprimento das diretrizes de segurança da informação e LGPD.",
+    "category": "Conformidade"
+  }
+]

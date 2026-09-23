@@ -1,0 +1,53 @@
+{
+  "name": "Caixa de Som de Rede para Mensagens Críticas e Áudio IP",
+  "slug": "axis-c1004-e-audio-ip",
+  "brand": "AXIS Communications",
+  "brandId": "axis",
+  "category": "Áudio IP & Mensageria",
+  "model": "AXIS C1004-E Network Cabinet Speaker",
+  "type": "Alto-falante IP PoE",
+  "application": [
+    "Indústria e Fábricas",
+    "Condomínios e Portarias",
+    "Logística e Centros de Distribuição"
+  ],
+  "shortDescription": "Sistema de alto-falante completo tudo-em-um conectado por um único cabo de rede PoE, amplificador classe D integrado e DSP para voz inteligível.",
+  "description": "Permite que a equipe da central de monitoramento emita avisos ao vivo com áudio cristalino para dissuadir intrusos antes do cometimento de atos ilícitos. Também suporta avisos programados automáticos disparados por analíticos de vídeo.",
+  "image": "/images/equipamentos/axis-c1004-e-audio-ip.png",
+  "imageUrl": "/images/equipamentos/axis-c1004-e-audio-ip.png",
+  "gallery": [
+    "/images/equipamentos/axis-c1004-e-audio-ip.png"
+  ],
+  "datasheet": "/datasheets/axis-c1004-e-audio-ip.pdf",
+  "highlights": [
+    "Tudo-em-um: alto-falante, amplificador, mixer e DSP em rede",
+    "Alimentação por PoE simples sem cabos elétricos dedicados",
+    "Disparo de mensagens por inteligência de vídeo ou agendamento"
+  ],
+  "features": [
+    "Microfone embutido para calibração acústica e teste automático de funcionamento",
+    "Memória interna de armazenamento para mensagens gravadas",
+    "Suporte a protocolo SIP para integração direta com ramais PABX",
+    "Gabinete resistente a intempéries IP45 para áreas semiabertas"
+  ],
+  "specs": {
+    "Pressão Sonora Máxima": ">96 dB SPL a 1 metro",
+    "Resposta de Frequência": "60 Hz a 20 kHz",
+    "Amplificador": "Classe D integrado de alta eficiência de 6W",
+    "Conectividade": "RJ45 10BASE-T/100BASE-TX PoE"
+  },
+  "downloads": [
+    {
+      "title": "Ficha Técnica AXIS C1004-E",
+      "type": "PDF",
+      "size": "1.1 MB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "axis-q3538-lve",
+    "genetec-security-center"
+  ],
+  "featured": false,
+  "active": true,
+  "order": 8
+}

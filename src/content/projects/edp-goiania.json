@@ -1,0 +1,70 @@
+{
+  "title": "Sistema Integrado de Segurança e Monitoramento Crítico",
+  "slug": "edp-goiania",
+  "client": "EDP Brasil / Subestação Goiânia",
+  "segment": "Energia & Utilidades",
+  "location": "Goiânia - GO",
+  "year": "2023 - 2024",
+  "summary": "Modernização do parque de monitoramento perimetral, proteção térmica de transformadores e controle de acesso para subestação elétrica de alta tensão.",
+  "shortDesc": "Modernização do parque de monitoramento perimetral, proteção térmica de transformadores e controle de acesso para subestação elétrica de alta tensão.",
+  "description": "A subestação exigia proteção perimetral ininterrupta contra intrusões em área de dezenas de hectares sob forte campo eletromagnético (alta tensão). Além disso, havia a necessidade crítica de detectar preventivamente variações térmicas anormais em transformadores e reatores antes da ocorrência de arcos elétricos ou interrupção no fornecimento elétrico regional. A engenharia da VS projetou uma infraestrutura redundante com fibra óptica dielétrica (totalmente imune a interferências de alta tensão), anel óptico com tempo de restauração sub-50ms, câmeras térmicas radiométricas da AXIS e Hanwha apontadas para barramentos críticos, e cercamento perimetral com análise de vídeo inteligente capaz de filtrar animais silvestres e tempestades típicas do cerrado.",
+  "fullDescription": "",
+  "coverImage": "/images/projetos/projeto-edp-goiania.png",
+  "heroImage": "/images/projetos/projeto-edp-goiania.png",
+  "gallery": [
+    "/images/projetos/projeto-edp-goiania.png",
+    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+  ],
+  "challenge": "A subestação exigia proteção perimetral ininterrupta contra intrusões em área de dezenas de hectares sob forte campo eletromagnético (alta tensão). Além disso, havia a necessidade crítica de detectar preventivamente variações térmicas anormais em transformadores e reatores antes da ocorrência de arcos elétricos ou interrupção no fornecimento elétrico regional.",
+  "solution": "A engenharia da VS projetou uma infraestrutura redundante com fibra óptica dielétrica (totalmente imune a interferências de alta tensão), anel óptico com tempo de restauração sub-50ms, câmeras térmicas radiométricas da AXIS e Hanwha apontadas para barramentos críticos, e cercamento perimetral com análise de vídeo inteligente capaz de filtrar animais silvestres e tempestades típicas do cerrado.",
+  "technologies": [
+    "Câmeras Térmicas Radiométricas AXIS com alarmes de temperatura",
+    "Câmeras PTZ de Alto Alcance com Iluminação Laser Infravermelha",
+    "Backbone em Fibra Óptica Monomodo Dielétrica Autossustentada",
+    "Switches Industriais com Norma IEC 61850-3",
+    "VMS Unificado integrado ao Centro de Controle Operacional (CCO)",
+    "Controle de Acesso com Biometria e Dupla Autenticação em Salas de Comando"
+  ],
+  "execution": [
+    "Topologia de rede em anel com protocolo ERPS para tolerância a falhas catastróficas",
+    "Instalação de postes de sustentação projetados para resistir a rajadas de vento e descargas atmosféricas (SPDA)",
+    "Configuração de zonas analíticas inteligentes: intrusão de cerca virtual, permanência não autorizada e medição térmica contínua de barramentos",
+    "Integração dos alarmes de vídeo aos sistemas supervisórios SCADA da concessionária"
+  ],
+  "results": [
+    "Zero falsos alarmes decorrentes de interferência eletromagnética ou animais no perímetro",
+    "Detecção preventiva de 2 pontos de sobreaquecimento em conexões de transformadores durante a fase de comissionamento",
+    "Redução de 65% no tempo de vistoria presencial das áreas desatendidas da subestação",
+    "Atendimento integral às rigorosas diretrizes da ONS (Operador Nacional do Sistema Elétrico)"
+  ],
+  "architectureSteps": [
+    {
+      "step": "Sensoriamento de Campo",
+      "detail": "Câmeras térmicas radiométricas AXIS + PTZ Laser instaladas no perímetro e pátio"
+    },
+    {
+      "step": "Backbone Imune",
+      "detail": "Anel óptico monomodo dielétrico subterrâneo com protocolo ERPS sub-50ms"
+    },
+    {
+      "step": "Comutação Industrial",
+      "detail": "Switches industriais certificados sob norma IEC 61850-3 contra surtos"
+    },
+    {
+      "step": "Analíticos & Supervisório",
+      "detail": "Integração de alarmes térmicos diretamente com o SCADA da concessionária"
+    },
+    {
+      "step": "Centro de Controle",
+      "detail": "Gestão visual unificada no CCO com gravação em servidores tolerantes a falhas"
+    }
+  ],
+  "whyVS": [
+    "Engenharia própria com registro no CREA-GO e emissão de ART específica para alta tensão",
+    "Domínio das normas da ONS e requisitos de imunidade eletromagnética em subestações",
+    "Parceria homologada direta com os fabricantes AXIS e Hanwha Vision"
+  ],
+  "featured": true,
+  "order": 1
+}

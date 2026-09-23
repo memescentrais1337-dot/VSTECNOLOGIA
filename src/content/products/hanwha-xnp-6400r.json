@@ -1,0 +1,55 @@
+{
+  "name": "Câmera PTZ de Alta Velocidade 40x com Inteligência Artificial",
+  "slug": "hanwha-xnp-6400r",
+  "brand": "Hanwha Vision",
+  "brandId": "hanwha",
+  "category": "Câmeras de Rede",
+  "model": "Hanwha Vision XNP-6400R",
+  "type": "Câmera PTZ de Longo Alcance",
+  "application": [
+    "Energia e Subestações",
+    "Indústria e Fábricas",
+    "Governo e Defesa"
+  ],
+  "shortDescription": "Câmera PTZ de alta performance com zoom óptico de 40x, iluminação infravermelha inteligente de até 200m e rastreamento automático por IA.",
+  "description": "Projetada para segurança de perímetros extensos e proteção de instalações críticas. A XNP-6400R utiliza algoritmos de inteligência artificial para fixar alvos específicos (pessoas ou veículos) e acompanhar seu deslocamento de forma autônoma sem perder o foco.",
+  "image": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1000&q=80",
+  "imageUrl": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1000&q=80",
+  "gallery": [
+    "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "datasheet": "/datasheets/hanwha-xnp-6400r.pdf",
+  "highlights": [
+    "Zoom óptico teleobjetiva de 40x (4.25 ~ 170 mm)",
+    "Iluminação IR adaptativa inteligente até 200 metros",
+    "Auto-tracking avançado baseado em IA na borda"
+  ],
+  "features": [
+    "Giro contínuo 360° com velocidade de até 700° por segundo",
+    "Limpador de lente (wiper) e desembaçamento térmico automático",
+    "Giroscópio embutido para estabilização de imagem contra vibrações de postes",
+    "Criptografia TPM 2.0 com certificação FIPS 140-2"
+  ],
+  "specs": {
+    "Sensor": "1/2.8\" CMOS de alta sensibilidade",
+    "Zoom Óptico": "40x (Digital 32x)",
+    "Sensibilidade Mínima": "0 Lux com IR acionado",
+    "Velocidade PTZ": "Preset 700°/s, manual 0.024°/s a 250°/s",
+    "Alimentação": "HPoE (IEEE 802.3bt Classe 6) ou 24V AC",
+    "Proteções": "IP66, IK10, NEMA 4X"
+  },
+  "downloads": [
+    {
+      "title": "Especificação Técnica Hanwha XNP-6400R",
+      "type": "PDF",
+      "size": "1.8 MB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "axis-q3538-lve",
+    "cisco-catalyst-9200"
+  ],
+  "featured": true,
+  "active": true,
+  "order": 3
+}

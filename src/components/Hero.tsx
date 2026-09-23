@@ -3,9 +3,12 @@ import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext';
 import { useMotionPreference } from './common/MotionReveal';
+import { getSiteConfig } from '../lib/content';
 
-export const DEFAULT_HERO_VIDEO = '/videos/hero-vs.mp4';
-export const DEFAULT_HERO_POSTER = '/images/hero-video-poster.jpg';
+const heroConfig = getSiteConfig().home.hero;
+
+export const DEFAULT_HERO_VIDEO = heroConfig.desktopVideo || '/videos/hero-vs.mp4';
+export const DEFAULT_HERO_POSTER = heroConfig.posterDesktop || '/images/hero-video-poster.jpg';
 
 export interface HeroMediaConfig {
   desktopVideo: string;
@@ -15,10 +18,10 @@ export interface HeroMediaConfig {
 }
 
 export const defaultHeroMedia: HeroMediaConfig = {
-  desktopVideo: DEFAULT_HERO_VIDEO,
-  mobileVideo: DEFAULT_HERO_VIDEO,
-  posterDesktop: DEFAULT_HERO_POSTER,
-  posterMobile: DEFAULT_HERO_POSTER,
+  desktopVideo: heroConfig.desktopVideo || DEFAULT_HERO_VIDEO,
+  mobileVideo: heroConfig.mobileVideo || DEFAULT_HERO_VIDEO,
+  posterDesktop: heroConfig.posterDesktop || DEFAULT_HERO_POSTER,
+  posterMobile: heroConfig.posterMobile || DEFAULT_HERO_POSTER,
 };
 
 interface HeroProps {
@@ -126,7 +129,7 @@ export const Hero: React.FC<HeroProps> = memo(({ mediaConfig = defaultHeroMedia 
             className="mb-4 sm:mb-5"
           >
             <span className="text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-emerald-400">
-              ENGENHARIA • TECNOLOGIA • AUTOMAÇÃO
+              {heroConfig.eyebrow}
             </span>
           </motion.div>
 
@@ -136,7 +139,7 @@ export const Hero: React.FC<HeroProps> = memo(({ mediaConfig = defaultHeroMedia 
             transition={{ duration: prefersReduced ? 0.35 : 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="text-2xl sm:text-3xl lg:text-[38px] font-semibold text-white tracking-tight leading-[1.2] max-w-[680px]"
           >
-            Tecnologia integrada para operações mais seguras e eficientes.
+            {heroConfig.headline}
           </motion.h1>
 
           <motion.p
@@ -145,7 +148,7 @@ export const Hero: React.FC<HeroProps> = memo(({ mediaConfig = defaultHeroMedia 
             transition={{ duration: prefersReduced ? 0.35 : 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="mt-3.5 sm:mt-4 text-sm sm:text-base text-stone-200 leading-relaxed max-w-[620px]"
           >
-            A VS Tecnologia e Automação desenvolve soluções completas em segurança, infraestrutura, automação e telecomunicações para empresas e operações de alta complexidade.
+            {heroConfig.subheadline}
           </motion.p>
 
           <motion.div
@@ -163,7 +166,7 @@ export const Hero: React.FC<HeroProps> = memo(({ mediaConfig = defaultHeroMedia 
               }}
               className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-md bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-medium text-sm transition-colors shadow-sm text-center cursor-pointer"
             >
-              Conheça nossas soluções
+              {heroConfig.ctaPrimary}
             </button>
 
             <button
@@ -175,7 +178,7 @@ export const Hero: React.FC<HeroProps> = memo(({ mediaConfig = defaultHeroMedia 
               }}
               className="group inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-md bg-white/10 hover:bg-white/15 active:bg-white/20 text-white border border-white/20 hover:border-white/30 backdrop-blur-xs font-medium text-sm transition-colors cursor-pointer"
             >
-              <span>Fale com um especialista</span>
+              <span>{heroConfig.ctaSecondary}</span>
               <ArrowRight className="w-4 h-4 text-stone-300 btn-arrow-icon" />
             </button>
           </motion.div>

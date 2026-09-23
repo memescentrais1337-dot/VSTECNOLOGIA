@@ -1,0 +1,59 @@
+{
+  "id": "saude",
+  "title": "Saúde & Hospitais",
+  "slug": "saude",
+  "tagline": "Proteção de pacientes, controle de farmácias hospitalares e áreas cirúrgicas restritas.",
+  "description": "Projetos especiais para hospitais de excelência, controlando fluxo de visitantes, salas de medicamentos controlados, centros cirúrgicos e maternidades com altíssimo padrão sanitário e técnico.",
+  "iconName": "HeartPulse",
+  "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Restrição rigorosa a ambientes cirúrgicos, UTIs e berçários com exigência de assepsia",
+    "Rastreabilidade pontual de insumos de alto custo, entorpecentes e farmácias centrais",
+    "Atendimento hospitalar humanizado e ágil em situações de emergência (Código Azul)"
+  ],
+  "solutionsProvided": [
+    "Fechaduras eletromagnéticas antivandalismo e leitores biométricos sem toque (touchless)",
+    "Áudio IP estéril para chamadas de emergência e interfonia médica",
+    "Câmeras discretas em corredores e acessos em conformidade com a privacidade de leitos"
+  ],
+  "featuredProject": "hospital-albert-einstein",
+  "recommendedArchitecture": [
+    {
+      "title": "Controle de Acesso Touchless",
+      "desc": "Validação facial ultrarrápida sem necessidade de contato físico"
+    },
+    {
+      "title": "Eclusas com Intertravamento",
+      "desc": "Portas duplas com liberação sequencial para manutenção do fluxo asséptico"
+    },
+    {
+      "title": "Cabeamento Estruturado LSZH",
+      "desc": "Cabos Cat.6A sem halogênio e com baixa emissão de fumaça"
+    }
+  ],
+  "manufacturers": [
+    "AXIS Communications",
+    "Avigilon",
+    "Tyco",
+    "Furukawa"
+  ],
+  "differentials": [
+    "Metodologia de execução hospitalar em turnos programados sem ruído e sem poeira nas alas clínicas",
+    "Aderência comprovada aos critérios de segurança física da Joint Commission International (JCI)",
+    "Software de controle de acesso integrado ao prontuário ou ERP de gestão de colaboradores"
+  ],
+  "faq": [
+    {
+      "q": "Como é garantida a privacidade dos pacientes internados?",
+      "a": "Câmeras são posicionadas estritamente em áreas de circulação comum, portarias e acessos restritos, com máscaras de privacidade de software impedindo filmagem involuntária de leitos."
+    },
+    {
+      "q": "O que acontece com as portas restritas em caso de incêndio ou emergência hospitalar?",
+      "a": "Todas as controladoras de acesso contam com laço de corte integrado à central de alarme de incêndio, liberando imediatamente as rotas de fuga."
+    }
+  ],
+  "relatedCaseSlugs": [
+    "hospital-albert-einstein"
+  ],
+  "order": 3
+}

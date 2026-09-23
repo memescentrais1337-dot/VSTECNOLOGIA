@@ -1,0 +1,68 @@
+{
+  "name": "Câmera Dome de Rede 4K com Aprendizado Profundo",
+  "slug": "axis-q3538-lve",
+  "brand": "AXIS Communications",
+  "brandId": "axis",
+  "category": "Câmeras de Rede",
+  "model": "AXIS Q3538-LVE",
+  "type": "Câmera Dome Externa",
+  "application": [
+    "Indústria e Fábricas",
+    "Governo e Defesa",
+    "Logística e Centros de Distribuição"
+  ],
+  "shortDescription": "Câmera dome de 8 MP com processador ARTPEC-8, recursos de IA de aprendizado profundo, proteção antivandalismo IK10+ e estanqueidade IP66/IP67.",
+  "description": "A AXIS Q3538-LVE é uma câmera dome de última geração que oferece excelente qualidade de imagem em 4K UHD, mesmo nas condições de luz mais exigentes. Com a unidade de processamento de aprendizado profundo (DLPU), ela executa análises granulares diretamente na borda, diferenciando veículos, caminhões e pessoas.",
+  "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1000&q=80",
+  "imageUrl": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1000&q=80",
+  "gallery": [
+    "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "datasheet": "/datasheets/axis-q3538-lve.pdf",
+  "highlights": [
+    "Resolução 4K UHD (8 MP) até 60 fps",
+    "Inteligência Artificial DLPU na borda com AXIS Object Analytics",
+    "Grau antivandalismo IK10+ e proteção climática IP66/67"
+  ],
+  "features": [
+    "Tecnologias avançadas Lightfinder 2.0 e Forensic WDR",
+    "Cúpula resistente a impactos violentos com proteção contra corrosão",
+    "Sensor giroscópico com Estabilização Eletrônica de Imagem (EIS)",
+    "Chip seguro Axis Edge Vault com inicialização segura e certificado IEEE 802.1AR",
+    "Áudio bidirecional e entradas/saídas digitais supervisionadas"
+  ],
+  "specs": {
+    "Sensor de Imagem": "CMOS progressivo 1/1.2\" de alta sensibilidade",
+    "Lente": "Varifocal 4.3 – 8.6 mm, P-Iris, foco e zoom remotos",
+    "Resolução Máxima": "3840 x 2160 pixels (4K)",
+    "Compressão": "H.265 / H.264 com tecnologia Axis Zipstream",
+    "Alimentação": "Power over Ethernet (PoE) IEEE 802.3af/802.3at Tipo 1 Classe 3",
+    "Temperatura de Operação": "-50 °C a 60 °C",
+    "Classificação de Proteção": "IP66, IP67, NEMA 4X, IK10+"
+  },
+  "downloads": [
+    {
+      "title": "Ficha Técnica Oficial (Datasheet)",
+      "type": "PDF",
+      "size": "1.4 MB"
+    },
+    {
+      "title": "Guia de Instalação e Arquitetura",
+      "type": "PDF",
+      "size": "3.1 MB"
+    },
+    {
+      "title": "Desenho Executivo CAD / DWG",
+      "type": "ZIP",
+      "size": "5.2 MB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "genetec-security-center",
+    "axis-a1601-network-door-controller",
+    "axis-c1004-e-audio-ip"
+  ],
+  "featured": true,
+  "active": true,
+  "order": 1
+}

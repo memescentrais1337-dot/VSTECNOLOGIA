@@ -1,0 +1,368 @@
+{
+  "slug": "pelco",
+  "brandName": "Pelco",
+  "solutionName": "Pelco VideoXpert Enterprise",
+  "eyebrow": "VIDEOMONITORAMENTO PARA OPERAÇÕES QUE EXIGEM CONTROLE CONTÍNUO",
+  "heroEyebrow": "Pelco • Infraestrutura confiável para ambientes exigentes",
+  "headline": "Quando perder um evento",
+  "headlineHighlight": "não é uma opção na sua operação.",
+  "subheadline": "Plataformas robustas de videomonitoramento, software VideoXpert Enterprise e câmeras industriais para infraestruturas críticas com operação ininterrupta 24 horas por dia.",
+  "heroBenefits": [
+    "Software VMS VideoXpert Enterprise com arquitetura tolerante a falhas",
+    "Câmeras panorâmicas Sarix e linhas PTZ Spectra de alta durabilidade",
+    "Gravação ininterrupta com redundância e failover N+1 em tempo real",
+    "Conformidade com normas industriais IK10, IP67 e cibersegurança nativa"
+  ],
+  "heroBgImage": "/images/heroes/hero-pelco.jpg",
+  "heroImage": "/images/cameras/camera-pelco.png",
+  "heroImageLabel": "Pelco Sarix Multi Pro - Cobertura Panorâmica Multidirecional Externa",
+  "logo": "/images/marcas/logo-pelco.png",
+  "logoAlt": "Pelco - Fabricante Homologado",
+  "partnerBadge": "Fabricante Homologado • Certificação Oficial VS",
+  "heroMetrics": [
+    {
+      "value": "VideoXpert",
+      "label": "VMS Corporativo",
+      "detail": "Gestão intuitiva para centrais de grande porte"
+    },
+    {
+      "value": "Spectra PTZ",
+      "label": "Mecânica Extrema",
+      "detail": "Movimento contínuo 360° com durabilidade lendária"
+    },
+    {
+      "value": "Failover N+1",
+      "label": "Alta Disponibilidade",
+      "detail": "Gravação ininterrupta mesmo com falha de servidor"
+    },
+    {
+      "value": "ONVIF Total",
+      "label": "Interoperabilidade",
+      "detail": "Integração transparente com centenas de fabricantes"
+    }
+  ],
+  "problemSection": {
+    "tag": "DIAGNÓSTICO OPERACIONAL",
+    "title": "Segurança não pode ser reativa.",
+    "narrative": [
+      "Em operações de missão crítica — como plantas industriais pesadas, portos, aeroportos e centros penitenciários —, a queda momentânea de um servidor de gravação ou o travamento mecânico de uma câmera PTZ não é apenas um transtorno operacional: é uma violação grave de segurança.",
+      "Sistemas genéricos não suportam condições climáticas hostis, poeira abrasiva, variações de temperatura ou o estresse de operações contínuas de 24 horas nos 365 dias do ano, gerando custos ocultos constantes de manutenção."
+    ],
+    "painPoints": [
+      {
+        "title": "VMS complexos e difíceis de operar em emergências",
+        "desc": "Interfaces confusas que demandam muitos cliques para exportar um vídeo ou alternar visualizações durante uma crise."
+      },
+      {
+        "title": "Vulnerabilidade mecânica de equipamentos em ambientes severos",
+        "desc": "Câmeras externas que quebram com tempestades, oscilação de calor ou maresia por falta de grau de proteção industrial."
+      },
+      {
+        "title": "Falta de redundância e perda irreversível de imagens",
+        "desc": "Gravadores que param quando um disco falha ou uma placa queima, criando lacunas inaceitáveis de registros."
+      },
+      {
+        "title": "Dificuldade de integrar novos módulos a sistemas legados",
+        "desc": "Softwares que obrigam a compra de equipamentos da mesma marca, encarecendo desnecessariamente as expansões."
+      }
+    ],
+    "solutionBridge": "É aqui que entra a confiabilidade comprovada da engenharia Pelco."
+  },
+  "technologiesTitle": "Uma arquitetura. Múltiplas camadas de proteção.",
+  "technologiesSubtitle": "Engenharia projetada para resistir ao tempo, ao clima e às exigências de segurança mais duras do planeta.",
+  "technologies": [
+    {
+      "title": "Pelco VideoXpert Enterprise VMS",
+      "category": "Gerenciamento de Vídeo",
+      "description": "Software de gestão de vídeo desenvolvido com foco na ergonomia do operador e na confiabilidade da infraestrutura. Permite gerenciar milhares de câmeras distribuídas com failover automático de servidores, mapas interativos e decodificação fluida de múltiplos fluxos 4K.",
+      "features": [
+        "Interface gráfica simplificada com tempo de treinamento reduzido para operadores",
+        "Arquitetura modular de alta resiliência com redundância N+1 de gravação",
+        "Compatibilidade aberta com dispositivos de terceiros através do protocolo ONVIF",
+        "Ferramentas colaborativas para compartilhamento de evidências entre operadores"
+      ],
+      "specs": {
+        "Escalabilidade": "Dezenas a milhares de canais",
+        "Redundância": "Failover em tempo real sem perda de gravação",
+        "Padrões": "ONVIF Perfil S, G e T"
+      },
+      "tag": "VMS Enterprise",
+      "image": "/images/equipamentos/pelco-videoxpert-vms.png"
+    },
+    {
+      "title": "Câmeras PTZ Spectra Série Profissional",
+      "category": "Monitoramento Móvel Extremo",
+      "description": "A lendária linha Spectra de câmeras PTZ de alta velocidade, construída com gabinetes industriais anticorrosivos, sistema de posicionamento de precisão e zoom óptico potente para identificação de pessoas e placas a longas distâncias.",
+      "features": [
+        "Giro contínuo 360° com rotação de alta precisão até 450° por segundo",
+        "Iluminação infravermelha adaptativa de longo alcance para escuridão total",
+        "Desembaçamento térmico e cúpula resistente a impactos mecânicos IK10",
+        "Analíticos integrados de cerca virtual, velocidade e direção proibida"
+      ],
+      "specs": {
+        "Zoom Óptico": "Até 40x com foco instantâneo",
+        "Proteções": "IP66, IP67, NEMA 4X, IK10",
+        "Temperatura": "-40 °C a 60 °C"
+      },
+      "tag": "PTZ Industrial",
+      "image": "/images/equipamentos/pelco-spectra-ptz.png"
+    },
+    {
+      "title": "Câmeras Panorâmicas Sarix e Térmicas Sarix Thermal",
+      "category": "Perímetro & Áreas Amplas",
+      "description": "Equipamentos de lente fixa e sensores radiométricos com imunidade a poeira, fumaça e névoa densa. Garantem detecção precoce de intrusos em perímetros sem iluminação artificial e alerta antecipado de sobreaquecimento.",
+      "features": [
+        "Detecção térmica precisa de silhuetas humanas e motores aquecidos a quilômetros",
+        "Combinação com sensores visuais para conferência pericial rápida",
+        "Invólucros com proteção antivandalismo e contra jatos fortes de água",
+        "Homologadas para operação contínua em refinarias, usinas e subestações"
+      ],
+      "specs": {
+        "Sensor Térmico": "Microbolômetro não resfriado de óxido de vanádio",
+        "Carcaça": "Alumínio naval com pintura epóxi",
+        "Alimentação": "PoE+ ou 24V AC/DC"
+      },
+      "tag": "Térmica & Panorâmica",
+      "image": "/images/cameras/camera-pelco.png"
+    }
+  ],
+  "businessBenefits": [
+    {
+      "number": "01",
+      "title": "VISÃO CENTRALIZADA",
+      "desc": "Operações complexas e plantas industriais monitoradas através de uma plataforma integrada com visualização ágil e mapas georreferenciados.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Videowalls corporativos com layouts dinâmicos configuráveis por perfil",
+        "Localização visual imediata de alarmes sobre plantas baixas da instalação",
+        "Exportação criptografada de incidentes para fins de auditoria jurídica"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "CYBERSECURITY NATIVA",
+      "desc": "Recursos robustos voltados à blindagem da infraestrutura de vídeo contra invasões lógicas e acessos não autorizados.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Autenticação de dois fatores e integração com diretórios corporativos (LDAP/AD)",
+        "Comunicação criptografada por TLS 1.3 entre câmeras e servidores",
+        "Registro inalterável de todas as interações e consultas de usuários"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "INTEROPERABILIDADE COMPROVADA",
+      "desc": "Integração transparente com dispositivos legados, sistemas de terceiros e sensores de alarme via protocolos universais.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Conformidade integral com os perfis ONVIF do mercado",
+        "Flexibilidade para manter investimentos anteriores enquanto moderniza a central",
+        "Suporte técnico de engenharia com homologação de fábrica"
+      ]
+    }
+  ],
+  "architectureTitle": "Monte sua arquitetura",
+  "architectureSubtitle": "A estrutura resiliente do ecossistema Pelco VideoXpert.",
+  "architectureLayers": [
+    {
+      "step": "01",
+      "label": "CÂMERAS SARIX & SPECTRA",
+      "sublabel": "Captura Perimétrica",
+      "detail": "Câmeras fixas, panorâmicas e PTZ com resistência mecânica para condições adversas.",
+      "metrics": "IK10 • IP67 • NEMA 4X",
+      "iconName": "Camera"
+    },
+    {
+      "step": "02",
+      "label": "REDE INDUSTRIAL",
+      "sublabel": "Backbone de Alta Confiabilidade",
+      "detail": "Infraestrutura de rede com anéis ópticos de fibra e switches industriais redundantes.",
+      "metrics": "Zero perda de pacotes",
+      "iconName": "Network"
+    },
+    {
+      "step": "03",
+      "label": "CORE SERVERS",
+      "sublabel": "Gerenciamento de Mídia",
+      "detail": "Servidores de banco de dados e controle de usuários com tolerância a falhas.",
+      "metrics": "Cluster de alta disponibilidade",
+      "iconName": "Database"
+    },
+    {
+      "step": "04",
+      "label": "RECORDING STORAGE",
+      "sublabel": "Gravação em RAID",
+      "detail": "Unidades de gravação contínua com failover N+1 assumindo em caso de parada de nós.",
+      "metrics": "Gravação ininterrupta 24/7",
+      "iconName": "HardDrive"
+    },
+    {
+      "step": "05",
+      "label": "VIDEOXPERT VMS",
+      "sublabel": "Inteligência de Interface",
+      "detail": "Ambiente ergonômico para operadores com atalhos rápidos e mapas interativos.",
+      "metrics": "Navegação fluida e veloz",
+      "iconName": "Server"
+    },
+    {
+      "step": "06",
+      "label": "CENTRAL DE OPERAÇÕES",
+      "sublabel": "Resposta & Despacho",
+      "detail": "Videowalls, integração com brigadas de incêndio e equipes táticas de campo.",
+      "metrics": "Controle contínuo e absoluto",
+      "iconName": "Monitor"
+    }
+  ],
+  "applicationsTitle": "Projetado para ambientes que não podem parar",
+  "applications": [
+    {
+      "title": "Centros Penitenciários & Segurança Pública",
+      "segment": "Controle Máximo",
+      "description": "Monitoramento de pátios, muralhas e galerias com câmeras à prova de depredação e retenção inviolável de gravações.",
+      "relevance": "Tolerância zero a falhas ou pontos cegos visuais.",
+      "iconName": "ShieldAlert"
+    },
+    {
+      "title": "Usinas de Energia, Hidrelétricas & Óleo e Gás",
+      "segment": "Operações Severas",
+      "description": "Proteção de reservatórios, tubulações, áreas com risco de explosão e monitoramento perimetral contra invasões noturnas.",
+      "relevance": "Resistência a intempéries agressivas e altas variações térmicas.",
+      "iconName": "Zap"
+    },
+    {
+      "title": "Mineração, Siderurgia & Logística Portuária",
+      "segment": "Ambientes Hostis",
+      "description": "Supervisão de correias transportadoras, pátios de minério, cais de atracação e tráfego de guindastes pesados.",
+      "relevance": "Equipamentos resistentes a vibração, poeira suspensa e corrosão salina.",
+      "iconName": "Factory"
+    },
+    {
+      "title": "Grandes Complexos Educacionais & Campi",
+      "segment": "Espaços Abertos",
+      "description": "Cobertura de amplos estacionamentos, vias internas e edifícios dispersos com centralização em única sala de segurança.",
+      "relevance": "Otimização de equipe patrimonial por meio de monitoramento inteligente.",
+      "iconName": "Building2"
+    }
+  ],
+  "compliance": {
+    "title": "Tecnologia preparada para ambientes com altas exigências.",
+    "subtitle": "Soluções com tradição global em segurança física, projetadas para manter conformidade com normas regulamentares de continuidade operacional.",
+    "items": [
+      {
+        "title": "Conformidade com Normas de TI e Privacidade",
+        "desc": "Políticas configuráveis de retenção de gravações, mascaramento de privacidade e conformidade com diretrizes da LGPD.",
+        "supportedStandard": "Governança & Privacidade LGPD"
+      },
+      {
+        "title": "Resistência Mecânica Homologada",
+        "desc": "Certificações internacionais de impacto e estanqueidade que garantem a segurança do equipamento contra vandalismo e tempestades.",
+        "supportedStandard": "Graus de Proteção IK10 e IP66/67"
+      },
+      {
+        "title": "Cibersegurança Corporativa",
+        "desc": "Proteção contra ataques de negação de serviço, senhas fortes obrigatórias e fechamento de portas de rede não utilizadas.",
+        "supportedStandard": "Padrão Hardening Corporativo"
+      },
+      {
+        "title": "Projetos com Responsabilidade Técnica",
+        "desc": "Projetos executivos desenvolvidos por engenheiros registrados no CREA com fornecimento oficial e documentação as-built.",
+        "supportedStandard": "Engenharia com ART / CREA-GO"
+      }
+    ]
+  },
+  "casesTitle": "Projetos que exigem confiabilidade",
+  "cases": [
+    {
+      "client": "Quartel General do Exército — QGEX",
+      "highlight": "Infraestrutura crítica de segurança",
+      "description": "Implantação de equipamentos de segurança física e infraestrutura de rede para complexo militar estratégico com alta exigência operacional.",
+      "image": "/images/projetos/projeto-qgex.png",
+      "tag": "Defesa & Governo"
+    },
+    {
+      "client": "EDP Goiânia",
+      "highlight": "Integração avançada",
+      "description": "Monitoramento perimetral e controle de subestação elétrica sob severo campo eletromagnético com alta disponibilidade de gravação.",
+      "image": "/images/projetos/projeto-edp-goiania.png",
+      "tag": "Energia & Utilidades"
+    },
+    {
+      "client": "Hospital Israelita Albert Einstein",
+      "highlight": "Projeto Turn-key",
+      "description": "Infraestrutura integrada de segurança e controle de circulação em centro médico avançado.",
+      "image": "/images/projetos/projeto-hospital-albert-einstein.png",
+      "tag": "Saúde & Alta Complexidade"
+    }
+  ],
+  "faq": [
+    {
+      "question": "O software VideoXpert da Pelco suporta câmeras de outros fabricantes?",
+      "answer": "Sim. O VideoXpert foi desenvolvido sobre arquitetura aberta e oferece suporte total ao padrão ONVIF, permitindo conectar câmeras já existentes no cliente ou mesclar diferentes fabricantes conforme a necessidade técnica do projeto."
+    },
+    {
+      "question": "O que acontece com as gravações se um dos servidores de gravação queimar?",
+      "answer": "Nas configurações com failover redundante N+1 que projetamos, um servidor reserva assume imediatamente a gravação das câmeras sem qualquer interrupção, mantendo o histórico protegido e alertando a equipe técnica."
+    },
+    {
+      "question": "As câmeras PTZ da Pelco são indicadas para áreas externas agressivas?",
+      "answer": "Sim. A linha Spectra é mundialmente famosa justamente pela robustez mecânica contra tempestades, altas temperaturas, granizo e ventos fortes, sendo padrão em pontes, portos e indústrias pesadas."
+    },
+    {
+      "question": "A VS Tecnologia executa a migração de sistemas antigos para a Pelco?",
+      "answer": "Sim. Avaliamos a fiação e equipamentos legados para elaborar um plano de migração progressivo, evitando que sua operação precise parar para a modernização da central."
+    },
+    {
+      "question": "Como solicitar um orçamento com a engenharia da VS?",
+      "answer": "Preencha o formulário nesta página ou clique no botão do WhatsApp. Um engenheiro especialista entrará em contato para agendar o diagnóstico e dimensionar a solução adequada."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de robustez inabalável para manter o controle dia e noite.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  },
+  "formSource": "landing_page_pelco",
+  "whatsappMessage": "Olá! Vim pela página da solução Pelco e gostaria de conversar sobre um projeto com um especialista da VS.",
+  "seoTitle": "Soluções Pelco para Videomonitoramento | VS Tecnologia",
+  "seoDescription": "Soluções de videomonitoramento de alta confiabilidade Pelco e software VideoXpert com projeto, fornecimento e implantação da VS Tecnologia.",
+  "benefits": [
+    {
+      "number": "01",
+      "title": "VISÃO CENTRALIZADA",
+      "desc": "Operações complexas e plantas industriais monitoradas através de uma plataforma integrada com visualização ágil e mapas georreferenciados.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Videowalls corporativos com layouts dinâmicos configuráveis por perfil",
+        "Localização visual imediata de alarmes sobre plantas baixas da instalação",
+        "Exportação criptografada de incidentes para fins de auditoria jurídica"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "CYBERSECURITY NATIVA",
+      "desc": "Recursos robustos voltados à blindagem da infraestrutura de vídeo contra invasões lógicas e acessos não autorizados.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Autenticação de dois fatores e integração com diretórios corporativos (LDAP/AD)",
+        "Comunicação criptografada por TLS 1.3 entre câmeras e servidores",
+        "Registro inalterável de todas as interações e consultas de usuários"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "INTEROPERABILIDADE COMPROVADA",
+      "desc": "Integração transparente com dispositivos legados, sistemas de terceiros e sensores de alarme via protocolos universais.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Conformidade integral com os perfis ONVIF do mercado",
+        "Flexibilidade para manter investimentos anteriores enquanto moderniza a central",
+        "Suporte técnico de engenharia com homologação de fábrica"
+      ]
+    }
+  ],
+  "cta": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de robustez inabalável para manter o controle dia e noite.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  }
+}

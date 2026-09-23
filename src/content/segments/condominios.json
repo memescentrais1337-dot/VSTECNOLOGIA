@@ -1,0 +1,30 @@
+{
+  "id": "condominios",
+  "title": "Condomínios Horizontais & Comerciais",
+  "slug": "condominios",
+  "tagline": "Segurança premium, reconhecimento de placas de moradores e portaria autônoma de alta velocidade.",
+  "description": "Tecnologia sofisticada que valoriza o metro quadrado. Câmeras de longo alcance perimetral, eclusas de pedestres e veículos com cancelas rápidas CAME e tags veiculares de alta precisão.",
+  "iconName": "Home",
+  "imageUrl": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Eliminação de filas nos horários de pico escolar e corporativo",
+    "Monitoramento seguro de extensos perímetros sem pontos cegos",
+    "Privacidade dos moradores e facilidade no acesso de prestadores e visitantes"
+  ],
+  "solutionsProvided": [
+    "Leitura de placas LPR com abertura instantânea para moradores cadastrados",
+    "Cerca perimetral inteligente com áudio de aviso e iluminação automática",
+    "Controle de visitantes via aplicativo e totem de autoatendimento"
+  ],
+  "featuredProject": "",
+  "recommendedArchitecture": [],
+  "manufacturers": [
+    "CAME",
+    "AXIS Communications",
+    "Hanwha Vision"
+  ],
+  "differentials": [],
+  "faq": [],
+  "relatedCaseSlugs": [],
+  "order": 10
+}

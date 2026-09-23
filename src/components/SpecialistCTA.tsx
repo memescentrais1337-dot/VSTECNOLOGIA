@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Phone, Mail, CheckCircle2, Send } from 'lucide-react';
 import { companyData } from '../data/company';
 import { MotionReveal } from './common/MotionReveal';
+import { getSiteConfig } from '../lib/content';
 
-const directorPhoto = '/images/institucional/diretor-especialista.png';
+const specialistCtaConfig = getSiteConfig().home.specialistCta;
+const directorPhoto = specialistCtaConfig.directorPhoto || '/images/institucional/diretor-especialista.png';
 
 export const SpecialistCTA: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -35,13 +37,13 @@ export const SpecialistCTA: React.FC = () => {
           <MotionReveal className="lg:col-span-5 space-y-4">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800">
-                Engenharia Consultiva
+                {specialistCtaConfig.eyebrow}
               </span>
               <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-stone-900 tracking-tight mt-1">
-                Vamos planejar seu próximo projeto.
+                {specialistCtaConfig.headline}
               </h2>
               <p className="mt-1.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Converse diretamente com nosso corpo de engenharia. Avaliamos a viabilidade da sua planta, normas cabíveis e a arquitetura mais eficiente.
+                {specialistCtaConfig.subheadline}
               </p>
             </div>
 

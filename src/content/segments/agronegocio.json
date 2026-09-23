@@ -1,0 +1,33 @@
+{
+  "id": "agronegocio",
+  "title": "Agronegócio & Silos",
+  "slug": "agronegocio",
+  "tagline": "Conectividade e vigilância inteligente em áreas remotas, fazendas e usinas de grãos.",
+  "description": "Monitoramento de pátios de armazenagem, balanças rodoviárias, pivôs e sedes remotas através de enlaces de rádio, fibra óptica e câmeras térmicas autônomas.",
+  "iconName": "Tractor",
+  "imageUrl": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Distâncias territoriais extremas e carência de rede de dados nas propriedades",
+    "Furtos de maquinários agrícolas, defensivos e combustível em locais ermos",
+    "Aquecimento e risco de combustão em silos de grãos e esteiras transportadoras"
+  ],
+  "solutionsProvided": [
+    "Termografia preventiva para detecção precoce de combustão em silos",
+    "Enlaces de rádio de longo alcance e energia fotovoltaica para pontos remotos",
+    "Detecção perimetral contra invasões noturnas com cornetas IP dissuasivas"
+  ],
+  "featuredProject": "",
+  "recommendedArchitecture": [],
+  "manufacturers": [
+    "AXIS Communications",
+    "Hanwha Vision",
+    "CAME"
+  ],
+  "differentials": [
+    "Capacidade de implantação em áreas rurais de Goiás, Mato Grosso e todo o Centro-Oeste",
+    "Soluções com energia solar e baterias estacionárias para locais sem rede elétrica"
+  ],
+  "faq": [],
+  "relatedCaseSlugs": [],
+  "order": 7
+}

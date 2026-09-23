@@ -1,0 +1,368 @@
+{
+  "slug": "avigilon",
+  "brandName": "Avigilon",
+  "solutionName": "Avigilon Unity & Alta Security",
+  "eyebrow": "INTELIGÊNCIA QUE AJUDA SUA OPERAÇÃO A ENCONTRAR O QUE IMPORTA",
+  "heroEyebrow": "Avigilon • Monitoramento e analytics de alta precisão",
+  "headline": "Menos tempo procurando alvos.",
+  "headlineHighlight": "Mais tempo para agir com precisão.",
+  "subheadline": "Vídeo analítico com inteligência artificial e busca acelerada por aparência para operações corporativas que exigem localização imediata e gestão unificada de segurança.",
+  "heroBenefits": [
+    "Busca Avançada por Aparência (Avigilon Appearance Search™)",
+    "Detecção de Movimento Incomum e Anomalias de Comportamento (UMD)",
+    "Câmeras Panorâmicas H6A e Multisensores de altíssima definição",
+    "Plataforma unificada de vídeo com controle de acesso integrado"
+  ],
+  "heroBgImage": "/images/heroes/hero-avigilon.jpg",
+  "heroImage": "/images/cameras/camera-avigilon.png",
+  "heroImageLabel": "Avigilon H5A PTZ - Câmera Externa de Alta Definição e Resposta Rápida",
+  "logo": "/images/marcas/logo-avigilon.png",
+  "logoAlt": "Avigilon - Fabricante Homologado",
+  "partnerBadge": "Fabricante Homologado • Certificação Oficial VS",
+  "heroMetrics": [
+    {
+      "value": "Appearance Search",
+      "label": "Busca por Aparência",
+      "detail": "Localização rápida de indivíduos em toda a planta"
+    },
+    {
+      "value": "HDSM 2.0",
+      "label": "Gestão de Banda",
+      "detail": "Transmissão inteligente apenas de pixels necessários"
+    },
+    {
+      "value": "32 MP",
+      "label": "Cobertura Total",
+      "detail": "Multisensores com 180° e 360° contínuos"
+    },
+    {
+      "value": "Unificado",
+      "label": "Vídeo + Acesso",
+      "detail": "Correlação nativa de imagens com crachás"
+    }
+  ],
+  "problemSection": {
+    "tag": "DIAGNÓSTICO OPERACIONAL",
+    "title": "Segurança não pode ser reativa.",
+    "narrative": [
+      "Quando ocorre um incidente crítico em uma grande área — como um galpão logístico ou complexo hospitalar —, os operadores de segurança perdem horas preciosas navegando manualmente por dezenas de câmeras desconexas para reconstruir a rota de uma pessoa ou veículo.",
+      "Sistemas convencionais acumulam terabytes de vídeo inútil e exigem esforço humano desproporcional. Sem inteligência analítica para classificar o que é normal e o que é anômalo, incidentes só são descobertos quando os danos já se consolidaram."
+    ],
+    "painPoints": [
+      {
+        "title": "Horas perdidas em busca manual de gravações",
+        "desc": "Operadores navegando por barras de tempo infinitas tentando localizar o momento exato de uma ocorrência."
+      },
+      {
+        "title": "Incapacidade de rastrear suspeitos entre câmeras",
+        "desc": "Perda de continuidade visual quando uma pessoa suspeita ou veículo se desloca por diferentes setores da empresa."
+      },
+      {
+        "title": "Eventos atípicos despercebidos",
+        "desc": "Movimentações em horários incomuns ou em sentidos contrários ao fluxo que não geram alertas por falta de aprendizado de máquina."
+      },
+      {
+        "title": "Sistemas de acesso desconectados do vídeo",
+        "desc": "Dificuldade de validar se a pessoa que usou um crachá em uma porta restrita é realmente o titular da credencial."
+      }
+    ],
+    "solutionBridge": "É aqui que entra a engenharia de segurança inteligente da Avigilon."
+  },
+  "technologiesTitle": "Uma arquitetura. Múltiplas camadas de proteção.",
+  "technologiesSubtitle": "Ferramentas de análise preditiva projetadas para acelerar a tomada de decisão da equipe de segurança.",
+  "technologies": [
+    {
+      "title": "Câmeras Multissensor H6A e Panorâmicas 360°",
+      "category": "Cobertura Ampla",
+      "description": "Projetadas para substituir múltiplos dispositivos pontuais por um único equipamento de alta densidade óptica. Quatro sensores ajustáveis independentes com costura de imagem perfeita proporcionam cobertura ininterrupta de 180° ou 360° consumindo apenas uma porta de rede e uma licença.",
+      "features": [
+        "Resolução combinada de até 32 MP para identificação forense de detalhes",
+        "Gestão Dinâmica de Fluxo de Alta Definição (HDSM 2.0) poupando rede",
+        "Iluminação infravermelha inteligente adaptativa em todos os quadrantes",
+        "Classificação de pessoas, veículos e contagem precisa de fluxo"
+      ],
+      "specs": {
+        "Resolução": "Até 32 MP (4 x 8 MP)",
+        "Alimentação": "PoE+ (IEEE 802.3at) ou 24V",
+        "Proteções": "IP66, IP67, IK10"
+      },
+      "tag": "Câmera Multissensor",
+      "image": "/images/cameras/camera-avigilon.png"
+    },
+    {
+      "title": "Avigilon AI Appliance & Servidores Analíticos",
+      "category": "Aceleração de Inteligência",
+      "description": "Dispositivo de computação de borda de alta densidade que adiciona capacidade de aprendizado de máquina e busca por aparência até mesmo a câmeras convencionais já instaladas na planta, protegendo investimentos legados do cliente.",
+      "features": [
+        "Capacidade de processar dezenas de fluxos de vídeo simultâneos com IA",
+        "Habilita busca forense de indivíduos por tipo e cor de vestimenta",
+        "Alimentação redundante e hardware de padrão industrial corporativo",
+        "Integração nativa com software de gerenciamento Avigilon Control Center (ACC/Unity)"
+      ],
+      "specs": {
+        "Capacidade": "Até 60+ canais de análise simultânea",
+        "Armazenamento": "RAID corporativo hot-swap",
+        "Conectividade": "Portas Gigabit e 10GbE"
+      },
+      "tag": "IA Appliance",
+      "image": "/images/equipamentos/avigilon-ai-server.png"
+    },
+    {
+      "title": "Gerenciamento Centralizado Unity & Controle de Acesso",
+      "category": "Plataforma Unificada",
+      "description": "Ambiente unificado onde eventos de controle de acesso geram verificação visual instantânea com vídeo ao vivo. Alertas de portas forçadas, credenciais não autorizadas e antipassback são enriquecidos com a gravação precisa do momento.",
+      "features": [
+        "Interface gráfica intuitiva com mapas georreferenciados interativos",
+        "Verificação visual de credenciais em tempo real nos pontos de acesso",
+        "Relatórios de auditoria com exportação protegida contra adulteração",
+        "App móvel corporativo para visualização e resposta a incidentes remotos"
+      ],
+      "specs": {
+        "Arquitetura": "Cliente-Servidor escalável",
+        "Compatibilidade": "ONVIF Perfil S, G, T e M",
+        "Segurança": "Criptografia FIPS 140-2 nível 3"
+      },
+      "tag": "VMS & Acesso Unificado",
+      "image": "/images/equipamentos/avigilon-unity-vms.png"
+    }
+  ],
+  "businessBenefits": [
+    {
+      "number": "01",
+      "title": "ANÁLISE INTELIGENTE",
+      "desc": "Ajuda as equipes a encontrar eventos relevantes em grandes volumes de vídeo gravado sem necessidade de rever horas de gravações contínuas.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Busca por atributos físicos (ex.: pessoa com camisa vermelha e mochila)",
+        "Detecção automática de comportamentos incomuns de pedestres e frotas",
+        "Notificações proativas antes que a invasão perimetral se consolide"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "OPERAÇÃO CENTRALIZADA",
+      "desc": "Concentra vídeo analítico, alertas de intrusão e controle de acesso físico em uma única tela de comando de alto impacto.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Validação visual instantânea no momento de leitura do crachá",
+        "Mapas interativos integrados mostrando a posição exata de cada sensor",
+        "Redução drástica do tempo de resposta da equipe patrimonial"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "ESCALA CORPORATIVA",
+      "desc": "Arquitetura adequada para operações complexas, plantas fabris extensas e redes distribuídas com dezenas de unidades.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Gestão de banda HDSM transmitindo apenas o recorte visual focado",
+        "Armazenamento otimizado com redução sensível do custo de servidores",
+        "Expansão progressiva conforme as novas etapas do plano diretor da empresa"
+      ]
+    }
+  ],
+  "architectureTitle": "Monte sua arquitetura",
+  "architectureSubtitle": "Entenda como o ecossistema Avigilon conecta câmeras, appliances analíticos e operadores.",
+  "architectureLayers": [
+    {
+      "step": "01",
+      "label": "CÂMERAS H6A",
+      "sublabel": "Captura Panorâmica",
+      "detail": "Sensores multimegapixel cobrindo 180° ou 360° contínuos com detalhamento forense.",
+      "metrics": "Até 32 MP • HDSM 2.0",
+      "iconName": "Camera"
+    },
+    {
+      "step": "02",
+      "label": "AI APPLIANCE",
+      "sublabel": "Processamento de Vídeo",
+      "detail": "Motor de inteligência artificial indexando pessoas, veículos e trajetos em tempo real.",
+      "metrics": "Classificação neural de alvos",
+      "iconName": "Cpu"
+    },
+    {
+      "step": "03",
+      "label": "NETWORK & STORAGE",
+      "sublabel": "Armazenamento HDSM",
+      "detail": "Compressão patenteada que transmite apenas os pixels necessários para visualização.",
+      "metrics": "Economia de banda e storage",
+      "iconName": "HardDrive"
+    },
+    {
+      "step": "04",
+      "label": "UNITY VMS",
+      "sublabel": "Plataforma Unificada",
+      "detail": "Centralização de gravações, regras de automação e histórico de controle de acesso.",
+      "metrics": "Mapas interativos e logs",
+      "iconName": "Server"
+    },
+    {
+      "step": "05",
+      "label": "APPEARANCE SEARCH",
+      "sublabel": "Busca Forense",
+      "detail": "Localização instantânea de alvos em todo o parque de câmeras através de características visuais.",
+      "metrics": "Localização em segundos",
+      "iconName": "Search"
+    },
+    {
+      "step": "06",
+      "label": "CONTROL ROOM",
+      "sublabel": "Tomada de Ação",
+      "detail": "Acionamento imediato de bloqueio de portas, avisos à segurança e notificação à diretoria.",
+      "metrics": "Resposta tática integrada",
+      "iconName": "ShieldAlert"
+    }
+  ],
+  "applicationsTitle": "Projetado para ambientes que não podem parar",
+  "applications": [
+    {
+      "title": "Complexos Hospitalares & Saúde",
+      "segment": "Alta Complexidade",
+      "description": "Rastreamento de movimentações em farmácias centrais, corredores cirúrgicos, berçários e controle estrito de credenciais em áreas estéreis.",
+      "relevance": "Garantia de atendimento a protocolos clínicos e proteção de pacientes.",
+      "iconName": "HeartPulse"
+    },
+    {
+      "title": "Centros Logísticos & Pátios de Cargas",
+      "segment": "Prevenção de Perdas",
+      "description": "Identificação precisa de carretas, rastreabilidade visual de mercadorias de alto valor e cobertura ampla de docas sem pontos cegos.",
+      "relevance": "Auditoria de sinistros e minimização de tempo de investigação.",
+      "iconName": "Truck"
+    },
+    {
+      "title": "Indústrias Farmacêuticas & Químicas",
+      "segment": "Conformidade Regulamentar",
+      "description": "Monitoramento de salas limpas, detecção de tráfego em sentido inadequado e proteção de propriedade intelectual em laboratórios.",
+      "relevance": "Atendimento a rígidas normas de controle de processos e auditoria.",
+      "iconName": "Factory"
+    },
+    {
+      "title": "Edifícios Comerciais Triple A",
+      "segment": "Segurança Executiva",
+      "description": "Controle de saguões de alto fluxo, cancelas de estacionamento, elevadores inteligentes e áreas de diretoria com discrição e sofisticação.",
+      "relevance": "Equilíbrio entre acolhimento ao visitante e blindagem corporativa.",
+      "iconName": "Building2"
+    }
+  ],
+  "compliance": {
+    "title": "Tecnologia preparada para ambientes com altas exigências.",
+    "subtitle": "Soluções que auxiliam a sua empresa a cumprir requisitos técnicos de segurança da informação, auditoria e preservação de registros.",
+    "items": [
+      {
+        "title": "Conformidade com Privacidade (LGPD)",
+        "desc": "Recursos configuráveis para ofuscação de rostos e descarte seguro de gravações após os períodos regulatórios definidos pela governança do cliente.",
+        "supportedStandard": "Governança & Adequação LGPD"
+      },
+      {
+        "title": "Proteção Criptográfica Avançada",
+        "desc": "Comunicação protegida por certificados digitais e criptografia de ponta a ponta entre câmeras, controladoras e servidores.",
+        "supportedStandard": "Criptografia FIPS 140-2"
+      },
+      {
+        "title": "Auditoria e Logs Imutáveis",
+        "desc": "Registro completo de todas as ações de operadores, exportações de vídeo e consultas forenses para fins de conformidade interna e externa.",
+        "supportedStandard": "Trilha de Auditoria AuditLog"
+      },
+      {
+        "title": "Engenharia com Garantia Oficial",
+        "desc": "Projetos especificados por integradores homologados com ART (Anotação de Responsabilidade Técnica) e suporte de fábrica.",
+        "supportedStandard": "Padrão CREA & Boas Práticas"
+      }
+    ]
+  },
+  "casesTitle": "Projetos que exigem confiabilidade",
+  "cases": [
+    {
+      "client": "Hospital Israelita Albert Einstein",
+      "highlight": "Projeto Turn-key",
+      "description": "Controle de acesso touchless, monitoramento de alta definição em corredores clínicos e gestão unificada em ambiente hospitalar de excelência.",
+      "image": "/images/projetos/projeto-hospital-albert-einstein.png",
+      "tag": "Saúde & Alta Complexidade"
+    },
+    {
+      "client": "EDP Goiânia",
+      "highlight": "Integração avançada",
+      "description": "Segurança perimetral inteligente com análise de vídeo e controle térmico de transformadores em subestação elétrica de alta potência.",
+      "image": "/images/projetos/projeto-edp-goiania.png",
+      "tag": "Energia & Utilidades"
+    },
+    {
+      "client": "Quartel General do Exército — QGEX",
+      "highlight": "Infraestrutura crítica de segurança",
+      "description": "Vigilância eletrônica integrada e infraestrutura de rede corporativa para complexo de segurança militar.",
+      "image": "/images/projetos/projeto-qgex.png",
+      "tag": "Defesa & Governo"
+    }
+  ],
+  "faq": [
+    {
+      "question": "É possível utilizar os recursos de IA da Avigilon com as câmeras que minha empresa já possui?",
+      "answer": "Sim. Com o Avigilon AI Appliance é possível injetar recursos de inteligência artificial (como classificação de pessoas e busca por aparência) em câmeras de terceiros já existentes na sua infraestrutura, desde que atendam aos requisitos mínimos de resolução e protocolo ONVIF."
+    },
+    {
+      "question": "O que é a tecnologia de busca por aparência (Appearance Search)?",
+      "answer": "É um motor de pesquisa baseado em Deep Learning que localiza rapidamente uma pessoa ou veículo específico em todo o parque de câmeras gravadas, utilizando critérios físicos como cor da roupa, características gerais ou a partir da foto do indivíduo."
+    },
+    {
+      "question": "A tecnologia HDSM realmente economiza armazenamento e banda?",
+      "answer": "Sim. O protocolo High Definition Stream Management transmite apenas a porção de pixels que o operador está de fato visualizando na tela, mantendo a gravação gravada em resolução máxima no servidor sem sobrecarregar a rede local nem computadores clientes."
+    },
+    {
+      "question": "A VS Tecnologia presta suporte contínuo pós-implantação?",
+      "answer": "Sim. Oferecemos contratos de manutenção preventiva, suporte técnico especializado de engenharia, atualização de firmware e atendimento a chamados com SLA definido."
+    },
+    {
+      "question": "Como solicitar uma demonstração técnica ou estudo de viabilidade?",
+      "answer": "Basta preencher o formulário desta página ou entrar em contato pelo WhatsApp. Nossa equipe de engenharia agendará uma reunião técnica para analisar sua planta e apresentar a solução adequada."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de inteligência visual que encontre respostas em segundos.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  },
+  "formSource": "landing_page_avigilon",
+  "whatsappMessage": "Olá! Vim pela página da solução Avigilon e gostaria de conversar sobre um projeto com um especialista da VS.",
+  "seoTitle": "Soluções Avigilon para Segurança Inteligente | VS Tecnologia",
+  "seoDescription": "Soluções completas Avigilon com inteligência de vídeo, busca por aparência e gestão unificada para ambientes corporativos e infraestrutura crítica com a VS Tecnologia.",
+  "benefits": [
+    {
+      "number": "01",
+      "title": "ANÁLISE INTELIGENTE",
+      "desc": "Ajuda as equipes a encontrar eventos relevantes em grandes volumes de vídeo gravado sem necessidade de rever horas de gravações contínuas.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Busca por atributos físicos (ex.: pessoa com camisa vermelha e mochila)",
+        "Detecção automática de comportamentos incomuns de pedestres e frotas",
+        "Notificações proativas antes que a invasão perimetral se consolide"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "OPERAÇÃO CENTRALIZADA",
+      "desc": "Concentra vídeo analítico, alertas de intrusão e controle de acesso físico em uma única tela de comando de alto impacto.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Validação visual instantânea no momento de leitura do crachá",
+        "Mapas interativos integrados mostrando a posição exata de cada sensor",
+        "Redução drástica do tempo de resposta da equipe patrimonial"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "ESCALA CORPORATIVA",
+      "desc": "Arquitetura adequada para operações complexas, plantas fabris extensas e redes distribuídas com dezenas de unidades.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Gestão de banda HDSM transmitindo apenas o recorte visual focado",
+        "Armazenamento otimizado com redução sensível do custo de servidores",
+        "Expansão progressiva conforme as novas etapas do plano diretor da empresa"
+      ]
+    }
+  ],
+  "cta": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de inteligência visual que encontre respostas em segundos.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  }
+}

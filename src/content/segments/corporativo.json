@@ -1,0 +1,59 @@
+{
+  "id": "corporativo",
+  "title": "Corporativo & Edifícios Comerciais",
+  "slug": "corporativo",
+  "tagline": "Sede corporativa inteligente com catracas speed gates de vidro e elevadores integrados.",
+  "description": "Elegância arquitetônica aliada ao controle rigoroso de fluxo. Catracas speed gates de aço inox e vidro, biometria facial touchless e integração com sistemas de ar condicionado e iluminação predial (BMS).",
+  "iconName": "Briefcase",
+  "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Harmonização estética refinada com halls de entrada e recepções de alto padrão",
+    "Gestão de alto volume de visitantes e colaboradores nos horários de pico comercial",
+    "Integração de múltiplos sistemas prediais em interface simplificada"
+  ],
+  "solutionsProvided": [
+    "Speed Gates de vidro CAME com reconhecimento facial integrado e abertura silenciosa",
+    "Destinação antecipada de elevadores vinculada ao crachá ou biometria",
+    "Infraestrutura de cabeamento estruturado Cat.6A para escritórios modernos"
+  ],
+  "featuredProject": "hospital-albert-einstein",
+  "recommendedArchitecture": [
+    {
+      "title": "Controle de Hall de Entrada",
+      "desc": "Speed gates em aço escovado com portas de vidro basculantes"
+    },
+    {
+      "title": "Totem de Autoatendimento",
+      "desc": "Cadastro biométrico e emissão de QR code de visitante em menos de 1 minuto"
+    },
+    {
+      "title": "Automação Predial BMS",
+      "desc": "Integração de sensores de presença com acionamento do ar condicionado"
+    }
+  ],
+  "manufacturers": [
+    "CAME",
+    "AXIS Communications",
+    "Avigilon",
+    "Furukawa"
+  ],
+  "differentials": [
+    "Design sofisticado que valoriza o metro quadrado do empreendimento corporativo",
+    "Integração nativa com sistemas de gestão condominial e de visitantes",
+    "Suporte técnico e manutenção preventiva periódica"
+  ],
+  "faq": [
+    {
+      "q": "O sistema permite o envio de convite com QR Code para visitantes pelo WhatsApp?",
+      "a": "Sim. O anfitrião pode pré-cadastrar a visita pelo aplicativo, e o visitante acessa as catracas diretamente aproximando o QR Code do smartphone."
+    },
+    {
+      "q": "Como as catracas operam em caso de falta de energia elétrica?",
+      "a": "As portas dos speed gates abrem automaticamente para liberação do fluxo livre de evacuação, além de contarem com no-break para operação ininterrupta."
+    }
+  ],
+  "relatedCaseSlugs": [
+    "hospital-albert-einstein"
+  ],
+  "order": 6
+}

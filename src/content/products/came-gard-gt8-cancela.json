@@ -1,0 +1,54 @@
+{
+  "name": "Cancela Automática Veicular de Alta Velocidade e Fluxo Contínuo",
+  "slug": "came-gard-gt8-cancela",
+  "brand": "CAME",
+  "brandId": "came",
+  "category": "Automação & Cancelas",
+  "model": "CAME GARD GT8 Brushless",
+  "type": "Cancela Automática para Cargas e Pedestres",
+  "application": [
+    "Logística e Centros de Distribuição",
+    "Condomínios e Portarias",
+    "Indústria e Fábricas"
+  ],
+  "shortDescription": "Cancela eletromecânica 24V com motor brushless para hastes de até 7.8 metros, tempo de abertura a partir de 2 segundos e fita LED de alta visibilidade.",
+  "description": "Projetada especificamente para docas de logística pesada, condomínios com tráfego denso e portagens industriais. O motor brushless de 24V elimina o desgaste mecânico tradicional, suportando operação contínua sem aquecimento.",
+  "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80",
+  "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80",
+  "gallery": [
+    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "datasheet": "/datasheets/came-gard-gt8-cancela.pdf",
+  "highlights": [
+    "Motor Brushless 24V com garantia de 3 milhões de ciclos",
+    "Haste com iluminação LED dinâmica verde/vermelho integrada",
+    "Abertura ultrarrápida ajustável entre 2 e 4 segundos"
+  ],
+  "features": [
+    "Gabinete em aço zincado pintado ou aço inox AISI 304",
+    "Sistema antiesmagamento com encoder de precisão milimétrica",
+    "Placa de comando com display digital e conectividade CAME Connect",
+    "Destravamento manual com chave personalizada"
+  ],
+  "specs": {
+    "Comprimento Máximo da Haste": "Até 7.8 metros",
+    "Tempo de Abertura": "2 a 4 segundos",
+    "Ciclo de Trabalho": "Uso contínuo (Intensivo 100%)",
+    "Grau de Proteção": "IP54 com vedação estanque",
+    "Alimentação do Motor": "24 VDC Brushless"
+  },
+  "downloads": [
+    {
+      "title": "Ficha Técnica Cancela CAME GARD GT8",
+      "type": "PDF",
+      "size": "2.1 MB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "came-ozak-speedgate",
+    "axis-a1601-network-door-controller"
+  ],
+  "featured": false,
+  "active": true,
+  "order": 10
+}

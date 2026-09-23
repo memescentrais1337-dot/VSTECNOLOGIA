@@ -1,0 +1,70 @@
+{
+  "title": "Controle de Acesso Restrito e Videomonitoramento Clínico",
+  "slug": "hospital-albert-einstein",
+  "client": "Hospital Israelita Albert Einstein",
+  "segment": "Saúde & Alta Complexidade",
+  "location": "Unidade Hospitalar / Centro Avançado",
+  "year": "2023",
+  "summary": "Implantação de controle de acesso touchless com reconhecimento facial, gerenciamento de farmácia hospitalar de alta dosagem e infraestrutura de rede segura.",
+  "shortDesc": "Implantação de controle de acesso touchless com reconhecimento facial, gerenciamento de farmácia hospitalar de alta dosagem e infraestrutura de rede segura.",
+  "description": "A operação hospitalar exige conciliar altíssimo fluxo de pacientes e acompanhantes com bloqueio absoluto e rastreável de áreas estéreis, centros cirúrgicos, berçários e farmácia central. Além disso, os leitores de acesso deveriam seguir rígidos protocolos de assepsia (sem contato físico), garantindo velocidade para equipes médicas em situações de código azul. A VS implementou uma solução de controle de acesso unificada com leitoras de reconhecimento facial 3D de alta precisão integradas a fechaduras eletromagnéticas antivandalismo e eclusas sanitárias automáticas. Para o monitoramento, foram empregadas câmeras discretas de alta resolução da AXIS em corredores e acessos, preservando a privacidade dos leitos e a segurança institucional.",
+  "fullDescription": "",
+  "coverImage": "/images/projetos/projeto-hospital-albert-einstein.png",
+  "heroImage": "/images/projetos/projeto-hospital-albert-einstein.png",
+  "gallery": [
+    "/images/projetos/projeto-hospital-albert-einstein.png",
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+  ],
+  "challenge": "A operação hospitalar exige conciliar altíssimo fluxo de pacientes e acompanhantes com bloqueio absoluto e rastreável de áreas estéreis, centros cirúrgicos, berçários e farmácia central. Além disso, os leitores de acesso deveriam seguir rígidos protocolos de assepsia (sem contato físico), garantindo velocidade para equipes médicas em situações de código azul.",
+  "solution": "A VS implementou uma solução de controle de acesso unificada com leitoras de reconhecimento facial 3D de alta precisão integradas a fechaduras eletromagnéticas antivandalismo e eclusas sanitárias automáticas. Para o monitoramento, foram empregadas câmeras discretas de alta resolução da AXIS em corredores e acessos, preservando a privacidade dos leitos e a segurança institucional.",
+  "technologies": [
+    "Leitores de Reconhecimento Facial com detecção de vivacidade (Anti-Spoofing)",
+    "Fechaduras Eletromecânicas Especiais para Portas Hospitalares e Corta-Fogo",
+    "Software de Gestão de Identidades com Integração ao ERP Hospitalar",
+    "Câmeras IP Dome AXIS com Áudio Bidirecional para Triagem",
+    "Cabeamento Estruturado Categoria 6A LSZH (Baixa Emissão de Fumaça e Zero Halogênio)",
+    "Sistemas de Interfonia SIP Médica com Botão de Emergência"
+  ],
+  "execution": [
+    "Execução dos trabalhos em horários programados para não interferir nas rotinas de internação e cirurgias",
+    "Utilização de cabos normatizados LSZH em conformidade com as normas hospitalares de combate a incêndio",
+    "Treinamento e capacitação das equipes de segurança patrimonial, enfermagem e hotelaria hospitalar",
+    "Auditoria de conformidade com a LGPD para armazenamento seguro de dados biométricos"
+  ],
+  "results": [
+    "Acesso 100% sem contato físico para os profissionais em áreas cirúrgicas",
+    "Tempo de validação de acesso inferior a 0.3 segundos por colaborador",
+    "Rastreabilidade integral de entrada e saída em almoxarifados de medicamentos controlados",
+    "Auditorias de acreditação hospitalar internacional (JCI) aprovadas com nota máxima em segurança física"
+  ],
+  "architectureSteps": [
+    {
+      "step": "Identificação Facial Touchless",
+      "detail": "Leitores biométricos 3D com validação sem toque em centro cirúrgico e farmácias"
+    },
+    {
+      "step": "Eclusas & Travas Eletromecânicas",
+      "detail": "Intertravamento de portas com abertura de emergência automatizada (código azul)"
+    },
+    {
+      "step": "Rede Segura LSZH Cat.6A",
+      "detail": "Cabeamento estruturado livre de halogênios e sem emissão de gases tóxicos"
+    },
+    {
+      "step": "Monitoramento & Interfonia SIP",
+      "detail": "Câmeras discretas em corredores e interfonia estéril com botão de acionamento"
+    },
+    {
+      "step": "Integração com ERP Hospitalar",
+      "detail": "Sincronização instantânea de permissões com o cadastro de colaboradores e médicos"
+    }
+  ],
+  "whyVS": [
+    "Experiência consolidada em ambientes de saúde com exigência sanitária e normas de combate a incêndio",
+    "Capacidade de implantação noturna e escalonada sem interrupção dos atendimentos médicos",
+    "Conformidade rígida com os padrões de acreditação internacional JCI e LGPD"
+  ],
+  "featured": true,
+  "order": 2
+}

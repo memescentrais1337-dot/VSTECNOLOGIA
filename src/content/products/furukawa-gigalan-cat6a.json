@@ -1,0 +1,52 @@
+{
+  "name": "Cabo de Dados Blindado F/UTP Categoria 6A LSZH",
+  "slug": "furukawa-gigalan-cat6a",
+  "brand": "Furukawa",
+  "brandId": "furukawa",
+  "category": "Infraestrutura de Redes",
+  "model": "Furukawa GigaLan MAX Cat.6A Green",
+  "type": "Cabo de Cabeamento Estruturado",
+  "application": [
+    "Indústria e Fábricas",
+    "Hospitais e Saúde",
+    "Corporativo e Escritórios"
+  ],
+  "shortDescription": "Cabo de dados blindado para transmissão a 10 Gigabits por segundo, capa ecológica LSZH retardante a chama e proteção contra diafonia.",
+  "description": "O cabo Furukawa GigaLan Cat.6A é a escolha recomendada para ambientes industriais e corporativos que demandam largura de banda massiva de 10 Gbps até 500 MHz, com imunidade superior a interferências eletromagnéticas.",
+  "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80",
+  "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80",
+  "gallery": [
+    "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "datasheet": "/datasheets/furukawa-gigalan-cat6a.pdf",
+  "highlights": [
+    "Transmissão garantida a 10 Gigabit Ethernet (10GBASE-T)",
+    "Blindagem F/UTP em fita de alumínio contra Alien Crosstalk",
+    "Composto LSZH livre de halogênios com baixa emissão de fumaça"
+  ],
+  "features": [
+    "Condutores em cobre 100% eletrolítico sólido 23 AWG",
+    "Certificação internacional ETL e Anatel",
+    "Garantia de até 25 anos em canal Furukawa certificado pela VS",
+    "Compatível com aplicações PoE++ (Type 4) até 90W"
+  ],
+  "specs": {
+    "Frequência de Operação": "Até 500 MHz",
+    "Normas Atendidas": "ANSI/TIA-568.2-D, ISO/IEC 11801, ABNT NBR 14565",
+    "Diâmetro Externo": "7.4 mm",
+    "Grau de Inflamabilidade": "IEC 60332-3 (LSZH)"
+  },
+  "downloads": [
+    {
+      "title": "Certificado de Conformidade Furukawa",
+      "type": "PDF",
+      "size": "950 KB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "cisco-catalyst-9200"
+  ],
+  "featured": false,
+  "active": true,
+  "order": 7
+}

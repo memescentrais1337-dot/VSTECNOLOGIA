@@ -1,0 +1,59 @@
+{
+  "id": "portos",
+  "title": "Logística & Centros de Distribuição",
+  "slug": "portos",
+  "tagline": "Conformidade operacional, OCR de carretas e automação de gates e docas de carga.",
+  "description": "Engenharia para condomínios logísticos, portos secos e centros de distribuição. Leitura automática de placas de cavalos e carretas, monitoramento de docas de carregamento e cercamento perimetral contra intrusões noturnas.",
+  "iconName": "Truck",
+  "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Fluxo ininterrupto de centenas de caminhões exigindo validação de entrada em segundos",
+    "Grandes extensões de galpão e pátio externo expostos a furtos e violações de lacres",
+    "Necessidade de gravação em altíssima resolução para auditoria forense de cargas"
+  ],
+  "solutionsProvided": [
+    "Sistemas de leitura automática de placas (LPR) integrados ao software TMS/WMS",
+    "Câmeras panorâmicas 180° e 360° para visualização contínua de docas de expedição",
+    "Torres autônomas de monitoramento perimetral com detecção por radar"
+  ],
+  "featuredProject": "edp-goiania",
+  "recommendedArchitecture": [
+    {
+      "title": "Automação de Gates",
+      "desc": "Cancelas rápidas CAME acionadas por leitura ótica de placas (LPR)"
+    },
+    {
+      "title": "Auditoria de Docas",
+      "desc": "Câmeras 4K focalizadas na abertura de portas de baús e conferência de pallets"
+    },
+    {
+      "title": "Perímetro com Radar",
+      "desc": "Cobertura noturna de pátios com rastreamento PTZ automático do invasor"
+    }
+  ],
+  "manufacturers": [
+    "CAME",
+    "Hanwha Vision",
+    "AXIS Communications",
+    "Pelco"
+  ],
+  "differentials": [
+    "Cancelas industriais reforçadas com tempo de abertura de 1,5 a 2 segundos",
+    "Armazenamento de imagens com retenção dimensionada conforme exigências de seguradoras (GRI)",
+    "Estrutura em fibra óptica dielétrica ligando portarias remotas ao prédio administrativo"
+  ],
+  "faq": [
+    {
+      "q": "O sistema de leitura de placas reconhece as novas placas Mercosul?",
+      "a": "Sim, nossos analíticos de LPR são homologados para padrões Mercosul e placas tradicionais, além de identificarem o tipo de veículo e a velocidade."
+    },
+    {
+      "q": "As imagens gravadas atendem às regras de auditoria das companhias seguradoras?",
+      "a": "Sim. Dimensionamos os servidores de gravação com discos rígidos corporativos, RAID e resolução que garantem nitidez de rostos e lacres."
+    }
+  ],
+  "relatedCaseSlugs": [
+    "edp-goiania"
+  ],
+  "order": 4
+}

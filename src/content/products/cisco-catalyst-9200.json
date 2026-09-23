@@ -1,0 +1,53 @@
+{
+  "name": "Switch Corporativo Gerenciável 24/48 Portas PoE+",
+  "slug": "cisco-catalyst-9200",
+  "brand": "Cisco",
+  "brandId": "cisco",
+  "category": "Infraestrutura de Redes",
+  "model": "Cisco Catalyst 9200 Series",
+  "type": "Switch Gerenciável Layer 2/3",
+  "application": [
+    "Indústria e Fábricas",
+    "Corporativo e Escritórios",
+    "Governo e Defesa"
+  ],
+  "shortDescription": "Switch de classe empresarial com suporte a empilhamento (StackWise), orçamento PoE+ integral para câmeras 4K e segurança com Cisco DNA.",
+  "description": "A fundação da conectividade para sistemas de segurança física e redes corporativas. Oferece alta resiliência com fontes de alimentação redundantes hot-swap, segurança de portas 802.1X e telemetria em tempo real.",
+  "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
+  "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
+  "gallery": [
+    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"
+  ],
+  "datasheet": "/datasheets/cisco-catalyst-9200.pdf",
+  "highlights": [
+    "Até 1440W de potência PoE+ para câmeras PTZ e áudio IP",
+    "Fontes de alimentação duplas redundantes e ventiladores modulares",
+    "Arquitetura ASIC UADP com suporte a Cisco DNA e automação"
+  ],
+  "features": [
+    "Empilhamento de até 160 Gbps de largura de banda com StackWise-160",
+    "Criptografia MACsec-128 para proteção contra espionagem no cabo",
+    "Segurança baseada em identidade com Cisco TrustSec",
+    "Roteamento estático Layer 3 e suporte a OSPF/EIGRP"
+  ],
+  "specs": {
+    "Portas": "24 ou 48 portas 10/100/1000 PoE+ com 4 uplinks 10G SFP+",
+    "Capacidade de Comutação": "Até 176 Gbps",
+    "Taxa de Encaminhamento": "130.95 Mpps",
+    "Memória": "RAM 2 GB / Flash 4 GB"
+  },
+  "downloads": [
+    {
+      "title": "Datasheet Cisco Catalyst 9200",
+      "type": "PDF",
+      "size": "2.8 MB"
+    }
+  ],
+  "relatedProductSlugs": [
+    "axis-q3538-lve",
+    "furukawa-gigalan-cat6a"
+  ],
+  "featured": false,
+  "active": true,
+  "order": 6
+}

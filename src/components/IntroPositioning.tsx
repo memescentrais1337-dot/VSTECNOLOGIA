@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef, memo } from 'react';
 import { ArrowRight, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigation } from '../context/NavigationContext';
 import { MotionReveal } from './common/MotionReveal';
+import { getSiteConfig } from '../lib/content';
+
+const turnkeyConfig = getSiteConfig().home.turnkey;
 
 export const IntroPositioning: React.FC = memo(() => {
   const { navigate } = useNavigation();
@@ -9,7 +12,7 @@ export const IntroPositioning: React.FC = memo(() => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isInView, setIsInView] = useState(false);
 
-  const carouselImages = [
+  const carouselImages = turnkeyConfig.carouselImages || [
     {
       src: '/images/turnkey/turnkey-slide-1.png',
       alt: 'Engenharia Turn-Key e implantação de sistemas de missão crítica',
@@ -65,7 +68,7 @@ export const IntroPositioning: React.FC = memo(() => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
   };
 
-  const lifecycleVerbs = [
+  const lifecycleVerbs = turnkeyConfig.lifecycleVerbs || [
     { verb: 'Analisa', desc: 'Diagnóstico técnico de vulnerabilidades e demandas no local.' },
     { verb: 'Projeta', desc: 'Engenharia com memoriais executivos, diagramas e cálculo de carga.' },
     { verb: 'Especifica', desc: 'Seleção dos equipamentos adequados para cada requisito operacional.' },
@@ -149,15 +152,15 @@ export const IntroPositioning: React.FC = memo(() => {
           {/* Content */}
           <MotionReveal className="lg:col-span-6 order-1 lg:order-2" delay={0.1}>
             <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-800">
-              Engenharia Turn-Key
+              {turnkeyConfig.eyebrow}
             </span>
 
             <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-stone-900 tracking-tight leading-snug mt-1">
-              Transformamos desafios operacionais em sistemas integrados e confiáveis.
+              {turnkeyConfig.headline}
             </h2>
 
             <p className="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
-              A <strong className="text-stone-900 font-medium">VS Tecnologia e Automação</strong> assume a responsabilidade ponta a ponta sobre a infraestrutura tecnológica, do diagnóstico à manutenção com SLA.
+              {turnkeyConfig.description}
             </p>
 
             {/* Lifecycle verbs */}
@@ -188,7 +191,7 @@ export const IntroPositioning: React.FC = memo(() => {
                 onClick={() => navigate('/quem-somos')}
                 className="group inline-flex items-center gap-2 px-4 py-2 rounded-md bg-stone-900 hover:bg-stone-800 text-white font-medium text-xs sm:text-sm transition-colors cursor-pointer"
               >
-                <span>Conheça a VS Tecnologia</span>
+                <span>{turnkeyConfig.ctaText}</span>
                 <ArrowRight className="w-3.5 h-3.5 btn-arrow-icon" />
               </button>
             </div>

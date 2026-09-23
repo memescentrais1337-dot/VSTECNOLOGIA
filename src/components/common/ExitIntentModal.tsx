@@ -4,7 +4,6 @@ import {
   CheckCircle2,
   ArrowRight,
   ShieldCheck,
-  Send,
   MessageCircle,
   FileSpreadsheet,
   Clock,

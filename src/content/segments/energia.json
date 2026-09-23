@@ -1,0 +1,58 @@
+{
+  "id": "energia",
+  "title": "Energia & Subestações",
+  "slug": "energia",
+  "tagline": "Monitoramento térmico de transformadores, usinas solares e infraestruturas desatendidas.",
+  "description": "Soluções homologadas pelo setor elétrico para ambientes desatendidos com alta tensão. Câmeras com proteção contra surtos transitórios, detecção de aquecimento prematuro e segurança perimetral.",
+  "iconName": "Zap",
+  "imageUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Campos eletromagnéticos intensos e risco constante de descargas atmosféricas",
+    "Locais desassistidos geograficamente dispersos sem presença constante de equipes",
+    "Riscos de segurança operacional e exigência de conformidade estrita com a ONS"
+  ],
+  "solutionsProvided": [
+    "Fibra óptica dielétrica e switches industriais sob a norma IEC 61850-3",
+    "Termografia contínua para identificação de pontos quentes em transformadores",
+    "Cercamento virtual por câmeras térmicas com zero falso alarme por animais silvestres"
+  ],
+  "featuredProject": "edp-goiania",
+  "recommendedArchitecture": [
+    {
+      "title": "Sensoriamento Radiométrico",
+      "desc": "Câmeras com alarme de temperatura pré-calibrado para evitar arcos elétricos"
+    },
+    {
+      "title": "Rede Dielétrica em Anel",
+      "desc": "Anel óptico sem nenhum elemento metálico condutor de alta tensão"
+    },
+    {
+      "title": "Integração SCADA",
+      "desc": "Envio de telemetria e alarmes para o sistema supervisório da operadora"
+    }
+  ],
+  "manufacturers": [
+    "AXIS Communications",
+    "Hanwha Vision",
+    "Furukawa"
+  ],
+  "differentials": [
+    "Case emblemático executado com sucesso na subestação da EDP Brasil em Goiânia",
+    "Engenheiros especialistas em imunidade contra interferência eletromagnética (EMI)",
+    "Certificação técnica nos equipamentos e softwares instalados"
+  ],
+  "faq": [
+    {
+      "q": "Como a fibra óptica suporta o campo eletromagnético de alta tensão?",
+      "a": "Utilizamos cabos totalmente dielétricos (sem armação metálica), o que os torna 100% imunes a induções elétricas e descargas atmosféricas."
+    },
+    {
+      "q": "A câmera térmica substitui a medição manual com termovisor?",
+      "a": "Sim, a câmera radiométrica monitora os barramentos 24 horas por dia de forma automatizada, gerando alertas instantâneos muito antes da ronda periódica."
+    }
+  ],
+  "relatedCaseSlugs": [
+    "edp-goiania"
+  ],
+  "order": 5
+}

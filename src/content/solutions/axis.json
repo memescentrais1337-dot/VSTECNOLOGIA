@@ -1,0 +1,368 @@
+{
+  "slug": "axis",
+  "brandName": "Axis Communications",
+  "solutionName": "Axis Connected Ecosystem",
+  "eyebrow": "ECOSSISTEMA DE SEGURANÇA CONECTADO",
+  "heroEyebrow": "Axis Communications • Ecossistema de segurança conectado",
+  "headline": "Vídeo, áudio, controle de acesso e analytics.",
+  "headlineHighlight": "Uma operação integrada e protegida.",
+  "subheadline": "Ecossistema conectado de dispositivos inteligentes em rede com padrões abertos, cibersegurança nativa e confiabilidade absoluta para operações corporativas.",
+  "heroBenefits": [
+    "Ecossistema convergente: Vídeo IP, Áudio em Rede, Acesso e Sensores",
+    "Processador ARTPEC-8 de última geração com unidade DLPU na borda",
+    "Tecnologias líderes de imagem: Lightfinder 2.0 e Forensic WDR",
+    "Plataforma aberta (VAPIX / ACAP) imune ao aprisionamento tecnológico"
+  ],
+  "heroBgImage": "/images/heroes/hero-axis.jpg",
+  "heroImage": "/images/cameras/camera-axis.png",
+  "heroImageLabel": "AXIS Q6000-E / Q60 PTZ - Monitoramento 360° em Terminal de Transporte",
+  "logo": "/images/marcas/logo-axis.png",
+  "logoAlt": "Axis Communications - Fabricante Homologado",
+  "partnerBadge": "Fabricante Homologado • Certificação Oficial VS",
+  "heroMetrics": [
+    {
+      "value": "ARTPEC-8",
+      "label": "Chipset Proprietário",
+      "detail": "DLPU para inferência neural ultraveloz"
+    },
+    {
+      "value": "Lightfinder",
+      "label": "Cores no Escuro",
+      "detail": "Visão colorida em condições extremas de baixa luz"
+    },
+    {
+      "value": "Edge Vault",
+      "label": "Módulo Criptográfico",
+      "detail": "Certificação IEEE 802.1AR e Secure Boot"
+    },
+    {
+      "value": "Zipstream",
+      "label": "Compressão Dinâmica",
+      "detail": "Reduz largura de banda preservando detalhes"
+    }
+  ],
+  "problemSection": {
+    "tag": "DIAGNÓSTICO OPERACIONAL",
+    "title": "Segurança não pode ser reativa.",
+    "narrative": [
+      "Na maioria das empresas, os sistemas de vigilância por vídeo, sonorização de ambientes, alarmes perimetrais e controle de portas funcionam como quatro subsistemas completamente independentes, comprados de fornecedores diferentes e sem nenhuma sincronia.",
+      "Quando uma invasão ocorre no perímetro, o alarme toca em uma sala, a câmera grava em outro servidor e o porteiro precisa procurar manualmente o telefone para acionar o alerta. Essa falta de conexão gera atrasos fatais na resposta."
+    ],
+    "painPoints": [
+      {
+        "title": "Ilhas de tecnologia isoladas e incompatíveis",
+        "desc": "Câmeras que não conversam com alto-falantes de aviso e não acionam cancelas de segurança de forma automatizada."
+      },
+      {
+        "title": "Vulnerabilidades cibernéticas em dispositivos de rede",
+        "desc": "Equipamentos sem mecanismos de inicialização segura (Secure Boot), facilitando invasões em redes corporativas."
+      },
+      {
+        "title": "Perda de nitidez e cores em iluminação crítica",
+        "desc": "Câmeras comuns que geram imagens granuladas em preto e branco no período noturno, impossibilitando a identificação pericial."
+      },
+      {
+        "title": "Aprisionamento tecnológico a sistemas proprietários fechados",
+        "desc": "Dificuldade de trocar de software ou expandir a infraestrutura sem ter que descartar todo o parque de equipamentos existente."
+      }
+    ],
+    "solutionBridge": "É aqui que entra o ecossistema aberto e conectado da Axis Communications."
+  },
+  "technologiesTitle": "Uma arquitetura. Múltiplas camadas de proteção.",
+  "technologiesSubtitle": "Dispositivos inteligentes cooperando de ponta a ponta sobre a mesma rede IP.",
+  "technologies": [
+    {
+      "title": "Câmeras de Rede 4K com ARTPEC-8 e Lightfinder 2.0",
+      "category": "Captura Visual Avançada",
+      "description": "Equipamentos de alta robustez mecânica (IK10+ e IP66/67) dotados do processador ARTPEC-8. Executam análises com Deep Learning na borda (AXIS Object Analytics), mantendo fidelidade absoluta de cores mesmo em iluminação próxima de zero lux com a tecnologia Lightfinder 2.0.",
+      "features": [
+        "Diferenciação granular de pessoas, automóveis, ônibus e caminhões",
+        "Módulo de segurança cibernética Axis Edge Vault protegendo chaves criptográficas",
+        "Compressão Axis Zipstream com economia de até 50% de banda e armazenamento",
+        "Estabilização eletrônica de imagem (EIS) contra vibrações de vento e tráfego"
+      ],
+      "specs": {
+        "Chipset": "Axis ARTPEC-8 com DLPU",
+        "Resolução": "4K UHD (8 MP) a 60 fps",
+        "Segurança": "TPM 2.0 / IEEE 802.1AR"
+      },
+      "tag": "Câmera Dome / Bullet",
+      "image": "/images/cameras/camera-axis.png"
+    },
+    {
+      "title": "Áudio IP em Rede e Alto-Falantes Corneta",
+      "category": "Intervenção Ativa",
+      "description": "Alto-falantes inteligentes conectados diretamente à rede PoE. Quando a análise da câmera detecta uma invasão perimetral, o próprio ecossistema dispara imediatamente um aviso de voz pré-programado ou permite ao operador falar ao vivo, desestimulando a ação criminosa.",
+      "features": [
+        "Alimentação direta via cabo de rede PoE (sem cabeamento de áudio analógico)",
+        "DSP (Processamento Digital de Sinais) embutido para clareza vocal cristalina",
+        "Mensagens de voz automáticas ativadas por regras analíticas de vídeo",
+        "Autoteste de saúde do alto-falante gerando relatórios de disponibilidade"
+      ],
+      "specs": {
+        "Alimentação": "PoE IEEE 802.3af/at",
+        "SPL": "Até 121 dB para uso externo em pátios",
+        "Protocolos": "SIP, RTP, Axis VAPIX"
+      },
+      "tag": "Áudio em Rede",
+      "image": "/images/equipamentos/axis-audio-horn.png"
+    },
+    {
+      "title": "Controladoras de Acesso de Rede e AXIS Camera Station",
+      "category": "Controle & Orquestração",
+      "description": "Controladoras de porta compactas operando em protocolo aberto (OSDP v2 seguro), gerenciando fechaduras, leitoras biométricas e interfonia com inteligência descentralizada que continua operando mesmo se o servidor central cair.",
+      "features": [
+        "Plataforma aberta compatível com os principais softwares de mercado",
+        "Memória local não volátil para até 70.000 usuários e 200.000 eventos",
+        "Alimentação de fechaduras diretamente pelas portas supervisionadas PoE+",
+        "Software VMS AXIS Camera Station para gestão fluida de vídeo e acesso"
+      ],
+      "specs": {
+        "Portas": "2 leitoras OSDP / Wiegand supervisionadas",
+        "Capacidade": "70.000 credenciais salvas em memória local",
+        "Certificação": "UL 294, CE, FCC"
+      },
+      "tag": "Controladora IP",
+      "image": "/images/equipamentos/axis-door-controller.png"
+    }
+  ],
+  "businessBenefits": [
+    {
+      "number": "01",
+      "title": "ECOSSISTEMA INTEGRADO",
+      "desc": "Vídeo, áudio em rede, controle de acesso e analytics inteligentes trabalhando como uma única engrenagem automatizada.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Avisos de voz disparados automaticamente por violação visual de perímetro",
+        "Verificação fotográfica em tela para cada passagem em catracas e portas",
+        "Redução substancial da necessidade de rondas manuais noturnas"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "INTELIGÊNCIA DISTRIBUÍDA",
+      "desc": "Processamento de analytics realizado diretamente na ponta (Edge Computing), reduzindo tráfego e acelerando a resposta.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Dispositivos tomam decisões locais sem depender da estabilidade do link central",
+        "Classificação precisa de objetos evitando disparos falsos de sirenes",
+        "Metadados estruturados para geração de relatórios de ocupação e fluxo"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "ARQUITETURA ABERTA",
+      "desc": "Baseada em padrões abertos e APIs documentadas, permitindo integração harmoniosa com a infraestrutura existente do seu projeto.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Compatibilidade universal via ONVIF e protocolo Axis VAPIX aberto",
+        "Liberdade para escolher ou migrar de software VMS sem trocar o hardware",
+        "Ciclo de vida estendido dos equipamentos com suporte contínuo de firmware"
+      ]
+    }
+  ],
+  "architectureTitle": "Monte sua arquitetura",
+  "architectureSubtitle": "Veja como os nós inteligentes do ecossistema Axis interagem sobre a mesma rede.",
+  "architectureLayers": [
+    {
+      "step": "01",
+      "label": "SENSORES & CÂMERAS",
+      "sublabel": "Visão & Detecção",
+      "detail": "Câmeras 4K ópticas e térmicas monitorando pontos críticos com Lightfinder 2.0.",
+      "metrics": "4K • 60fps • WDR Forense",
+      "iconName": "Camera"
+    },
+    {
+      "step": "02",
+      "label": "EDGE VAULT & DLPU",
+      "sublabel": "Inferência Segura",
+      "detail": "Chipset seguro protegendo a identidade do nó e processando redes neurais na borda.",
+      "metrics": "Certificado IEEE 802.1AR",
+      "iconName": "Cpu"
+    },
+    {
+      "step": "03",
+      "label": "REDE IP POE+",
+      "sublabel": "Comunicação Unificada",
+      "detail": "Switches e fibra óptica conduzindo vídeo, dados de acesso e áudio pelo mesmo cabo.",
+      "metrics": "Zipstream • OSDP v2",
+      "iconName": "Network"
+    },
+    {
+      "step": "04",
+      "label": "ÁUDIO & ACESSO",
+      "sublabel": "Intervenção Local",
+      "detail": "Alto-falantes de corneta e controladoras de porta acionados automaticamente por regras.",
+      "metrics": "Dissuasão em tempo real",
+      "iconName": "Volume2"
+    },
+    {
+      "step": "05",
+      "label": "AXIS CAMERA STATION",
+      "sublabel": "Gestão Operacional",
+      "detail": "Visualização integrada de câmeras, mapas de calor, controle de portas e gravações.",
+      "metrics": "VMS intuitivo e robusto",
+      "iconName": "Server"
+    },
+    {
+      "step": "06",
+      "label": "CCO / RESPOSTA",
+      "sublabel": "Comando Estratégico",
+      "detail": "Tomada de decisão ágil pelos gestores com relatórios de ocupação e histórico de incidentes.",
+      "metrics": "Operação fluida e proativa",
+      "iconName": "ShieldCheck"
+    }
+  ],
+  "applicationsTitle": "Projetado para ambientes que não podem parar",
+  "applications": [
+    {
+      "title": "Subestações & Concessionárias de Energia",
+      "segment": "Infraestrutura Crítica",
+      "description": "Proteção perimetral contra intrusões, monitoramento térmico de barramentos elétricos e avisos automáticos de segurança por áudio corneta.",
+      "relevance": "Ambientes sujeitos a indução eletromagnética que exigem equipamentos dielétricos.",
+      "iconName": "Zap"
+    },
+    {
+      "title": "Centros Hospitalares e Clínicas",
+      "segment": "Saúde & Confiabilidade",
+      "description": "Controle de farmácias com controladoras de porta abertas, interfonia de emergência SIP e monitoramento discreto em áreas de triagem.",
+      "relevance": "Garantia de assepsia, facilidade de uso e conformidade com normas hospitalares.",
+      "iconName": "HeartPulse"
+    },
+    {
+      "title": "Indústrias Químicas e Manufatura",
+      "segment": "Plantas Industriais",
+      "description": "Câmeras à prova de intempéries, detecção de permanência não autorizada em zonas de risco e comunicação sonora para evacuação segura.",
+      "relevance": "Equipamentos com certificação NEMA 4X e proteção contra corrosão e pós.",
+      "iconName": "Factory"
+    },
+    {
+      "title": "Sedes Corporativas & Data Centers",
+      "segment": "Alta Governança",
+      "description": "Acesso com dupla autenticação a salas seguras, monitoramento de corredores de servidores e integração fluida com sistemas prediais (BMS).",
+      "relevance": "Necessidade de criptografia nativa e ausência de backdoors de segurança.",
+      "iconName": "Building2"
+    }
+  ],
+  "compliance": {
+    "title": "Tecnologia preparada para ambientes com altas exigências.",
+    "subtitle": "A Axis Communications é referência global em cibersegurança e padrões éticos de fabricação de hardware de segurança.",
+    "items": [
+      {
+        "title": "Cibersegurança com Axis Edge Vault",
+        "desc": "Ambiente de execução confiável de hardware com inicialização segura que impede a instalação de firmwares adulterados em sua rede.",
+        "supportedStandard": "Padrão IEEE 802.1AR / Secure Boot"
+      },
+      {
+        "title": "Interoperabilidade Aberta",
+        "desc": "Total suporte a especificações abertas da indústria, garantindo compatibilidade com sistemas legados homologados e evitando lock-in.",
+        "supportedStandard": "Padrão ONVIF (Perfil S, G, T, M, A e C)"
+      },
+      {
+        "title": "Transparência de Vulnerabilidades (CVE)",
+        "desc": "Política ativa de divulgação responsável de vulnerabilidades e correções regulares de software sem custos adicionais de licença.",
+        "supportedStandard": "Programa CVE & Boas Práticas"
+      },
+      {
+        "title": "Responsabilidade Ambiental e Materiais",
+        "desc": "Componentes livres de substâncias perigosas (RoHS) e carcaças projetadas para longa vida útil em campo.",
+        "supportedStandard": "Diretiva RoHS e ISO 14001"
+      }
+    ]
+  },
+  "casesTitle": "Projetos que exigem confiabilidade",
+  "cases": [
+    {
+      "client": "EDP Goiânia",
+      "highlight": "Integração avançada",
+      "description": "Emprego de câmeras térmicas radiométricas e ópticas de alta definição da AXIS com alarme de temperatura preventivo em subestação elétrica.",
+      "image": "/images/projetos/projeto-edp-goiania.png",
+      "tag": "Energia & Utilidades"
+    },
+    {
+      "client": "Hospital Israelita Albert Einstein",
+      "highlight": "Projeto Turn-key",
+      "description": "Monitoramento com câmeras discretas de alta sensibilidade luminosa e integração com infraestrutura estruturada de cabeamento.",
+      "image": "/images/projetos/projeto-hospital-albert-einstein.png",
+      "tag": "Saúde & Alta Complexidade"
+    },
+    {
+      "client": "Quartel General do Exército — QGEX",
+      "highlight": "Infraestrutura crítica de segurança",
+      "description": "Vigilância eletrônica corporativa com equipamentos de alto grau antivandalismo e anel de rede de dados de alta disponibilidade.",
+      "image": "/images/projetos/projeto-qgex.png",
+      "tag": "Defesa & Governo"
+    }
+  ],
+  "faq": [
+    {
+      "question": "O que diferencia o ecossistema Axis de câmeras convencionais de mercado?",
+      "answer": "A Axis foi a pioneira em inventar a primeira câmera de rede do mundo. Seu grande diferencial é o processador proprietário ARTPEC, o ecossistema aberto de aplicativos (ACAP) e recursos nativos de cibersegurança (Edge Vault) que transformam cada dispositivo em um computador analítico seguro na borda."
+    },
+    {
+      "question": "Como os alto-falantes IP podem ser acionados pelas câmeras?",
+      "answer": "Por estarem todos conectados na mesma rede IP sob a mesma linguagem aberta, você pode criar regras simples: quando uma câmera detectar invasão em horário proibido, ela mesma envia um comando de rede para a corneta tocar uma mensagem gravada de advertência."
+    },
+    {
+      "question": "A Axis cobra mensalidades obrigatórias pelo firmware das câmeras?",
+      "answer": "Não. As atualizações de segurança e melhorias de firmware dos equipamentos são disponibilizadas gratuitamente pelo fabricante ao longo de todo o ciclo de vida do produto."
+    },
+    {
+      "question": "A VS Tecnologia fornece os equipamentos e executa a instalação?",
+      "answer": "Sim. Fornecemos os equipamentos originais com garantia formal, realizamos a instalação de cabeamento certificado, configuramos os parâmetros de rede e prestamos o treinamento operacional."
+    },
+    {
+      "question": "Como dar o primeiro passo para um projeto com tecnologia Axis?",
+      "answer": "Entre em contato pelo formulário ou WhatsApp informando sua necessidade. Nossos engenheiros realizarão uma análise do seu cenário para dimensionar as câmeras, lentes e equipamentos de rede ideais."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de um ecossistema conectado que antecipe riscos e proteja seus ativos.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  },
+  "formSource": "landing_page_axis",
+  "whatsappMessage": "Olá! Vim pela página da solução Axis Communications e gostaria de conversar sobre um projeto com um especialista da VS.",
+  "seoTitle": "Soluções Axis Communications | Ecossistema de Segurança Conectado | VS Tecnologia",
+  "seoDescription": "Soluções corporativas Axis Communications com vídeo IP, áudio em rede, controle de acesso e análise avançada com a engenharia da VS Tecnologia.",
+  "benefits": [
+    {
+      "number": "01",
+      "title": "ECOSSISTEMA INTEGRADO",
+      "desc": "Vídeo, áudio em rede, controle de acesso e analytics inteligentes trabalhando como uma única engrenagem automatizada.",
+      "image": "/images/beneficios/beneficio-inteligencia-ia.png",
+      "highlights": [
+        "Avisos de voz disparados automaticamente por violação visual de perímetro",
+        "Verificação fotográfica em tela para cada passagem em catracas e portas",
+        "Redução substancial da necessidade de rondas manuais noturnas"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "INTELIGÊNCIA DISTRIBUÍDA",
+      "desc": "Processamento de analytics realizado diretamente na ponta (Edge Computing), reduzindo tráfego e acelerando a resposta.",
+      "image": "/images/beneficios/beneficio-resposta-rapida.png",
+      "highlights": [
+        "Dispositivos tomam decisões locais sem depender da estabilidade do link central",
+        "Classificação precisa de objetos evitando disparos falsos de sirenes",
+        "Metadados estruturados para geração de relatórios de ocupação e fluxo"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "ARQUITETURA ABERTA",
+      "desc": "Baseada em padrões abertos e APIs documentadas, permitindo integração harmoniosa com a infraestrutura existente do seu projeto.",
+      "image": "/images/beneficios/beneficio-alta-disponibilidade.png",
+      "highlights": [
+        "Compatibilidade universal via ONVIF e protocolo Axis VAPIX aberto",
+        "Liberdade para escolher ou migrar de software VMS sem trocar o hardware",
+        "Ciclo de vida estendido dos equipamentos com suporte contínuo de firmware"
+      ]
+    }
+  ],
+  "cta": {
+    "headline": "Sua operação não precisa de mais uma câmera.",
+    "subheadline": "Precisa de um ecossistema conectado que antecipe riscos e proteja seus ativos.",
+    "buttonText": "FALAR COM UM ESPECIALISTA"
+  }
+}

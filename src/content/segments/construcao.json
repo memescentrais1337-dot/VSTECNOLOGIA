@@ -1,0 +1,30 @@
+{
+  "id": "construcao",
+  "title": "Construção Civil & Incorporadoras",
+  "slug": "construcao",
+  "tagline": "Infraestrutura tecnológica entregue no padrão do empreendimento desde o canteiro até o habite-se.",
+  "description": "Consultoria e engenharia de projetos para construtoras: especificação de tubulações, prumadas de dados, automação de portarias e entrega de condomínios inteligentes com valor agregado de venda.",
+  "iconName": "Building",
+  "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+  "challenges": [
+    "Planejamento de infraestrutura antes do acabamento para evitar retrabalho",
+    "Adequação orçamentária do empreendimento mantendo alto padrão de entrega",
+    "Garantia de modernidade para os futuros moradores ou compradores"
+  ],
+  "solutionsProvided": [
+    "Projetos executivos em BIM/AutoCAD com memorial descritivo completo",
+    "Infraestrutura completa de interfonia, controle de acesso e dados",
+    "Portaria autônoma e clausuras de pedestres e veículos"
+  ],
+  "featuredProject": "",
+  "recommendedArchitecture": [],
+  "manufacturers": [
+    "CAME",
+    "Furukawa",
+    "Hanwha Vision"
+  ],
+  "differentials": [],
+  "faq": [],
+  "relatedCaseSlugs": [],
+  "order": 9
+}
