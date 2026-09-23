@@ -11,6 +11,10 @@ media:
     - webp
     - pdf
 
+settings:
+  content:
+    merge: true
+
 content:
   # ============================================================================
   # INFORMAÇÕES GERAIS E HOME (site.json)
@@ -20,7 +24,8 @@ content:
     type: file
     path: src/content/site.json
     format: json
-    delete: false
+    operations:
+      delete: false
     fields:
       - name: company
         label: Dados Institucionais da Empresa
@@ -39,18 +44,18 @@ content:
             type: string
             required: true
           - name: phone
-            label: Telefone Exibição (ex: (62) 3289-5267)
+            label: "Telefone Exibição (ex: (62) 3289-5267)"
             type: string
             required: true
           - name: phoneRaw
-            label: Telefone Link Tel (ex: +556232895267)
+            label: "Telefone Link Tel (ex: +556232895267)"
             type: string
           - name: whatsapp
-            label: WhatsApp Exibição (ex: (62) 3289-5267)
+            label: "WhatsApp Exibição (ex: (62) 3289-5267)"
             type: string
             required: true
           - name: whatsappRaw
-            label: WhatsApp Link Número (ex: 556232895267)
+            label: "WhatsApp Link Número (ex: 556232895267)"
             type: string
             required: true
           - name: email
@@ -129,7 +134,8 @@ content:
             required: true
           - name: keywords
             label: Palavras-chave
-            type: list
+            type: object
+            list: true
             fields:
               - name: keyword
                 type: string
@@ -196,13 +202,14 @@ content:
                 type: string
               - name: metrics
                 label: Indicadores Numéricos
-                type: list
+                type: object
+                list: true
                 fields:
                   - name: id
                     label: Identificador (projetos, experiencia, fabricantes, segmentos)
                     type: string
                   - name: prefix
-                    label: Prefixo (ex: +)
+                    label: "Prefixo (ex: +)"
                     type: string
                   - name: value
                     label: Valor Numérico
@@ -216,7 +223,7 @@ content:
                     label: Descrição Detalhada
                     type: text
                   - name: technicalCode
-                    label: Código Técnico Estético (ex: PRJ / 120)
+                    label: "Código Técnico Estético (ex: PRJ / 120)"
                     type: string
                   - name: scopeTag
                     label: Tag de Escopo
@@ -240,7 +247,8 @@ content:
                 type: string
               - name: carouselImages
                 label: Fotos do Carrossel de Engenharia
-                type: list
+                type: object
+                list: true
                 fields:
                   - name: src
                     label: Imagem
@@ -250,10 +258,11 @@ content:
                     type: string
               - name: steps
                 label: Etapas do Ciclo Turn-Key
-                type: list
+                type: object
+                list: true
                 fields:
                   - name: step
-                    label: Número (ex: 01)
+                    label: "Número (ex: 01)"
                     type: string
                   - name: title
                     label: Nome da Etapa
@@ -263,7 +272,8 @@ content:
                     type: text
               - name: lifecycleVerbs
                 label: Verbos Operacionais em Grid
-                type: list
+                type: object
+                list: true
                 fields:
                   - name: verb
                     label: Verbo
@@ -300,7 +310,7 @@ content:
     type: collection
     path: src/content/products
     format: json
-    filename: '{slug}.json'
+    filename: "{fields.slug}.json"
     view:
       fields: [name, brand, category, active]
       primary: name
@@ -320,7 +330,7 @@ content:
         type: string
         required: true
       - name: brandId
-        label: ID da Marca (ex: axis, hanwha, avigilon, came, cisco)
+        label: "ID da Marca (ex: axis, hanwha, avigilon, came, cisco)"
         type: string
       - name: category
         label: Categoria Técnica
@@ -334,7 +344,8 @@ content:
         type: string
       - name: application
         label: Verticais Recomendadas
-        type: list
+        type: object
+        list: true
         fields:
           - name: vertical
             type: string
@@ -352,7 +363,8 @@ content:
         required: true
       - name: gallery
         label: Galeria de Fotos
-        type: list
+        type: object
+        list: true
         fields:
           - name: photo
             type: image
@@ -361,19 +373,18 @@ content:
         type: file
       - name: highlights
         label: Destaques Técnicos Principais (3 itens)
-        type: list
+        type: object
+        list: true
         fields:
           - name: highlight
             type: string
       - name: features
         label: Lista Detalhada de Recursos
-        type: list
+        type: object
+        list: true
         fields:
           - name: feature
             type: string
-      - name: specs
-        label: Especificações Técnicas (Chave / Valor)
-        type: object
       - name: featured
         label: Produto em Destaque na Home?
         type: boolean
@@ -395,7 +406,7 @@ content:
     type: collection
     path: src/content/projects
     format: json
-    filename: '{slug}.json'
+    filename: "{fields.slug}.json"
     view:
       fields: [title, client, segment, location]
       primary: title
@@ -438,7 +449,8 @@ content:
         required: true
       - name: gallery
         label: Galeria de Fotos do Case
-        type: list
+        type: object
+        list: true
         fields:
           - name: photo
             type: image
@@ -452,25 +464,29 @@ content:
         required: true
       - name: technologies
         label: Tecnologias Empregadas
-        type: list
+        type: object
+        list: true
         fields:
           - name: tech
             type: string
       - name: execution
         label: Fases da Execução Técnica
-        type: list
+        type: object
+        list: true
         fields:
           - name: step
             type: string
       - name: results
         label: Resultados e Benefícios Aferidos
-        type: list
+        type: object
+        list: true
         fields:
           - name: result
             type: string
       - name: architectureSteps
         label: Etapas da Arquitetura Implantada
-        type: list
+        type: object
+        list: true
         fields:
           - name: step
             label: Nome da Camada
@@ -495,8 +511,9 @@ content:
     type: collection
     path: src/content/solutions
     format: json
-    filename: '{slug}.json'
-    delete: false
+    filename: "{fields.slug}.json"
+    operations:
+      delete: false
     view:
       fields: [brandName, solutionName, eyebrow]
       primary: brandName
@@ -506,7 +523,7 @@ content:
         type: string
         required: true
       - name: slug
-        label: Slug da LP (ex: hanwha, avigilon, axis, pelco, tyco)
+        label: "Slug da LP (ex: hanwha, avigilon, axis, pelco, tyco)"
         type: string
         required: true
         pattern: '^[a-z0-9-]+$'
@@ -548,16 +565,18 @@ content:
         type: string
       - name: heroBenefits
         label: Benefícios Rápidos do Hero (Lista de Destaques)
-        type: list
+        type: object
+        list: true
         fields:
           - name: item
             type: string
       - name: heroMetrics
         label: 4 Indicadores Tecnológicos do Hero
-        type: list
+        type: object
+        list: true
         fields:
           - name: value
-            label: Valor / Sigla (ex: AI, 4K, 99.9%)
+            label: "Valor / Sigla (ex: AI, 4K, 99.9%)"
             type: string
           - name: label
             label: Título do Indicador
@@ -580,7 +599,8 @@ content:
             type: text
           - name: items
             label: Lista de Desafios Resolvidos
-            type: list
+            type: object
+            list: true
             fields:
               - name: challenge
                 label: Desafio
@@ -593,7 +613,8 @@ content:
                 type: string
       - name: businessBenefits
         label: Benefícios Corporativos Estruturados
-        type: list
+        type: object
+        list: true
         fields:
           - name: title
             label: Título do Benefício
@@ -615,7 +636,8 @@ content:
         type: text
       - name: technologies
         label: Catálogo Técnico de Equipamentos da Solução
-        type: list
+        type: object
+        list: true
         fields:
           - name: name
             label: Nome do Dispositivo
@@ -634,7 +656,8 @@ content:
             type: image
           - name: features
             label: Especificações Secundárias
-            type: list
+            type: object
+            list: true
             fields:
               - name: spec
                 type: string
@@ -643,7 +666,8 @@ content:
         type: string
       - name: applications
         label: Casos de Aplicação por Setor
-        type: list
+        type: object
+        list: true
         fields:
           - name: title
             label: Setor / Ambiente
@@ -656,7 +680,8 @@ content:
             type: string
           - name: features
             label: Destaques da Aplicação
-            type: list
+            type: object
+            list: true
             fields:
               - name: item
                 type: string
@@ -665,7 +690,8 @@ content:
         type: string
       - name: cases
         label: Cases de Sucesso da Solução
-        type: list
+        type: object
+        list: true
         fields:
           - name: client
             label: Nome do Cliente
@@ -687,7 +713,8 @@ content:
             type: text
       - name: faq
         label: Perguntas Frequentes da Solução
-        type: list
+        type: object
+        list: true
         fields:
           - name: q
             label: Pergunta
@@ -728,8 +755,9 @@ content:
     type: collection
     path: src/content/segments
     format: json
-    filename: '{slug}.json'
-    delete: false
+    filename: "{fields.slug}.json"
+    operations:
+      delete: false
     view:
       fields: [title, tagline]
       primary: title
@@ -759,13 +787,15 @@ content:
         type: image
       - name: challenges
         label: Principais Desafios do Setor
-        type: list
+        type: object
+        list: true
         fields:
           - name: challenge
             type: string
       - name: solutionsProvided
         label: Soluções de Engenharia Fornecidas
-        type: list
+        type: object
+        list: true
         fields:
           - name: solution
             type: string
@@ -774,19 +804,22 @@ content:
         type: string
       - name: manufacturers
         label: Fabricantes Empregados
-        type: list
+        type: object
+        list: true
         fields:
           - name: brand
             type: string
       - name: differentials
         label: Diferenciais Técnicos da VS Tecnologia
-        type: list
+        type: object
+        list: true
         fields:
           - name: diff
             type: string
       - name: faq
         label: Dúvidas Comuns do Segmento
-        type: list
+        type: object
+        list: true
         fields:
           - name: q
             label: Pergunta
@@ -807,11 +840,13 @@ content:
     type: file
     path: src/content/faqs/general.json
     format: json
-    delete: false
+    operations:
+      delete: false
     fields:
       - name: list
         label: Banco de Perguntas e Respostas
-        type: list
+        type: object
+        list: true
         fields:
           - name: question
             label: Pergunta
